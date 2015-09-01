@@ -5,9 +5,9 @@
 *,
 :before,
 :after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -24,10 +24,10 @@ body { }
 
 a,
 a:visited {
-	color: $red;
+    color: $red;
 }
 a:hover {
-	color: $blue;
+    color: $blue;
 }
 
 
@@ -36,8 +36,8 @@ a:hover {
    ========================================================================== */
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+    height: auto; /* Make sure images are scaled correctly. */
+    max-width: 100%; /* Adhere to container width. */
 }
 
 
@@ -51,19 +51,19 @@ h3 { }
 h4 { }
 
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
+    clear: both;
 }
 
 p {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 blockquote {
-	margin: 0 1.5em;
+    margin: 0 1.5em;
 }
 
 address {
-	margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 
 
@@ -72,19 +72,19 @@ address {
    ========================================================================== */
 
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
 }
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
 }
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
+    clear: both;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -94,29 +94,29 @@ address {
 
 /* Text meant only for screen readers */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
 }
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
 }
 
 /* ==========================================================================
@@ -134,8 +134,8 @@ address {
 .site-content:after,
 .site-footer:before,
 .site-footer:after {
-	content: '';
-	display: table;
+    content: '';
+    display: table;
 }
 
 .clear:after,
@@ -144,7 +144,7 @@ address {
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-	clear: both;
+    clear: both;
 }
 
 
@@ -155,10 +155,10 @@ address {
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
+    display: none;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
-	display: block;
+    display: block;
 }
