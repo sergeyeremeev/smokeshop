@@ -16,6 +16,9 @@ Tags: smokeshop, wordpress, theme, red, white, responsive
 @import "partials/variables";
 @import "partials/normalize";
 
+// Vendor
+@import "partials/owl-carousel";
+
 // Globals
 @import "partials/h5bp-global";
 @import "partials/general";
@@ -34,6 +37,11 @@ Tags: smokeshop, wordpress, theme, red, white, responsive
 // Page Templates
 @import "partials/page-home";
 @import "partials/page-blog";
+@import "partials/page-contact";
+@import "partials/page-about";
+@import "partials/page-location";
+@import "partials/content";
+@import "partials/search";
 
 // Widgets, Search, Comments, Forms, Sharing
 @import "partials/widgets";

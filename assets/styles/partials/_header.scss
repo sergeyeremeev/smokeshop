@@ -19,6 +19,7 @@
 
 .header-main {
     border-bottom: 1px solid rgb(204, 204, 204);
+    position: relative;
 
     .container {
         width: 100%;
@@ -34,16 +35,91 @@
 
 .site-title {
     float: left;
-    margin: 14px 0 0;
+    margin: 35px 0 0 !important;
+    position: relative;
 
     a {
         display: block;
-        width: 345px;
-        height: 65px;
-        text-indent: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        background: url(assets/images/logo.png);
+        width: 350px;
+        height: 44px;
+        text-decoration: none;
+
+        .all-in-one {
+            display: block;
+            float: left;
+            margin-right: 6px;
+            width: 44px;
+            height: 44px;
+            background: #d92738;
+            border-radius: 6px;
+            padding-top: 3px;
+
+            span {
+                display: block;
+                color: #fff;
+                line-height: 1;
+            }
+
+            .row1,
+            .row3 {
+                font-size: 16px;
+                font-weight: 900;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .row2 {
+                font-family: 'Alex Brush';
+                font-size: 18px;
+                text-align: center;
+                margin: -5px 0;
+            }
+        }
+
+        .smoke {
+            font-size: 48px;
+            font-weight: 300;
+            color: #000;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .shop {
+            font-size: 48px;
+            font-weight: 900;
+            color: #000;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-left: -10px;
+        }
+
+        .fire {
+            display: block;
+            width: 16px;
+            height: 25px;
+            background: url(assets/images/fire.png) no-repeat;
+            position: absolute;
+            top: -20px;
+            right: 90px;
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   min--moz-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/fire_2x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                only screen and (   min--moz-device-pixel-ratio: 2.5),
+                only screen and (     -o-min-device-pixel-ratio: 5/2),
+                only screen and (        min-device-pixel-ratio: 2.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/fire_3x.png) no-repeat;
+                    background-size: 100%;
+                }
+        }
     }
 }
 
@@ -61,7 +137,6 @@
             display: inline-block;
             position: relative;
             padding-bottom: 15px;
-            font-family: Raleway;
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 600;
@@ -116,17 +191,408 @@
     }
 
     label {
-        width: 36px;
         display: block;
-        overflow: hidden;
     }
 
     .search-field {
         height: 28px;
         border: none;
-        padding-left: 36px;
-        background: url(assets/images/search-icon.png) no-repeat;
-        background-position: 14px 6px;
+        width: 0;
+        float: left;
+        -webkit-transition: width 0.5s;
+        transition: width 0.5s;
+
+        &::-webkit-input-placeholder {
+            font-size: 14px;
+            color: #000;
+            font-family: Raleway;
+        }
+
+        &:-moz-placeholder {
+            font-size: 14px;
+            color: #000;
+            font-family: Raleway;
+        }
+
+        &::-moz-placeholder {
+            font-size: 14px;
+            color: #000;
+            font-family: Raleway;
+        }
+
+        &:-ms-input-placeholder {
+            font-size: 14px;
+            color: #000;
+            font-family: Raleway;
+        }
+
+        &.toggled {
+            width: 100px;
+            padding-left: 12px;
+        }
+    }
+
+    .search-toggle {
+        display: block;
+        width: 18px;
+        height: 18px;
+        float: left;
+        background: url(assets/images/search_icon.png);
+        position: relative;
+        top: 4px;
         cursor: pointer;
+        margin-left: 15px;
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   min--moz-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/search_icon_2x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                only screen and (   min--moz-device-pixel-ratio: 2.5),
+                only screen and (     -o-min-device-pixel-ratio: 5/2),
+                only screen and (        min-device-pixel-ratio: 2.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/search_icon_3x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+        &.toggled {
+            background: url(assets/images/search_icon_hover.png);
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   min--moz-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/search_icon_hover_2x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                only screen and (   min--moz-device-pixel-ratio: 2.5),
+                only screen and (     -o-min-device-pixel-ratio: 5/2),
+                only screen and (        min-device-pixel-ratio: 2.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/search_icon_hover_3x.png) no-repeat;
+                    background-size: 100%;
+                }
+        }
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .container {
+        max-width: 920px !important;
+    }
+}
+
+
+@media only screen and (max-width: 959px) {
+
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    #page {
+        overflow: hidden;
+    }
+
+    .site-branding {
+        float: none !important;
+        margin: 0 auto;
+    }
+
+    .main-navigation {
+        height: auto;
+        line-height: 1;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -34px;
+    }
+
+    .button-holder {
+        position: absolute;
+        top: 76px;
+        left: 20px;
+        padding: 6px 20px 6px 0;
+        z-index: 1;
+        border-right: 1px solid #ccc;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        height: 17px;
+        width: 24px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            margin-bottom: 4px;
+            background: #d92738;
+            border-radius: 1px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.toggled {
+            position: relative;
+
+            span {
+                display: none;
+            }
+
+            &:after {
+                content: 'X';
+                font-size: 24px;
+                font-weight: 900;
+                color: #d92738;
+                position: absolute;
+                top: -2px;
+                left: 0;
+            }
+        }
+    }
+
+    .menu-main-menu-container {
+        z-index: 3;
+        background: #fff;
+        width: 200px;
+        position: absolute;
+        left: 100%;
+        height: 2560px;
+        -webkit-transition: transform 0.5s;
+        transition: transform 0.5s;
+
+        &.toggled {
+            -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+        }
+    }
+
+    #menu-main-menu {
+        border-left: 1px solid #ccc;
+        padding: 0 10px;
+        height: 100%;
+
+        li {
+            margin-right: 0;
+            display: block;
+            float: none;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+
+            a {
+
+                &:hover {
+                    color: #d92738;
+
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+
+            &.current_page_item a {
+                color: #d92738;
+
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .header-search {
+        position: static;
+        margin-top: 42px;
+        height: 29px;
+
+        .input-wrapper {
+            position: absolute;
+            display: none;
+            top: 110px;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: #eee;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+
+            &.toggled {
+                display: block;
+            }
+        }
+
+        .search-field {
+            height: 100%;
+            width: -webkit-calc(100% - 20px);
+            width: calc(100% - 20px);
+            padding-left: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .top-bar {
+        height: 38px;
+        line-height: 1;
+        font-size: 10px;
+
+        .top-bar-left {
+            height: 100%;
+            width: 160px;
+            padding-top: 8px;
+
+            .red {
+                white-space: nowrap;
+            }
+        }
+
+        .top-bar-right {
+            height: 100%;
+            width: 90px;
+            text-align: right;
+            padding-top: 8px;
+
+            .red {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .header-main {
+        height: 68px;
+    }
+
+    .site-branding {
+        width: 214px;
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+    .site-title {
+        margin: 17px 0 0 !important;
+
+        a {
+            width: 214px;
+            height: 27px;
+            line-height: 1;
+
+            .all-in-one {
+                margin-right: 2px;
+                width: 27px;
+                height: 27px;
+                border-radius: 4px;
+                padding-top: 3px;
+                position: relative;
+                top: 3px;
+
+                .row1,
+                .row3 {
+                    font-size: 9px;
+                }
+
+                .row2 {
+                    font-size: 11px;
+                    margin: -3px 0;
+                }
+            }
+
+            .title-main {
+                line-height: 1;
+            }
+
+            .smoke {
+                font-size: 29px;
+                position: relative;
+                top: 3px;
+            }
+
+            .shop {
+                font-size: 29px;
+                margin-left: -5px;
+                position: relative;
+                top: 3px;
+            }
+
+            .fire {
+                width: 10px;
+                height: 15px;
+                background: url(assets/images/fire.png) no-repeat;
+                background-size: 100%;
+                top: -10px;
+                right: 57px;
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/fire_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/fire_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+        }
+    }
+
+    .button-holder {
+        top: 58px;
+        left: 10px;
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .main-navigation {
+        top: -38px;
+    }
+
+    .menu-main-menu-container {
+        width: 150px;
+
+        &.toggled {
+            -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+        }
+    }
+
+    #menu-main-menu {
+        display: block;
+    }
+
+    .header-search {
+        margin-top: 20px;
+        border-left: 0;
+
+        .input-wrapper {
+            top: 68px;
+        }
     }
 }

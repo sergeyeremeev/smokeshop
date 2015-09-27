@@ -13,18 +13,90 @@ get_header(); ?>
         <main id="main" class="site-main" role="main">
 
             <?php while ( have_posts() ) : the_post(); ?>
+                <div class="top-banner">
+                    <div class="banner-image image1"><img src="<?php the_field('top_banner_image_1'); ?>"></div>
+                    <div class="banner-text-box left">
+                        <span class="row1">Welcome to</span><span class="row2">All in one Smoke Shop</span>
+                        <span class="row3">The largest network of smoke shops in the USA</span>
+                        <a href="<?php echo get_permalink(9); ?>" class="find-shop-btn">Find a shop</a>
+                    </div>
+                    <div class="banner-image image2"><img src="<?php the_field('top_banner_image_2'); ?>"></div>
+                    <div class="bottom-row">
+                        <div class="banner-image image3"><img src="<?php the_field('top_banner_image_3'); ?>"></div>
+                        <div class="banner-image image4"><img src="<?php the_field('top_banner_image_4'); ?>"></div>
+                        <div class="banner-image image5"><img src="<?php the_field('top_banner_image_5'); ?>"></div>
+                        <div class="banner-image image2"><img src="<?php the_field('top_banner_image_2'); ?>"></div>
+                        <div class="banner-image image1"><img src="<?php the_field('top_banner_image_1'); ?>"></div>
+                    </div>
+                </div>
 
-                <?php get_template_part( 'content', 'page' ); ?>
+                <div class="home-about">
+                    <div class="container">
+                        <h2>About Us</h2>
+                        <?php
+                            setup_postdata( $post = get_post( 7 ) );
+                            the_content('read more &raquo;');
+                            wp_reset_postdata();
+                        ?>
+                    </div>
+                </div>
 
-                <?php
-                    // If comments are open or we have at least one comment, load up the comment template
-                    if ( comments_open() || '0' != get_comments_number() ) :
-                        comments_template();
-                    endif;
-                ?>
+                <div class="home-locations">
+                    <div class="container">
+                        <h2>Our Locations</h2>
+                        <a href="#" class="view-all">view all</a>
+                        <div class="locations-container">
+                            <?php
+                                $args = array('post_type' => 'locations');
+                                $loop = new WP_Query( $args );
+                                while ( $loop->have_posts() ) : $loop->the_post();
+                                if (get_field('short_address') !== '') {
+                            ?>
+                                <div class="location-single">
+                                    <h3><?php the_field('short_address'); ?></h3>
+                                    <a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
+                                    <div class="location-info-box">
+                                        <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
+                                        <span class="phone"><span class="icon"></span><span class="text"><?php the_field('phone_number'); ?></span></span>
+                                        <span class="open-hours">
+                                            <span class="icon"></span>
+                                            <span class="text">
+                                                <?php the_field('open_hours_1'); ?>
+                                                <?php if ( get_field('open_hours_2') ) { ?>
+                                                    <span class="open-hours-optional"><?php the_field('open_hours_2'); ?></span>
+                                                <?php } ?>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            <?php
+                                }
+                                endwhile;
+                                wp_reset_postdata();
+                            ?>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="page-subscribe-module">
+                    <div class="container">
+                        <h2>BE THE FIRST TO GET EXCLUSIVES AND DISCOUNTS FROM US!</h2>
+                        <?php
+                            if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }
+                        ?>
+                    </div>
+                </div>
+
+                <div class="home-testimonials">
+                    <div class="container">
+                        <h2><span>‘’</span>Client Testimonials</h2>
+                        <a href="#" class="view-all">view all</a>
+                        <div class="testimonials-container home-testimonials">
+                            <?php the_field('testimonials_code'); ?>
+                        </div>
+                    </div>
+                </div>
             <?php endwhile; // end of the loop. ?>
-
         </main><!-- #main -->
     </div><!-- #primary -->
 

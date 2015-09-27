@@ -92,6 +92,7 @@ function mb_scripts() {
         wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'customplugins', get_template_directory_uri() . '/assets/js/plugins.min.js', array('jquery'), NULL, true );
         wp_enqueue_script( 'customscripts', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), NULL, true );
+        wp_enqueue_script( 'customcarousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), NULL, true );
     }
 }
 
@@ -123,7 +124,9 @@ function mb_remove_more_jump_link( $link ) {
 function wpb_add_google_fonts() {
     wp_register_style('wpb-googleFonts1', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700');
     wp_enqueue_style( 'wpb-googleFonts1');
-    wp_register_style('wpb-googleFonts2', 'http://fonts.googleapis.com/css?family=Raleway:300,400,600,700');
+    wp_register_style('wpb-googleFonts2', 'http://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900');
     wp_enqueue_style( 'wpb-googleFonts2');
+    wp_register_style('wpb-googleFonts3', 'http://fonts.googleapis.com/css?family=Alex+Brush');
+    wp_enqueue_style( 'wpb-googleFonts3');
 }
 add_action('wp_print_styles', 'wpb_add_google_fonts');

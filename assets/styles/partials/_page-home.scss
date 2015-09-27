@@ -1,5 +1,877 @@
 /* ==========================================================================
    Home Page Template
    ========================================================================== */
+.top-banner {
+    @include clearfix;
 
-body.home {}
+    .banner-image,
+    .banner-text-box {
+        float: left;
+        background: #eee;
+    }
+
+    .bottom-row {
+
+        .image1,
+        .image2 {
+            display: none;
+        }
+    }
+
+    .image1,
+    .image2,
+    .banner-text-box {
+        height: 248px;
+    }
+
+    .image1,
+    .image2 {
+        width: 29%;
+    }
+
+    .image3,
+    .image4,
+    .image5 {
+        height: 251px;
+    }
+
+    .image3,
+    .image5 {
+        width: 37%;
+    }
+
+    .image4 {
+        width: 26%;
+        text-align: center;
+    }
+
+    .banner-text-box {
+        width: 42%;
+    }
+
+    .image1 {
+        border-right: 1px solid #ccc;
+
+        img {
+            float: right;
+            margin-right: 22%;
+        }
+    }
+
+    .image2 {
+        border-left: 1px solid #ccc;
+
+        img {
+            float: left;
+            margin-left: 6%;
+        }
+    }
+
+    .image3,
+    .image5 {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .image4 {
+        border: 1px solid #ccc;
+    }
+
+    .image3 img {
+        float: right;
+        margin-right: 10%;
+    }
+
+    .image5 img {
+        float: left;
+        margin-left: 6%;
+    }
+
+    .banner-text-box {
+        padding-top: 45px;
+
+        span {
+            display: block;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .row1 {
+            text-transform: uppercase;
+            font-size: 48px;
+            font-weight: 300;
+            color: #000;
+        }
+
+        .row2 {
+            text-transform: uppercase;
+            font-size: 36px;
+            font-weight: 900;
+            color: #d92738;
+            margin: -5px 0 4px;
+        }
+
+        .row3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .find-shop-btn {
+            display: block;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            margin: 15px auto 0;
+            text-align: center;
+            color: #fff;
+            background: #d92738;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 900;
+            text-decoration: none;
+
+            &:hover {
+                background: #be2231;
+            }
+        }
+    }
+}
+
+.home-about {
+    height: 275px;
+    padding-top: 50px;
+
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-weight: 700;
+        color: #000;
+        font-size: 24px;
+        line-height: 1;
+        text-transform: uppercase;
+        margin: 0 0 30px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+
+        a {
+            font-weight: 700;
+            color: #d92738;
+            text-decoration: none;
+        }
+    }
+}
+
+.home-locations,
+.about-locations {
+    @include clearfix;
+    height: 375px;
+    background: #eee;
+    padding-top: 50px;
+
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-weight: 700;
+        color: #000;
+        font-size: 24px;
+        line-height: 1;
+        text-transform: uppercase;
+        margin: 0 0 30px;
+    }
+
+    .view-all {
+        display: none;
+    }
+
+    .location-single {
+        width: 225px;
+        height: 225px;
+        border: 1px solid #ccc;
+        padding: 20px 0 0 15px;
+        background: #fff;
+        overflow: hidden;
+
+        h3 {
+            font-size: 18px;
+            color: #000;
+            font-weight: 700;
+            line-height: 1;
+            margin: 0 0 3px;
+        }
+
+        .learn-more {
+            display: block;
+            color: #d92738;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .location-info-box {
+            border-top: 1px solid #ccc;
+            font-family: 'Open Sans';
+            padding-top: 20px;
+            font-size: 12px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .address,
+        .phone,
+        .open-hours {
+            margin-bottom: 25px;
+            height: 21px;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-flex-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .address {
+
+            .icon {
+                display: inline-block;
+                width: 16px;
+                height: 21px;
+                background: url(assets/images/location_marker.png) no-repeat;
+                background-size: 100%;
+                margin-right: 12px;
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/location_marker_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/location_marker_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+
+            .text {
+                display: block;
+                width: -webkit-calc(100% - 28px);
+                width: calc(100% - 28px);
+            }
+        }
+
+        .phone {
+
+            .icon {
+                display: inline-block;
+                width: 21px;
+                height: 22px;
+                background: url(assets/images/phone_icon.png) no-repeat;
+                background-size: 100%;
+                margin-right: 7px;
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/phone_icon_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/phone_icon_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+
+            .text {
+                display: block;
+                width: -webkit-calc(100% - 28px);
+                width: calc(100% - 28px);
+            }
+        }
+
+        .open-hours {
+
+            .icon {
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                background: url(assets/images/calendar_icon.png) no-repeat;
+                background-size: 100%;
+                margin-right: 7px;
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/calendar_icon_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/calendar_icon_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+
+            .text {
+                display: block;
+                width: -webkit-calc(100% - 28px);
+                width: calc(100% - 28px);
+            }
+
+            .open-hours-optional {
+                display: block;
+            }
+        }
+    }
+}
+
+.page-subscribe-module {
+    height: 315px;
+    background: url(assets/images/subscribe_grey.jpg) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center;
+
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding-top: 70px;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 24px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .field-wrap {
+        height: 50px;
+        width: 49%;
+        float: left;
+        margin-bottom: 25px;
+
+        &:nth-of-type(1) {
+            margin-right: 2%;
+        }
+
+        &:nth-of-type(3) {
+            width: 100%;
+        }
+
+        input,
+        select {
+            height: 50px;
+            width: 100%;
+            background: #fff;
+            border: 0;
+            padding-left: 15px;
+            font-size: 14px;
+            font-family: Raleway;
+            color: #000;
+
+            &::-webkit-input-placeholder {
+                font-size: 14px;
+                color: #000;
+                font-family: Raleway;
+            }
+
+            &:-moz-placeholder {
+                font-size: 14px;
+                color: #000;
+                font-family: Raleway;
+            }
+
+            &::-moz-placeholder {
+                font-size: 14px;
+                color: #000;
+                font-family: Raleway;
+            }
+
+            &:-ms-input-placeholder {
+                font-size: 14px;
+                color: #000;
+                font-family: Raleway;
+            }
+
+            &[type="submit"] {
+                background: #d92738;
+                font-size: 18px;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+.home-testimonials {
+
+    .view-all {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 50px 0 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: #000;
+        font-weight: 700;
+        margin: 0 0 20px;
+        text-transform: uppercase;
+        position: relative;
+        padding-left: 46px;
+
+        span {
+            font-size: 72px;
+            font-family: Times;
+            display: inline-block;
+            letter-spacing: -7px;
+            color: #d92738;
+            position: absolute;
+            line-height: 0;
+            left: 0;
+            top: 28px;
+        }
+    }
+
+    .paging {
+        display: none !important;
+    }
+
+    blockquote {
+        font-size: 14px;
+        font-style: italic;
+        color: #666;
+        margin: 0 !important;
+        font-family: Raleway !important;
+    }
+
+    .credit {
+        text-align: left !important;
+        font-size: 14px;
+        color: #d92738;
+        font-family: Raleway !important;
+
+        &:before {
+            content: none !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+
+    .top-banner {
+
+        .image1,
+        .image2,
+        .banner-text-box,
+        .image3,
+        .image4,
+        .image5 {
+            height: 150px;
+            text-align: center;
+        }
+
+        .image1 img,
+        .image2 img,
+        .image3 img,
+        .image4 img,
+        .image5 img {
+            float: none;
+            margin-right: 0;
+            height: 148px;
+        }
+
+        .banner-text-box {
+            padding-top: 20px;
+
+            span {
+                display: block;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .row1 {
+                font-size: 33px;
+            }
+
+            .row2 {
+                font-size: 25px;
+                font-weight: 900;
+                margin: -4px 0 2px;
+            }
+
+            .row3 {
+                font-size: 12px;
+                font-weight: 900;
+            }
+
+            .find-shop-btn {
+                width: 140px;
+                height: 34px;
+                line-height: 34px;
+                margin: 10px auto 0;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .home-about {
+        padding-top: 30px;
+    }
+
+    .page-subscribe-module {
+        height: 216px;
+
+        .container {
+            padding-top: 20px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .field-wrap {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .top-banner {
+
+        .banner-image,
+        .banner-text-box {
+            float: none !important;
+            background: #eee;
+        }
+
+        .image1,
+        .image2 {
+            display: none;
+        }
+
+        .bottom-row {
+
+            .image1,
+            .image2 {
+                display: block;
+            }
+        }
+
+        .banner-text-box {
+            width: 100%;
+            height: 110px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .bottom-row {
+            width: calc(100% - 70px);
+            width: -webkit-calc(100% - 70px);
+            margin-left: 35px;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+
+            .owl-item {
+                border-right: 1px solid #ccc;
+                overflow: hidden;
+            }
+
+            .owl-stage-outer {
+                z-index: 2;
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+            }
+
+            .owl-controls {
+                top: 0;
+                height: calc(100% + 1px);
+                height: -webkit-calc(100% + 1px);
+                background: #eee;
+                border-bottom: 1px solid #ccc;
+                left: -35px;
+                width: calc(100% + 70px);
+                width: -webkit-calc(100% + 70px);
+            }
+
+            .owl-prev {
+                position: relative;
+                top: 37px;
+                left: 6px;
+            }
+
+            .owl-next {
+                position: relative;
+                top: 37px;
+                left: calc(100% - 66px);
+                left: -webkit-calc(100% - 66px);
+            }
+
+            .banner-image {
+                height: 98px;
+                padding: 0 5px;
+                width: 100%;
+                border: 0 !important;
+                text-align: center;
+
+                img {
+                    margin: 0 auto !important;
+                    height: 98px;
+                    width: auto !important;
+                }
+            }
+        }
+
+        .banner-text-box {
+            padding-top: 10px;
+
+            span {
+                display: block;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .row1 {
+                font-size: 24px;
+            }
+
+            .row2 {
+                font-size: 18px;
+                margin: -2px 0 0;
+            }
+
+            .row3 {
+                font-size: 9px;
+            }
+
+            .find-shop-btn {
+                width: 102px;
+                height: 25px;
+                line-height: 25px;
+                margin: 10px auto 0;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .home-about {
+        padding-top: 15px;
+        height: auto;
+        padding-bottom: 20px;
+
+        h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            display: inline-block;
+            margin: 0;
+        }
+
+        p:nth-of-type(2) {
+            display: none;
+        }
+    }
+
+    .home-locations,
+    .about-locations {
+        padding-top: 15px;
+        height: 245px;
+        position: relative;
+
+        h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .view-all {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            font-size: 12px;
+            color: #d92738;
+            font-family: Raleway;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .location-single {
+            width: 100%;
+            height: 190px;
+            padding: 15px 0 0 15px;
+
+            h3 {
+                font-size: 14px;
+            }
+
+            .learn-more {
+                font-size: 12px;
+            }
+        }
+
+        .location-info-box {
+            padding-top: 15px !important;
+            margin-right: 15px;
+
+            & > span {
+                margin-bottom: 15px !important;
+            }
+        }
+
+        .owl-controls {
+            top: 17px;
+            right: 20px;
+        }
+    }
+
+    .page-subscribe-module {
+        height: 250px;
+
+        .container {
+            padding-top: 10px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        .field-wrap {
+            width: 100% !important;
+            margin-right: 0 !important;
+            margin-bottom: 10px;
+        }
+    }
+
+    .home-testimonials {
+        position: relative;
+
+        .container {
+            padding: 20px 0 0;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin: 0 0 10px;
+            padding-left: 36px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+
+            span {
+                font-size: 62px;
+                top: 22px;
+            }
+        }
+
+        blockquote {
+            font-size: 12px;
+            width: calc(100% - 80px);
+            width: -webkit-calc(100% - 80px);
+        }
+
+        .owl-stage-outer {
+            z-index: 2;
+            width: calc(100% - 80px);
+            width: -webkit-calc(100% - 80px);
+            margin-left: 40px;
+        }
+
+        .owl-controls {
+            top: 0;
+            height: 100%;
+            left: -40px;
+            width: 100%;
+        }
+
+        .owl-prev {
+            position: relative;
+            top: 30px;
+            left: 42px;
+        }
+
+        .owl-next {
+            position: relative;
+            top: 30px;
+            left: calc(100% - 26px);
+            left: -webkit-calc(100% - 26px);
+        }
+
+        .view-all {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            font-size: 12px;
+            color: #d92738;
+            font-family: Raleway;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .extend-content {
+            font-size: 12px;
+            color: #d92738;
+            font-family: Raleway;
+            text-decoration: none;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .testimonials-widget-testimonial {
+            margin-bottom: 15px !important;
+        }
+
+        .credit {
+            margin-top: 15px !important;
+        }
+    }
+}

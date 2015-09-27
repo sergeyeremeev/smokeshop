@@ -44,6 +44,9 @@ img {
 /* ==========================================================================
    Typography
    ========================================================================== */
+body {
+    font-family: Raleway;
+}
 
 h1 { }
 h2 { }
@@ -161,4 +164,71 @@ address {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
     display: block;
+}
+
+// fix owl controls
+.owl-controls {
+    position: absolute;
+    top: -55px;
+    right: 0;
+
+    .owl-prev,
+    .owl-next {
+        display: inline-block;
+        float: left;
+        width: 24px;
+        height: 24px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .owl-prev {
+        background: url(assets/images/prev.png) no-repeat;
+        margin-right: 12px;
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (   min--moz-device-pixel-ratio: 1.5),
+            only screen and (     -o-min-device-pixel-ratio: 3/2),
+            only screen and (        min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/prev_2x.png) no-repeat;
+                background-size: 100%;
+            }
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+            only screen and (   min--moz-device-pixel-ratio: 2.5),
+            only screen and (     -o-min-device-pixel-ratio: 5/2),
+            only screen and (        min-device-pixel-ratio: 2.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/prev_3x.png) no-repeat;
+                background-size: 100%;
+            }
+    }
+
+    .owl-next {
+        background: url(assets/images/next.png) no-repeat;
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (   min--moz-device-pixel-ratio: 1.5),
+            only screen and (     -o-min-device-pixel-ratio: 3/2),
+            only screen and (        min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/next_2x.png) no-repeat;
+                background-size: 100%;
+            }
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+            only screen and (   min--moz-device-pixel-ratio: 2.5),
+            only screen and (     -o-min-device-pixel-ratio: 5/2),
+            only screen and (        min-device-pixel-ratio: 2.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/next_3x.png) no-repeat;
+                background-size: 100%;
+            }
+    }
+}
+
+.view-all {
+    display: none !important;
 }
