@@ -1,6 +1,7 @@
 .blog,
 .single-article,
-.page-template-page-content {
+.page-template-page-content,
+.single {
     font-family: Raleway !important;
 
     .content-banner {
@@ -48,17 +49,44 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .blog,
+    .single-article,
+    .page-template-page-content,
+    .single {
+
+        .content-banner {
+            height: 240px;
+        }
+    }
+}
+
 @media only screen and (max-width: 767px) {
-    h1 a {
-        font-size: 16px;
-    }
+    .blog,
+    .single-article,
+    .page-template-page-content,
+    .single {
 
-    h1 {
-        margin-bottom: 5px !important;
-    }
+        .content-banner {
+            height: 150px;
+        }
 
-    .entry-content {
-        margin-top: 5px;
-        font-size: 12px;
+        h1 a,
+        h1 {
+            font-size: 16px;
+        }
+
+        h1 {
+            margin-bottom: 5px !important;
+        }
+
+        .entry-content {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+        .page-content {
+            font-size: 12px;
+        }
     }
 }

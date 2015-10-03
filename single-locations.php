@@ -216,14 +216,16 @@ get_header(); ?>
                         <div class="right-col">
                             <div class="find-shop">
                                 <h3>Find a shop near me</h3>
-                                <select name="shop" id="select-shop">
-                                    <option value="all">All States</option>
-                                    <option value="florida">Philadelphia, PA</option>
-                                    <option value="nj">Pembroke Pines, FL</option>
-                                    <option value="pensylvania">Boca Raton, FL</option>
-                                    <option value="nj">Chicago, IL</option>
-                                    <option value="pensylvania">Glassboro, NJ</option>
-                                </select>
+                                <div class="shop-select">
+                                    <select name="shop" id="select-shop">
+                                        <option value="all">All States</option>
+                                        <option value="florida">Philadelphia, PA</option>
+                                        <option value="nj">Pembroke Pines, FL</option>
+                                        <option value="pensylvania">Boca Raton, FL</option>
+                                        <option value="nj">Chicago, IL</option>
+                                        <option value="pensylvania">Glassboro, NJ</option>
+                                    </select>
+                                </div>
                                 <a href="#" class="find-shops-go">Go</a>
                             </div>
                             <div class="directions">

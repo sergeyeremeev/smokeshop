@@ -118,9 +118,6 @@ function mb_remove_more_jump_link( $link ) {
     return $link;
 }
 
-
-
-
 function wpb_add_google_fonts() {
     wp_register_style('wpb-googleFonts1', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700');
     wp_enqueue_style( 'wpb-googleFonts1');

@@ -439,7 +439,37 @@
                 color: #fff;
                 text-transform: uppercase;
                 font-weight: 900;
+
+                &:hover {
+                    background: #be2231;
+                }
             }
+        }
+    }
+
+    .list-dropdown-wrap {
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            position: relative;
+            top: -27px;
+            left: -webkit-calc(100% - 25px);
+            left: calc(100% - 25px);
+            border-style: solid;
+            border-width: 6px 6px 0;
+            border-color: #000 transparent transparent;
+            pointer-events: none;
         }
     }
 }

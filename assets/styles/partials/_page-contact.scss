@@ -196,7 +196,7 @@
 
 .contact-form {
     height: 512px;
-    background: url(assets/images/contact_form.jpg) no-repeat;
+    background: url(assets/images/contact_form_grey.jpg) no-repeat;
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
@@ -236,6 +236,10 @@
     p:nth-of-type(2),
     p:nth-of-type(4) {
         margin-right: 2%;
+    }
+
+    p:nth-of-type(5) {
+        margin-bottom: -11px;
     }
 
     input,
@@ -310,12 +314,43 @@
     .submit-btn {
         width: 200px;
         height: 50px;
-        background: #000;
         color: #fff;
         font-weight: 900;
         font-size: 18px;
         text-transform: uppercase;
         cursor: pointer;
+        padding: 0 !important;
+        background: #d92738;
+
+        &:hover {
+            background: #be2231;
+        }
+    }
+
+    .wpcf7-form .shop-location {
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            position: relative;
+            top: -24px;
+            left: -webkit-calc(100% - 25px);
+            left: calc(100% - 25px);
+            border-style: solid;
+            border-width: 6px 6px 0;
+            border-color: #000 transparent transparent;
+            pointer-events: none;
+        }
     }
 }
 

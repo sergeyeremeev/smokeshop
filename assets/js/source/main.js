@@ -273,4 +273,8 @@
         $('.wpgmp_search_form').find('input').val($(this).val());
         $('.wpgmp_search_form').find('input').trigger('keyup').trigger('touchend');
     });
+
+
+    // add propper arrows
+
 })(jQuery);

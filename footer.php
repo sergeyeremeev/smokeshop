@@ -44,15 +44,23 @@
                     <h3>Helpful Articles</h3>
                     <div class="article-list">
                         <ul>
-                        <?php
-                            $args = array('post_type' => 'article', 'showposts' => 7);
-                            $loop = new WP_Query( $args );
-                            while ( $loop->have_posts() ) : $loop->the_post();
-                        ?>
-                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                        <?php endwhile; ?>
+                            <?php
+                                $args = array(
+                                    'numberposts' => 7
+                                );
+                                $recent_posts = wp_get_recent_posts($args);
+                                foreach( $recent_posts as $recent ) {
+                                    echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+                                }
+                            ?>
                         </ul>
-                        <a href="#" class="view-all">View All &raquo;</a>
+                        <?php
+                            $count_posts = wp_count_posts();
+                            if ($count_posts > 7) { ?>
+                                <a href="#" class="view-all">View All &raquo;</a>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
                 <div class="footer-col4">
@@ -78,6 +86,17 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53597806-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>

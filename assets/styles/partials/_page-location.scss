@@ -258,6 +258,7 @@
 
         .review-stats {
             @include clearfix;
+            position: relative;
         }
 
         .stats-left {
@@ -423,9 +424,9 @@
         }
 
         .toggle-review-form {
-            float: right;
-            position: relative;
+            position: absolute;
             top: 15px;
+            right: 0;
             text-align: center;
             display: block;
             width: 200px;
@@ -625,16 +626,40 @@
         padding: 18px;
         margin-bottom: 20px;
 
-        select {
-            height: 50px;
+        .shop-select {
+            float: left;
             width: calc(100% - 50px);
             width: -webkit-calc(100% - 50px);
-            border: 0;
-            background: #fff;
-            float: left;
-            font-size: 14px;
-            color: #000;
-            padding-left: 8px;
+
+            select {
+                height: 50px;
+                width: 100%;
+                border: 0;
+                background: #fff;
+                font-size: 14px;
+                color: #000;
+                padding-left: 8px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                display: inline-block;
+                cursor: pointer;
+                outline: 0;
+            }
+
+            &:after {
+                content: '';
+                width: 0;
+                height: 0;
+                position: relative;
+                top: -24px;
+                left: -webkit-calc(100% - 25px);
+                left: calc(100% - 25px);
+                border-style: solid;
+                border-width: 6px 6px 0;
+                border-color: #000 transparent transparent;
+                pointer-events: none;
+            }
         }
 
         .find-shops-go {
@@ -848,6 +873,8 @@
             }
 
             .toggle-review-form {
+                position: relative;
+                right: inherit;
                 width: 100%;
                 float: none;
                 clear: both;
