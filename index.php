@@ -16,8 +16,6 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-        <div class="content-banner"></div>
-
         <div class="container">
             <?php if ( have_posts() ) : ?>
 
@@ -34,22 +32,15 @@ get_header(); ?>
 
                 <?php endwhile; ?>
 
-                <?php _mbbasetheme_paging_nav(); ?>
-
             <?php else : ?>
 
                 <?php get_template_part( 'content', 'none' ); ?>
 
             <?php endif; ?>
-        </div>
-
-        <div class="page-subscribe-module">
-            <div class="container">
-                <h2>BE THE FIRST TO GET EXCLUSIVES AND DISCOUNTS FROM US!</h2>
-                <?php
-                    if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }
-                ?>
-            </div>
+            <?php the_posts_pagination(array(
+                'prev_text' => __( '', 'textdomain' ),
+                'next_text' => __( '', 'textdomain' ),
+            )); ?>
         </div>
 
         </main><!-- #main -->

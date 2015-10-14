@@ -275,6 +275,12 @@
     });
 
 
-    // add propper arrows
+    // cut mobile blog text
+    if ($(document).width() < 768) {
+        $('.blog').find('.entry-content').each(function () {
+            $this = $(this).find('p');
+            $this.text($this.text().substr(0, 100) + '...');
+        });
+    }
 
 })(jQuery);
