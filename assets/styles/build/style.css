@@ -1055,6 +1055,7 @@ address {
   float: left;
   margin: 35px 0 0 !important;
   position: relative;
+  border-bottom: 0 !important;
 }
 .site-title a {
   display: block;
@@ -4947,6 +4948,190 @@ object {
   }
 }
 
+.single-post .header-main {
+  border-bottom: 0;
+}
+.single-post .post-image {
+  margin-bottom: 15px;
+}
+.single-post .post-image img {
+  width: 100%;
+  height: auto;
+}
+.single-post h1 {
+  margin: 0;
+  padding: 0 0 15px;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+}
+.single-post .post-meta {
+  border-bottom: 1px solid #ccc;
+  height: 42px;
+}
+.single-post .post-author,
+.single-post .post-date {
+  float: left;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.single-post .post-author {
+  margin-right: 30px;
+}
+.single-post .user-icon {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background: url(assets/images/author.png) no-repeat;
+  margin-right: 10px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .user-icon {
+    background: url(assets/images/author_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .user-icon {
+    background: url(assets/images/author_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+.single-post .clock-icon {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background: url(assets/images/clock.png) no-repeat;
+  margin-right: 10px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .clock-icon {
+    background: url(assets/images/clock_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .clock-icon {
+    background: url(assets/images/clock_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+.single-post .author,
+.single-post .date {
+  color: #d92738;
+  font-weight: 700;
+}
+.single-post .share {
+  position: relative;
+  top: 8px;
+  right: 1px;
+}
+.single-post .share-btn {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background: url(assets/images/share.png) no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .share-btn {
+    background: url(assets/images/share_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .share-btn {
+    background: url(assets/images/share_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+.single-post .page-content {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.single-post .page-content a {
+  color: #d92738;
+  text-decoration: none;
+}
+.single-post .page-content strong,
+.single-post .page-content h1,
+.single-post .page-content h2,
+.single-post .page-content h3,
+.single-post .page-content h4,
+.single-post .page-content h5,
+.single-post .page-content h6 {
+  color: #000;
+}
+.single-post .navigation {
+  height: 70px;
+  padding-top: 22px;
+  color: #666;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  position: relative;
+}
+.single-post .navigation a {
+  color: inherit;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+}
+.single-post .navigation .left a {
+  padding-left: 32px;
+}
+.single-post .navigation .right a {
+  padding-right: 32px;
+}
+.single-post .navigation .next,
+.single-post .navigation .prev {
+  position: absolute;
+  top: 20px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.single-post .navigation .prev {
+  background: url(assets/images/prev.png) no-repeat;
+  left: 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .navigation .prev {
+    background: url(assets/images/prev_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .navigation .prev {
+    background: url(assets/images/prev_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+.single-post .navigation .next {
+  background: url(assets/images/next.png) no-repeat;
+  right: 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .navigation .next {
+    background: url(assets/images/next_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .single-post .navigation .next {
+    background: url(assets/images/next_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .blog .content-banner,
   .single-article .content-banner,
@@ -5172,6 +5357,99 @@ object {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .single-post .post-image {
+    margin-bottom: 10px;
+  }
+  .single-post h1 {
+    margin-bottom: 0 !important;
+    padding: 0 0 5px;
+    font-size: 18px;
+  }
+  .single-post .post-meta {
+    height: 36px;
+  }
+  .single-post .post-author {
+    margin-right: 20px;
+  }
+  .single-post .author,
+  .single-post .date {
+    font-size: 12px;
+  }
+  .single-post .user-icon {
+    width: 16px;
+    height: 16px;
+    background: url(assets/images/author.png) no-repeat;
+    margin-right: 8px;
+  }
+}
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .single-post .user-icon {
+    background: url(assets/images/author_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .single-post .user-icon {
+    background: url(assets/images/author_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .single-post .clock-icon {
+    width: 16px;
+    height: 16px;
+    background: url(assets/images/clock.png) no-repeat;
+    margin-right: 8px;
+  }
+}
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .single-post .clock-icon {
+    background: url(assets/images/clock_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .single-post .clock-icon {
+    background: url(assets/images/clock_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .single-post .share-btn {
+    width: 16px;
+    height: 16px;
+    background: url(assets/images/share.png) no-repeat;
+  }
+}
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .single-post .share-btn {
+    background: url(assets/images/share_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .single-post .share-btn {
+    background: url(assets/images/share_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .single-post .page-content {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.4;
+    padding-bottom: 5px;
+  }
+  .single-post .navigation {
+    height: 60px;
+    padding-top: 18px;
+  }
+  .single-post .navigation .next,
+  .single-post .navigation .prev {
+    top: 16px;
+  }
+}
 .search-container {
   height: 680px;
   position: relative;

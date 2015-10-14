@@ -294,6 +294,245 @@
     }
 }
 
+.single-post {
+
+    .header-main {
+        border-bottom: 0;
+    }
+
+    .post-image {
+        margin-bottom: 15px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0 0 15px;
+        font-size: 24px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .post-meta {
+        border-bottom: 1px solid #ccc;
+        height: 42px;
+    }
+
+    .post-author,
+    .post-date {
+        float: left;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-flex-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .post-author {
+        margin-right: 30px;
+    }
+
+    .user-icon {
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        background: url(assets/images/author.png) no-repeat;
+        margin-right: 10px;
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (   min--moz-device-pixel-ratio: 1.5),
+            only screen and (     -o-min-device-pixel-ratio: 3/2),
+            only screen and (        min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/author_2x.png) no-repeat;
+                background-size: 100%;
+            }
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+            only screen and (   min--moz-device-pixel-ratio: 2.5),
+            only screen and (     -o-min-device-pixel-ratio: 5/2),
+            only screen and (        min-device-pixel-ratio: 2.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/author_3x.png) no-repeat;
+                background-size: 100%;
+            }
+    }
+
+    .clock-icon {
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        background: url(assets/images/clock.png) no-repeat;
+        margin-right: 10px;
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (   min--moz-device-pixel-ratio: 1.5),
+            only screen and (     -o-min-device-pixel-ratio: 3/2),
+            only screen and (        min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/clock_2x.png) no-repeat;
+                background-size: 100%;
+            }
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+            only screen and (   min--moz-device-pixel-ratio: 2.5),
+            only screen and (     -o-min-device-pixel-ratio: 5/2),
+            only screen and (        min-device-pixel-ratio: 2.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/clock_3x.png) no-repeat;
+                background-size: 100%;
+            }
+    }
+
+    .author,
+    .date {
+        color: #d92738;
+        font-weight: 700;
+    }
+
+    .share {
+        position: relative;
+        top: 8px;
+        right: 1px;
+    }
+
+    .share-btn {
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        background: url(assets/images/share.png) no-repeat;
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (   min--moz-device-pixel-ratio: 1.5),
+            only screen and (     -o-min-device-pixel-ratio: 3/2),
+            only screen and (        min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/share_2x.png) no-repeat;
+                background-size: 100%;
+            }
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+            only screen and (   min--moz-device-pixel-ratio: 2.5),
+            only screen and (     -o-min-device-pixel-ratio: 5/2),
+            only screen and (        min-device-pixel-ratio: 2.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/share_3x.png) no-repeat;
+                background-size: 100%;
+            }
+    }
+
+    .page-content {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.4;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+
+        a {
+            color: #d92738;
+            text-decoration: none;
+        }
+
+        strong,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000;
+        }
+    }
+
+    .navigation {
+        height: 70px;
+        padding-top: 22px;
+        color: #666;
+        font-size: 14px;
+        font-family: 'Open Sans';
+        position: relative;
+
+        a {
+            color: inherit;
+            position: relative;
+            z-index: 2;
+            text-decoration: none;
+        }
+
+        .left a {
+            padding-left: 32px;
+        }
+
+        .right a {
+            padding-right: 32px;
+        }
+
+        .next,
+        .prev {
+            position: absolute;
+            top: 20px;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+
+        .prev {
+            background: url(assets/images/prev.png) no-repeat;
+            left: 0;
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   min--moz-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/prev_2x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                only screen and (   min--moz-device-pixel-ratio: 2.5),
+                only screen and (     -o-min-device-pixel-ratio: 5/2),
+                only screen and (        min-device-pixel-ratio: 2.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/prev_3x.png) no-repeat;
+                    background-size: 100%;
+                }
+        }
+
+        .next {
+            background: url(assets/images/next.png) no-repeat;
+            right: 0;
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   min--moz-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/next_2x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                only screen and (   min--moz-device-pixel-ratio: 2.5),
+                only screen and (     -o-min-device-pixel-ratio: 5/2),
+                only screen and (        min-device-pixel-ratio: 2.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/next_3x.png) no-repeat;
+                    background-size: 100%;
+                }
+        }
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .blog,
     .single-article,
@@ -549,6 +788,123 @@
                             background-size: 100%;
                         }
                 }
+            }
+        }
+    }
+
+    .single-post {
+
+        .post-image {
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin-bottom: 0 !important;
+            padding: 0 0 5px;
+            font-size: 18px;
+        }
+
+        .post-meta {
+            height: 36px;
+        }
+
+        .post-author {
+            margin-right: 20px;
+        }
+
+        .author,
+        .date {
+            font-size: 12px;
+        }
+
+        .user-icon {
+            width: 16px;
+            height: 16px;
+            background: url(assets/images/author.png) no-repeat;
+            margin-right: 8px;
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   min--moz-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/author_2x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                only screen and (   min--moz-device-pixel-ratio: 2.5),
+                only screen and (     -o-min-device-pixel-ratio: 5/2),
+                only screen and (        min-device-pixel-ratio: 2.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/author_3x.png) no-repeat;
+                    background-size: 100%;
+                }
+        }
+
+        .clock-icon {
+            width: 16px;
+            height: 16px;
+            background: url(assets/images/clock.png) no-repeat;
+            margin-right: 8px;
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   min--moz-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/clock_2x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                only screen and (   min--moz-device-pixel-ratio: 2.5),
+                only screen and (     -o-min-device-pixel-ratio: 5/2),
+                only screen and (        min-device-pixel-ratio: 2.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/clock_3x.png) no-repeat;
+                    background-size: 100%;
+                }
+        }
+
+        .share-btn {
+            width: 16px;
+            height: 16px;
+            background: url(assets/images/share.png) no-repeat;
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                only screen and (   min--moz-device-pixel-ratio: 1.5),
+                only screen and (     -o-min-device-pixel-ratio: 3/2),
+                only screen and (        min-device-pixel-ratio: 1.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/share_2x.png) no-repeat;
+                    background-size: 100%;
+                }
+
+            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                only screen and (   min--moz-device-pixel-ratio: 2.5),
+                only screen and (     -o-min-device-pixel-ratio: 5/2),
+                only screen and (        min-device-pixel-ratio: 2.5),
+                only screen and (min-resolution: 192dpi) {
+                    background: url(assets/images/share_3x.png) no-repeat;
+                    background-size: 100%;
+                }
+        }
+
+        .page-content {
+            color: #666;
+            font-size: 12px;
+            line-height: 1.4;
+            padding-bottom: 5px;
+        }
+
+        .navigation {
+            height: 60px;
+            padding-top: 18px;
+
+            .next,
+            .prev {
+                top: 16px;
             }
         }
     }
