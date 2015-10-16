@@ -4805,6 +4805,7 @@ object {
 }
 .blog article .post-author {
   margin-right: 30px;
+  display: none;
 }
 .blog article .user-icon {
   display: inline-block;
@@ -4984,6 +4985,7 @@ object {
 }
 .single-post .post-author {
   margin-right: 30px;
+  display: none;
 }
 .single-post .user-icon {
   display: inline-block;
@@ -5314,6 +5316,7 @@ object {
   }
   .blog article .post-author {
     margin-right: 20px;
+    display: none;
   }
   .blog article .user-icon {
     width: 16px;
@@ -5468,6 +5471,7 @@ object {
   }
   .single-post .post-author {
     margin-right: 20px;
+    display: none;
   }
   .single-post .author,
   .single-post .date {
