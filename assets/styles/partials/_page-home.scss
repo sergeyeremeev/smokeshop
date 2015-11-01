@@ -20,37 +20,43 @@
 
     .image1,
     .image2,
+    .image3,
+    .image4,
+    .image5,
     .banner-text-box {
-        height: 248px;
+        height: 276px;
+    }
+    
+    .image1,
+    .image2,
+    .image3,
+    .image4,
+    .image5 {
+        background: url(assets/images/home-banner-bg_bright.jpg) repeat;
     }
 
     .image1,
     .image2 {
-        width: 29%;
-    }
-
-    .image3,
-    .image4,
-    .image5 {
-        height: 251px;
+        width: 31%;
     }
 
     .image3,
     .image5 {
-        width: 37%;
+        width: 36%;
     }
 
     .image4 {
-        width: 26%;
+        width: 28%;
         text-align: center;
     }
 
     .banner-text-box {
-        width: 42%;
+        width: 38%;
+        background: url(assets/images/locations-bg.jpg) repeat;
     }
 
     .image1 {
-        border-right: 1px solid #ccc;
+        border-right: 1px solid rgba(51, 51, 51, 0.1);
 
         img {
             float: right;
@@ -59,7 +65,7 @@
     }
 
     .image2 {
-        border-left: 1px solid #ccc;
+        border-left: 1px solid rgba(51, 51, 51, 0.1);
 
         img {
             float: left;
@@ -69,12 +75,12 @@
 
     .image3,
     .image5 {
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
+        border-top: 1px solid rgba(51, 51, 51, 0.1);
     }
 
     .image4 {
-        border: 1px solid #ccc;
+        border: 1px solid rgba(51, 51, 51, 0.1);
+        border-bottom: 0;
     }
 
     .image3 img {
@@ -88,7 +94,7 @@
     }
 
     .banner-text-box {
-        padding-top: 45px;
+        padding-top: 50px;
 
         span {
             display: block;
@@ -98,74 +104,90 @@
 
         .row1 {
             text-transform: uppercase;
-            font-size: 48px;
-            font-weight: 300;
-            color: #000;
+            font-size: 20px;
+            font-family: MontserratBold;
+            color: #111;
         }
 
         .row2 {
             text-transform: uppercase;
-            font-size: 36px;
-            font-weight: 900;
+            font-size: 30px;
+            font-family: MontserratBold;
             color: #d92738;
-            margin: -5px 0 4px;
+            margin: 13px 0 18px;
         }
 
         .row3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            color: #0c0c0c;
         }
 
         .find-shop-btn {
             display: block;
-            width: 200px;
-            height: 50px;
-            line-height: 50px;
-            margin: 15px auto 0;
+            width: 240px;
+            height: 54px;
+            line-height: 54px;
+            margin: 23px auto 0;
             text-align: center;
             color: #fff;
-            background: #d92738;
+            background: $darkRed;
             text-transform: uppercase;
             font-size: 18px;
-            font-weight: 900;
+            font-weight: 700;
             text-decoration: none;
 
             &:hover {
-                background: #be2231;
+                background: $veryDarkRed;
             }
         }
     }
 }
 
 .home-about {
-    height: 275px;
-    padding-top: 50px;
-
+    padding: 80px 0;
+    
     .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
+        overflow: auto;
     }
 
     h2 {
-        font-weight: 700;
-        color: #000;
-        font-size: 24px;
-        line-height: 1;
+        color: $blackGrey;
+        font-size: 40px;
         text-transform: uppercase;
-        margin: 0 0 30px;
+        margin: 0 0 40px;
     }
 
     p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: $blackGrey;
+        margin: 0 0 40px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         a {
             font-weight: 700;
-            color: #d92738;
+            color: $darkRed;
             text-decoration: none;
+        }
+    }
+    
+    .home-about-text {
+        width: 480px;
+        float: left;
+        margin-right: 40px;
+    }
+    
+    .home-about-image {
+        width: 420px;
+        float: left;
+        
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 }
@@ -173,96 +195,97 @@
 .home-locations,
 .about-locations {
     @include clearfix;
-    height: 375px;
-    background: #eee;
-    padding-top: 50px;
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-    }
+    padding: 80px 0;
+    background: url(assets/images/locations-bg.jpg) repeat;
 
     h2 {
-        font-weight: 700;
-        color: #000;
-        font-size: 24px;
-        line-height: 1;
+        color: $blackGrey;
+        font-size: 40px;
         text-transform: uppercase;
-        margin: 0 0 30px;
-    }
-
-    .view-all {
-        display: none;
+        margin: 0 0 40px;
     }
 
     .location-single {
-        width: 225px;
-        height: 225px;
-        border: 1px solid #ccc;
-        padding: 20px 0 0 15px;
+        width: 300px;
+        border: 1px solid #d9d9d9;
+        padding: 10px;
         background: #fff;
         overflow: hidden;
-
-        h3 {
-            font-size: 18px;
-            color: #000;
-            font-weight: 700;
-            line-height: 1;
-            margin: 0 0 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 0px 3px 1px 0px rgba(1, 1, 1, 0.08);
+        
+        &:hover {
+            border: 1px solid $darkRed;
+            
+            .learn-more {
+                background: $darkRed;
+                color: #fff;
+            }
+        }
+        
+        .location-image {
+            height: 130px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            
+            img {
+                height: 100%;
+                width: auto;
+                margin: 0 auto;
+            }
         }
 
-        .learn-more {
-            display: block;
-            color: #d92738;
-            font-weight: 700;
-            text-decoration: none;
-            margin-bottom: 8px;
-            font-size: 14px;
+        h3 {
+            font-size: 20px;
+            color: $blackGrey;
+            margin: 0 0 25px;
+            padding-left: 10px;
         }
 
         .location-info-box {
-            border-top: 1px solid #ccc;
-            font-family: 'Open Sans';
-            padding-top: 20px;
-            font-size: 12px;
-            color: #000;
-            font-weight: 600;
+            font-size: 16px;
+            color: $blackGrey;
+            margin-bottom: 5px;
         }
 
         .address,
         .phone,
         .open-hours {
-            margin-bottom: 25px;
-            height: 21px;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
+            margin-bottom: 22px;
+            height: 33px;
             display: flex;
-            -webkit-box-align: center;
-            -webkit-flex-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
             align-items: center;
+        }
+        
+        .icon-container {
+            display: inline-block;
+            width: 50px;
+            
+            .icon {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        
+        .text {
+            display: block;
+            width: calc(100% - 50px);
         }
 
         .address {
 
             .icon {
-                display: inline-block;
-                width: 16px;
-                height: 21px;
-                background: url(assets/images/location_marker.png) no-repeat;
+                width: 21px;
+                height: 15px;
+                background: url(assets/images/new-mail-icon.png) no-repeat;
                 background-size: 100%;
-                margin-right: 12px;
 
                 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                     only screen and (   min--moz-device-pixel-ratio: 1.5),
                     only screen and (     -o-min-device-pixel-ratio: 3/2),
                     only screen and (        min-device-pixel-ratio: 1.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/location_marker_2x.png) no-repeat;
+                        background: url(assets/images/new-mail-icon_2x.png) no-repeat;
                         background-size: 100%;
                     }
 
@@ -271,34 +294,26 @@
                     only screen and (     -o-min-device-pixel-ratio: 5/2),
                     only screen and (        min-device-pixel-ratio: 2.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/location_marker_3x.png) no-repeat;
+                        background: url(assets/images/new-mail-icon_3x.png) no-repeat;
                         background-size: 100%;
                     }
-            }
-
-            .text {
-                display: block;
-                width: -webkit-calc(100% - 28px);
-                width: calc(100% - 28px);
             }
         }
 
         .phone {
 
             .icon {
-                display: inline-block;
-                width: 21px;
+                width: 16px;
                 height: 22px;
-                background: url(assets/images/phone_icon.png) no-repeat;
+                background: url(assets/images/new-phone-icon.png) no-repeat;
                 background-size: 100%;
-                margin-right: 7px;
 
                 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                     only screen and (   min--moz-device-pixel-ratio: 1.5),
                     only screen and (     -o-min-device-pixel-ratio: 3/2),
                     only screen and (        min-device-pixel-ratio: 1.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/phone_icon_2x.png) no-repeat;
+                        background: url(assets/images/new-phone-icon_2x.png) no-repeat;
                         background-size: 100%;
                     }
 
@@ -307,34 +322,26 @@
                     only screen and (     -o-min-device-pixel-ratio: 5/2),
                     only screen and (        min-device-pixel-ratio: 2.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/phone_icon_3x.png) no-repeat;
+                        background: url(assets/images/new-phone-icon_3x.png) no-repeat;
                         background-size: 100%;
                     }
-            }
-
-            .text {
-                display: block;
-                width: -webkit-calc(100% - 28px);
-                width: calc(100% - 28px);
             }
         }
 
         .open-hours {
 
             .icon {
-                display: inline-block;
-                width: 21px;
-                height: 21px;
-                background: url(assets/images/calendar_icon.png) no-repeat;
+                width: 22px;
+                height: 23px;
+                background: url(assets/images/new-clock-icon.png) no-repeat;
                 background-size: 100%;
-                margin-right: 7px;
 
                 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                     only screen and (   min--moz-device-pixel-ratio: 1.5),
                     only screen and (     -o-min-device-pixel-ratio: 3/2),
                     only screen and (        min-device-pixel-ratio: 1.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/calendar_icon_2x.png) no-repeat;
+                        background: url(assets/images/new-clock-icon_2x.png) no-repeat;
                         background-size: 100%;
                     }
 
@@ -343,55 +350,58 @@
                     only screen and (     -o-min-device-pixel-ratio: 5/2),
                     only screen and (        min-device-pixel-ratio: 2.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/calendar_icon_3x.png) no-repeat;
+                        background: url(assets/images/new-clock-icon_3x.png) no-repeat;
                         background-size: 100%;
                     }
-            }
-
-            .text {
-                display: block;
-                width: -webkit-calc(100% - 28px);
-                width: calc(100% - 28px);
             }
 
             .open-hours-optional {
                 display: block;
             }
         }
+        
+        .learn-more {
+            display: block;
+            height: 46px;
+            line-height: 46px;
+            background: #f8f8f8;
+            text-align: center;
+            color: $darkRed;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            
+            &:active {
+                background: $veryDarkRed;
+            }
+        }
     }
 }
 
 .page-subscribe-module {
-    height: 315px;
-    background: url(assets/images/subscribe_grey.jpg) no-repeat;
+    height: 460px;
+    background: url(assets/images/subscribe_grey_new.jpg) no-repeat;
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding-top: 70px;
-    }
+    padding: 80px 0;
 
     h2 {
-        margin-top: 0;
-        font-size: 24px;
+        font-size: 40px;
         color: #fff;
         text-transform: uppercase;
-        margin-bottom: 30px;
-        text-align: center;
+        margin: 0 0 50px;
+        line-height: 1.2;
     }
 
     .field-wrap {
-        height: 50px;
-        width: 49%;
+        height: 66px;
+        width: calc(50% - 10px);
         float: left;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
 
         &:nth-of-type(1) {
-            margin-right: 2%;
+            margin-right: 20px;
         }
 
         &:nth-of-type(3) {
@@ -400,37 +410,37 @@
 
         input,
         select {
-            height: 50px;
+            height: 66px;
             width: 100%;
             background: #fff;
             border: 0;
-            padding-left: 15px;
-            font-size: 14px;
-            font-family: Raleway;
-            color: #000;
+            padding-left: 30px;
+            font-size: 18px;
+            font-family: Montserrat;
+            color: #c9c7c8;
 
             &::-webkit-input-placeholder {
-                font-size: 14px;
-                color: #000;
-                font-family: Raleway;
+                font-size: 18px;
+                color: #c9c7c8;
+                font-family: Montserrat;
             }
 
             &:-moz-placeholder {
-                font-size: 14px;
-                color: #000;
-                font-family: Raleway;
+                font-size: 18px;
+                color: #c9c7c8;
+                font-family: Montserrat;
             }
 
             &::-moz-placeholder {
-                font-size: 14px;
-                color: #000;
-                font-family: Raleway;
+                font-size: 18px;
+                color: #c9c7c8;
+                font-family: Montserrat;
             }
 
             &:-ms-input-placeholder {
-                font-size: 14px;
-                color: #000;
-                font-family: Raleway;
+                font-size: 18px;
+                color: #c9c7c8;
+                font-family: Montserrat;
             }
 
             &[type="submit"] {
@@ -438,7 +448,8 @@
                 font-size: 18px;
                 color: #fff;
                 text-transform: uppercase;
-                font-weight: 900;
+                font-weight: 700;
+                cursor: pointer;
 
                 &:hover {
                     background: #be2231;
@@ -450,9 +461,6 @@
     .list-dropdown-wrap {
 
         select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
             display: inline-block;
             cursor: pointer;
             outline: 0;
@@ -463,49 +471,37 @@
             width: 0;
             height: 0;
             position: relative;
-            top: -27px;
-            left: -webkit-calc(100% - 25px);
-            left: calc(100% - 25px);
+            top: -35px;
+            left: calc(100% - 40px);
             border-style: solid;
             border-width: 6px 6px 0;
-            border-color: #000 transparent transparent;
+            border-color: #c9c7c8 transparent transparent;
             pointer-events: none;
         }
     }
 }
 
 .home-testimonials {
-
-    .view-all {
-        display: none;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 50px 0 0;
-    }
+    padding: 80px 0;
 
     h2 {
-        font-size: 24px;
-        color: #000;
-        font-weight: 700;
-        margin: 0 0 20px;
+        font-size: 40px;
+        color: $blackGrey;
+        margin: 0 0 70px;
         text-transform: uppercase;
-        position: relative;
-        padding-left: 46px;
-
-        span {
-            font-size: 72px;
-            font-family: Times;
-            display: inline-block;
-            letter-spacing: -7px;
-            color: #d92738;
-            position: absolute;
-            line-height: 0;
-            left: 0;
-            top: 28px;
+    }
+    
+    .owl-controls {
+        top: -102px;
+    }
+    
+    .testimonials-widget-testimonial {
+        width: 50%;
+        float: left;
+        clear: none;
+        
+        &:first-of-type {
+            border-right: 1px solid #e5e5e5;
         }
     }
 
@@ -514,18 +510,46 @@
     }
 
     blockquote {
-        font-size: 14px;
+        font-size: 16px;
+        color: $blackGrey;
+        font-family: Arial, Helvetica, sans-serif !important;
         font-style: italic;
-        color: #666;
-        margin: 0 !important;
-        font-family: Raleway !important;
+        text-align: center;
+        width: 290px;
+        margin: 0 auto !important;
+        position: relative;
+        quotes: '\201c' '\201d';
+        
+        &:before {
+            content: open-quote;
+            font-family: Arial;
+            font-weight: bold;
+            position: absolute;
+            top: -10px;
+            left: -18px;
+            color: #a5a5a5;
+            font-size: 24px;
+        }
+        
+        &:after {
+            content: close-quote;
+            font-family: Arial;
+            font-weight: bold;
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            color: #a5a5a5;
+            font-size: 24px;
+        }
     }
 
     .credit {
-        text-align: left !important;
-        font-size: 14px;
-        color: #d92738;
-        font-family: Raleway !important;
+        text-align: center !important;
+        font-size: 20px;
+        color: $blackGrey;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-weight: 700;
+        margin: 0 0 25px;
 
         &:before {
             content: none !important;

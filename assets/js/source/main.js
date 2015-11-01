@@ -1,28 +1,48 @@
+/*global jQuery */
 (function($) {
+    'use strict';
+    
     // all Javascript code goes here
+    var searchSubmit = $('.search-submit'),
+        searchField = $('.search-field'),
+        testimonialsContainer = $('.testimonials-widget-testimonials'),
+        testimonialSingle = testimonialsContainer.find('.testimonials-widget-testimonial'),
+        testimonialsNum = testimonialSingle.length,
+        i,
+        $this;
 
-    // searcg toggle
-    $('.header-main').on('click', '.search-toggle', function (e) {
-        e.preventDefault();
-        $this = $(this);
-        $this.toggleClass('toggled');
-        if ($(document).width() >= 960) {
-            $this.closest('label').find('input').toggleClass('toggled');
-        } else {
-            $('.input-wrapper').toggleClass('toggled');
-        }
+    // search toggle
+    searchField.on('focus', function () {
+        searchSubmit.addClass('toggled');
+    });
+     
+    searchField.on('blur', function () {
+        searchSubmit.removeClass('toggled');
     });
 
+    // testimonials switch author and content
+    $(document).ready(function () {
+        $('.home-testimonials').find('.credit').each(function () {
+            $(this).insertBefore($(this).prev('blockquote')); 
+        });
+    });
+    
+    // add merge attributes to testimonials
+    if ($(document).width() > 1024) {
+        for (i = 0; i < testimonialsNum; i += 2) {
+            testimonialSingle.slice(i, i + 2).wrapAll("<div class='testimonials-wrap'></div>");
+        }
+    }
 
     // carousels
     $(document).ready(function () {
         if ($(document).width() >= 1280) {
             $(".locations-container").owlCarousel({
                 margin: 20,
-                stagePadding: 0,
                 loop: true,
-                items: 4,
-                nav: true
+                items: 3,
+                nav: true,
+                navText: ['&lt','&gt']
             });
         } else if ($(document).width() >= 768 && $(document).width() < 1280) {
             $(".locations-container").owlCarousel({
@@ -30,7 +50,8 @@
                 loop: true,
                 items: 3,
                 center: true,
-                nav: true
+                nav: true,
+                navText: ['&lt','&gt']
             });
         } else {
             $(".locations-container").owlCarousel({
@@ -38,7 +59,8 @@
                 stagePadding: 0,
                 loop: true,
                 items: 1,
-                nav: true
+                nav: true,
+                navText: ['&lt','&gt']
             });
         }
 
@@ -48,7 +70,8 @@
                 stagePadding: 0,
                 loop: true,
                 items: 3,
-                nav: true
+                nav: true,
+                navText: ['&lt','&gt']
             });
         }
 
@@ -58,7 +81,9 @@
             stagePadding: 0,
             loop: true,
             items: 1,
-            nav: true
+            nav: true,
+            navText: ['&lt','&gt'],
+            merge: true
         });
 
         $(".video-slider, .shop-video-container").owlCarousel({
@@ -66,7 +91,8 @@
             stagePadding: 0,
             loop: true,
             items: 1,
-            nav: true
+            nav: true,
+            navText: ['&lt','&gt']
         });
 
         $(".photo-container").find('p').owlCarousel({
@@ -74,7 +100,8 @@
             stagePadding: 0,
             loop: true,
             items: 1,
-            nav: true
+            nav: true,
+            navText: ['&lt','&gt']
         });
     });
 
@@ -100,7 +127,8 @@
                 stagePadding: 0,
                 loop: true,
                 items: 4,
-                nav: true
+                nav: true,
+                navText: ['&lt','&gt']
             });
         } else if ($(document).width() >= 768 && $(document).width() < 1280) {
             if ($('.locations-container').find('.owl-stage').length !== 0) {
@@ -122,7 +150,8 @@
                 stagePadding: 0,
                 loop: true,
                 items: 3,
-                nav: true
+                nav: true,
+                navText: ['&lt','&gt']
             });
         } else {
             if ($('.locations-container').find('.owl-stage').length !== 0) {
@@ -144,7 +173,8 @@
                 stagePadding: 0,
                 loop: true,
                 items: 1,
-                nav: true
+                nav: true,
+                navText: ['&lt','&gt']
             });
 
             $(".top-banner").find('.bottom-row').owlCarousel({
@@ -152,7 +182,8 @@
                 stagePadding: 0,
                 loop: true,
                 items: 3,
-                nav: true
+                nav: true,
+                navText: ['&lt','&gt']
             });
         }
     });

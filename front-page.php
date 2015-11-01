@@ -32,19 +32,23 @@ get_header(); ?>
 
                 <div class="home-about">
                     <div class="container">
-                        <h2>About Us</h2>
-                        <?php
-                            setup_postdata( $post = get_post( 7 ) );
-                            the_content('read more &raquo;');
-                            wp_reset_postdata();
-                        ?>
+                        <div class="home-about-text">
+                            <h2>About Us</h2>
+                            <?php
+                                setup_postdata( $post = get_post( 7 ) );
+                                the_content('');
+                                wp_reset_postdata();
+                            ?>
+                        </div>
+                        <div class="home-about-image">
+                            <?php the_field('about_image'); ?>
+                        </div>
                     </div>
                 </div>
 
                 <div class="home-locations">
                     <div class="container">
                         <h2>Our Locations</h2>
-                        <a href="#" class="view-all">view all</a>
                         <div class="locations-container">
                             <?php
                                 $args = array('post_type' => 'locations');
@@ -53,13 +57,15 @@ get_header(); ?>
                                 if (get_field('short_address') !== '') {
                             ?>
                                 <div class="location-single">
+                                    <div class="location-image">
+                                        <img src="<?php the_field('shop_image'); ?>" alt="<?php the_title(); ?>">
+                                    </div>
                                     <h3><?php the_field('short_address'); ?></h3>
-                                    <a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
                                     <div class="location-info-box">
-                                        <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
-                                        <span class="phone"><span class="icon"></span><span class="text"><?php the_field('phone_number'); ?></span></span>
+                                        <span class="address"><div class="icon-container"><span class="icon"></span></div><span class="text"><?php the_field('full_address'); ?></span></span>
+                                        <span class="phone"><div class="icon-container"><span class="icon"></span></div><span class="text"><?php the_field('phone_number'); ?></span></span>
                                         <span class="open-hours">
-                                            <span class="icon"></span>
+                                            <div class="icon-container"><span class="icon"></span></div>
                                             <span class="text">
                                                 <?php the_field('open_hours_1'); ?>
                                                 <?php if ( get_field('open_hours_2') ) { ?>
@@ -68,6 +74,7 @@ get_header(); ?>
                                             </span>
                                         </span>
                                     </div>
+                                    <a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
                                 </div>
                             <?php
                                 }
@@ -89,9 +96,8 @@ get_header(); ?>
 
                 <div class="home-testimonials">
                     <div class="container">
-                        <h2><span>‘’</span>Client Testimonials</h2>
-                        <a href="#" class="view-all">view all</a>
-                        <div class="testimonials-container home-testimonials">
+                        <h2>Client Testimonials</h2>
+                        <div class="testimonials-container home-testimonials-container">
                             <?php the_field('testimonials_code'); ?>
                         </div>
                     </div>

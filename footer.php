@@ -24,15 +24,6 @@
                         while ( $loop->have_posts() ) : $loop->the_post();
                     ?>
                     <span><a href="#"><span class="icon-phone"><i></i></span><?php the_field('phone'); ?></a></span>
-                    <h3>Follow Us On</h3>
-                    <ul class="social-list">
-                        <li><a href="<?php the_field('google_plus'); ?>" class="gplus"><i></i></a></li>
-                        <li><a href="<?php the_field('facebook'); ?>" class="fb"><i></i></a></li>
-                        <li><a href="<?php the_field('twitter'); ?>" class="twitter"><i></i></a></li>
-                        <li><a href="<?php the_field('tumblr'); ?>" class="tumblr"><i></i></a></li>
-                        <li><a href="<?php the_field('instagram'); ?>" class="inst"><i></i></a></li>
-                        <li><a href="<?php the_field('youtube'); ?>" class="youtube"><i></i></a></li>
-                    </ul>
                     <?php endwhile;
                           wp_reset_postdata(); ?>
                 </div>
@@ -64,10 +55,11 @@
                     </div>
                 </div>
                 <div class="footer-col4">
-                    <h3>Newsletter Signup</h3>
+                    <h3>Subscribe Newsletter</h3>
+                    <p>Please enter your email address to stay updated with us</p>
                     <div class="footer-subscribe-module">
                         <?php
-                                if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }
+                                if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 6 ); }
                         ?>
                     </div>
                 </div>
@@ -80,6 +72,14 @@
         <div class="site-info">
             <div class="container">
                 <p class="copyright">Copyright &copy; AllinOneSmokeShop. All Rights Reserved.</p>
+                <ul class="social-list">
+                    <li><a href="<?php the_field('facebook'); ?>" class="fb"><i></i></a></li>
+                    <li><a href="<?php the_field('twitter'); ?>" class="twitter"><i></i></a></li>
+                    <li><a href="<?php the_field('pinterest'); ?>" class="pinterest"><i></i></a></li>
+                    <li><a href="<?php the_field('youtube'); ?>" class="youtube"><i></i></a></li>
+                    <li><a href="<?php the_field('instagram'); ?>" class="inst"><i></i></a></li>
+                    <li><a href="<?php the_field('google_plus'); ?>" class="gplus"><i></i></a></li>
+                </ul>
             </div>
         </div><!-- .site-info -->
     </footer><!-- #colophon -->

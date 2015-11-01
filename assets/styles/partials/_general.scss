@@ -15,12 +15,29 @@
    General
    ========================================================================== */
 
-body { }
+.container {
+    width: 100%;
+    max-width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+    height: 100%;
+}
 
+input, select, textarea {
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    
+    &:focus {
+        outline: 0;
+    }
+}
 
 /* ==========================================================================
    Links
    ========================================================================== */
+a {
+    text-decoration: none;
+}
 
 a,
 a:visited {
@@ -45,16 +62,12 @@ img {
    Typography
    ========================================================================== */
 body {
-    font-family: Raleway;
+    font-family: Montserrat;
 }
-
-h1 { }
-h2 { }
-h3 { }
-h4 { }
 
 h1, h2, h3, h4, h5, h6 {
     clear: both;
+    line-height: 1;
 }
 
 p {
@@ -76,12 +89,10 @@ address {
 
 .alignleft {
     display: inline;
-    float: left;
     margin-right: 1.5em;
 }
 .alignright {
     display: inline;
-    float: right;
     margin-left: 1.5em;
 }
 .aligncenter {
@@ -166,67 +177,52 @@ address {
     display: block;
 }
 
+// Websymbols font
+@font-face {
+	font-family: 'WebSymbols';
+	src: url('assets/fonts/WebSymbols-Regular.otf');
+}
+
+@font-face {
+	font-family: 'MontserratBold';
+	src: url('assets/fonts/Montserrat-Black.otf');
+}
+
+@font-face {
+	font-family: 'MontserratLight';
+	src: url('assets/fonts/Montserrat-Light.otf');
+}
+
 // fix owl controls
 .owl-controls {
-    position: absolute;
-    top: -55px;
-    right: 0;
+	position: absolute;
+	top: -67px;
+	right: 0;
 
     .owl-prev,
     .owl-next {
-        display: inline-block;
-        float: left;
-        width: 24px;
-        height: 24px;
-        text-indent: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-
-    .owl-prev {
-        background: url(assets/images/prev.png) no-repeat;
-        margin-right: 12px;
-
-        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-            only screen and (   min--moz-device-pixel-ratio: 1.5),
-            only screen and (     -o-min-device-pixel-ratio: 3/2),
-            only screen and (        min-device-pixel-ratio: 1.5),
-            only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/prev_2x.png) no-repeat;
-                background-size: 100%;
-            }
-
-        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-            only screen and (   min--moz-device-pixel-ratio: 2.5),
-            only screen and (     -o-min-device-pixel-ratio: 5/2),
-            only screen and (        min-device-pixel-ratio: 2.5),
-            only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/prev_3x.png) no-repeat;
-                background-size: 100%;
-            }
-    }
-
-    .owl-next {
-        background: url(assets/images/next.png) no-repeat;
-
-        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-            only screen and (   min--moz-device-pixel-ratio: 1.5),
-            only screen and (     -o-min-device-pixel-ratio: 3/2),
-            only screen and (        min-device-pixel-ratio: 1.5),
-            only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/next_2x.png) no-repeat;
-                background-size: 100%;
-            }
-
-        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-            only screen and (   min--moz-device-pixel-ratio: 2.5),
-            only screen and (     -o-min-device-pixel-ratio: 5/2),
-            only screen and (        min-device-pixel-ratio: 2.5),
-            only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/next_3x.png) no-repeat;
-                background-size: 100%;
-            }
-    }
+		display: inline-block;
+		font-family: WebSymbols;
+		font-size: 20px;
+		color: #828282;
+		
+		&:hover {
+			color: $darkRed;
+		}
+	}
+	
+	.owl-prev {
+		margin-right: 10px;
+	}
+	
+	@media only screen and (max-width: 767px) {
+		top: -37px;
+		
+		.owl-prev,
+    	.owl-next {
+			font-size: 16px;
+		}
+	}
 }
 
 .view-all {

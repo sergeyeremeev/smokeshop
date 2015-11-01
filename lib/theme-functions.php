@@ -125,6 +125,8 @@ function wpb_add_google_fonts() {
     wp_enqueue_style( 'wpb-googleFonts2');
     wp_register_style('wpb-googleFonts3', 'http://fonts.googleapis.com/css?family=Alex+Brush');
     wp_enqueue_style( 'wpb-googleFonts3');
+    wp_register_style('wpb-googleFonts4', 'http://fonts.googleapis.com/css?family=Montserrat:400,700');
+    wp_enqueue_style( 'wpb-googleFonts4');
 }
 add_action('wp_print_styles', 'wpb_add_google_fonts');
 
