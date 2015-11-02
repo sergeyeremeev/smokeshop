@@ -33,14 +33,16 @@
                 </div>
                 <div class="top-bar-right right"> 
                     <i class="tray"></i>To Order: 
-                    <?php
-                        $args = array('post_type' => 'social');
-                        $loop = new WP_Query( $args );
-                        while ( $loop->have_posts() ) : $loop->the_post();
-                    ?>
-                        <?php the_field('phone'); ?>
-                    <?php endwhile;
-                        wp_reset_postdata(); ?>
+                    <span class="tel-num">
+                        <?php
+                            $args = array('post_type' => 'social');
+                            $loop = new WP_Query( $args );
+                            while ( $loop->have_posts() ) : $loop->the_post();
+                        ?>
+                            <?php the_field('phone'); ?>
+                        <?php endwhile;
+                            wp_reset_postdata(); ?>
+                    </span>
                 </div>
             </div>
         </div>
@@ -50,6 +52,7 @@
                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                 </div>
                 <div class="header-search right">
+                    <a href="#" class="search-toggle-mobile"></a>
                     <?php get_search_form(); ?>
                 </div>
             </div>

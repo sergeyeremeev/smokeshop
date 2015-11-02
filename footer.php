@@ -63,10 +63,6 @@
                         ?>
                     </div>
                 </div>
-                <div class="mobile-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                </div>
             </div>
         </div>
         <div class="site-info">

@@ -32,6 +32,9 @@ get_header(); ?>
 
                 <div class="home-about">
                     <div class="container">
+                        <div class="home-about-image-mobile">
+                            <?php the_field('about_image'); ?>
+                        </div>
                         <div class="home-about-text">
                             <h2>About Us</h2>
                             <?php

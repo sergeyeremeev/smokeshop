@@ -19,6 +19,12 @@
     searchField.on('blur', function () {
         searchSubmit.removeClass('toggled');
     });
+    
+    // mobile search toggle
+    $('.search-toggle-mobile').on('click', function (e) {
+        e.preventDefault();
+        $(this).next('.search-form').toggle();
+    });
 
     // testimonials switch author and content
     $(document).ready(function () {
@@ -28,7 +34,7 @@
     });
     
     // add merge attributes to testimonials
-    if ($(document).width() > 1024) {
+    if ($(document).width() >= 768) {
         for (i = 0; i < testimonialsNum; i += 2) {
             testimonialSingle.slice(i, i + 2).wrapAll("<div class='testimonials-wrap'></div>");
         }
@@ -48,15 +54,12 @@
             $(".locations-container").owlCarousel({
                 margin: 20,
                 loop: true,
-                items: 3,
-                center: true,
+                autoWidth: true,
                 nav: true,
                 navText: ['&lt','&gt']
             });
         } else {
             $(".locations-container").owlCarousel({
-                margin: 0,
-                stagePadding: 0,
                 loop: true,
                 items: 1,
                 nav: true,
@@ -189,34 +192,15 @@
     });
 
     // menu toggle
-    if ($(document).width() < 960) {
+    if ($(document).width() < 768) {
         $('.menu-toggle').on('click', function(e) {
             e.preventDefault();
-            $(this).toggleClass('toggled');
-            $('.menu-main-menu-container').toggleClass('toggled');
+            $('body').toggleClass('menu-toggled');
         });
     }
 
-    // testimonials cutoff
+    // minimized text
     if ($(document).width() < 768) {
-        $('.testimonials-container').find('blockquote').each(function () {
-            $(this).html(
-                $(this).text().slice(0, 170)+'<span>... </span><a href="#" class="read-more-testimonial extend-content">read more</a>'+
-                '<span style="display:none;">'+ $(this).text().slice(170 ,$(this).text().length)+' <a href="#" class="less-testimonial extend-content">less</a></span>'
-            );
-        });
-
-        $('a.read-more-testimonial.extend-content').click(function(event){
-            event.preventDefault();
-            $(this).hide().prev().hide();
-            $(this).next().show();
-        });
-
-        $('a.less-testimonial.extend-content').click(function(event){
-            event.preventDefault();
-            $(this).parent().hide().prev().show().prev().show();
-        });
-
         var minimizedElements = $('.minimize');
         var minimizeCharacterCount = 170;
 
