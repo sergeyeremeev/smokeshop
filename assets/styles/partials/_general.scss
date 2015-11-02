@@ -197,6 +197,11 @@ address {
 	src: url('assets/fonts/Montserrat-Light.otf');
 }
 
+@font-face {
+	font-family: 'MontserratUltraLight';
+	src: url('assets/fonts/Montserrat-UltraLight.otf');
+}
+
 // fix owl controls
 .owl-controls {
 	position: absolute;
@@ -226,6 +231,60 @@ address {
     	.owl-next {
 			font-size: 16px;
 		}
+	}
+}
+
+.mejs-overlay-button {
+    width: 139px !important;
+    height: 139px !important;
+    margin: -70px 0 0 -70px !important;
+    background: url(assets/images/play_btn_white_big.png) no-repeat !important;
+    background-size: 100% !important;
+    
+    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (   min--moz-device-pixel-ratio: 1.5),
+        only screen and (     -o-min-device-pixel-ratio: 3/2),
+        only screen and (        min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 192dpi) {
+            background: url(assets/images/play_btn_white_big_2x.png) no-repeat !important;
+            background-size: 100% !important;
+        }
+
+    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+        only screen and (   min--moz-device-pixel-ratio: 2.5),
+        only screen and (     -o-min-device-pixel-ratio: 5/2),
+        only screen and (        min-device-pixel-ratio: 2.5),
+        only screen and (min-resolution: 192dpi) {
+            background: url(assets/images/play_btn_white_big_2x.png) no-repeat !important;
+            background-size: 100% !important;
+        }
+}
+
+@media only screen and (max-width: 767px) {
+	.mejs-overlay-button {
+		width: 63px !important;
+		height: 63px !important;
+		margin: -31px 0 0 -31px !important;
+		background: url(assets/images/play_btn.png) no-repeat !important;
+		background-size: 100% !important;
+		
+		@media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+			only screen and (   min--moz-device-pixel-ratio: 1.5),
+			only screen and (     -o-min-device-pixel-ratio: 3/2),
+			only screen and (        min-device-pixel-ratio: 1.5),
+			only screen and (min-resolution: 192dpi) {
+				background: url(assets/images/play_btn_2x.png) no-repeat !important;
+				background-size: 100% !important;
+			}
+	
+		@media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+			only screen and (   min--moz-device-pixel-ratio: 2.5),
+			only screen and (     -o-min-device-pixel-ratio: 5/2),
+			only screen and (        min-device-pixel-ratio: 2.5),
+			only screen and (min-resolution: 192dpi) {
+				background: url(assets/images/play_btn_2x.png) no-repeat !important;
+				background-size: 100% !important;
+			}
 	}
 }
 

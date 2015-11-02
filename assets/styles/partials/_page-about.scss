@@ -1,206 +1,68 @@
 .about-banner {
-    height: 400px;
+    height: 350px;
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
-    font-family: Raleway;
-
+    
     .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding-top: 156px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        text-align: center; 
     }
 
     .banner-text1,
     .banner-text2 {
         display: block;
         line-height: 1;
-        font-size: 48px;
-        text-transform: uppercase;
+        font-size: 40px;
+        color: #fff;
     }
 
     .banner-text1 {
-        font-weight: 900;
-        color: #d92738;
+        font-family: MontserratBold;
         margin-bottom: 10px;
+        text-transform: uppercase;
     }
 
     .banner-text2 {
-        color: #fff;
-        font-weight: 300;
+        font-family: MontserratUltraLight;
     }
 }
 
 .about-main {
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 40px 0 30px;
-    }
-
-    p {
-        font-size: 14px;
-        color: #000;
-    }
-
-    p:first-of-type {
-        font-weight: 700;
+    
+    & > .container {
+        padding: 80px 10px;
+        
+        & > p {
+            font-size: 24px;
+            color: #1d1d1d;
+            line-height: 1.6;
+            font-family: MontserratUltraLight;
+            margin: 0;
+        }
     }
 }
 
-.about-sliders {
-    height: 400px;
-    background: url(assets/images/about_sliders.jpg);
-    background-repeat: no-repeat;
-    background-size: cover !important;
-    background-position: center;
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding-top: 60px;
-    }
-
-    .testimonials-container {
-        width: 50%;
-        padding-right: 7.2%;
-        float: left;
-
-        .view-all {
-            display: none;
-        }
-
-        h3 {
-            font-size: 14px;
-            color: #fff;
-            font-weight: 700;
-            margin: 0;
-            text-transform: uppercase;
-            position: relative;
-            padding: 0 0 15px 40px;
-            border-bottom: 1px solid #fff;
-
-            span {
-                font-size: 60px;
-                font-family: Times;
-                display: inline-block;
-                letter-spacing: -7px;
-                color: #d92738;
-                position: absolute;
-                line-height: 0;
-                left: 0;
-                top: 17px;
-            }
-        }
-
-        .owl-controls {
-            top: -40px;
-        }
-
-        .paging {
-            display: none !important;
-        }
-
-        blockquote {
-            font-size: 14px;
-            font-style: italic;
-            margin: 0 !important;
-            font-family: Raleway !important;
-
-            p {
-                color: #fff;
-                font-weight: 400 !important;
-            }
-        }
-
-        .credit {
-            text-align: left !important;
-            font-size: 14px;
-            color: #d92738;
-            font-family: Raleway !important;
-
-            &:before {
-                content: none !important;
-            }
-        }
-    }
-
-    .videos-container {
-        width: 50%;
-        padding-left: 7.2%;
-        float: left;
-
-        h3 {
-            font-size: 14px;
-            color: #fff;
-            font-weight: 700;
-            margin: 0 0 15px;
-            text-transform: uppercase;
-        }
-
-        .owl-controls {
-            top: -40px;
-
-            .owl-prev {
-                background: url(assets/images/prev_white.png) no-repeat;
-
-                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                    only screen and (   min--moz-device-pixel-ratio: 1.5),
-                    only screen and (     -o-min-device-pixel-ratio: 3/2),
-                    only screen and (        min-device-pixel-ratio: 1.5),
-                    only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/prev_white_2x.png) no-repeat;
-                        background-size: 100%;
-                    }
-
-                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                    only screen and (   min--moz-device-pixel-ratio: 2.5),
-                    only screen and (     -o-min-device-pixel-ratio: 5/2),
-                    only screen and (        min-device-pixel-ratio: 2.5),
-                    only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/prev_white_3x.png) no-repeat;
-                        background-size: 100%;
-                    }
-            }
-
-            .owl-next {
-                background: url(assets/images/next_white.png) no-repeat;
-
-                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                    only screen and (   min--moz-device-pixel-ratio: 1.5),
-                    only screen and (     -o-min-device-pixel-ratio: 3/2),
-                    only screen and (        min-device-pixel-ratio: 1.5),
-                    only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/next_white_2x.png) no-repeat;
-                        background-size: 100%;
-                    }
-
-                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                    only screen and (   min--moz-device-pixel-ratio: 2.5),
-                    only screen and (     -o-min-device-pixel-ratio: 5/2),
-                    only screen and (        min-device-pixel-ratio: 2.5),
-                    only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/next_white_3x.png) no-repeat;
-                        background-size: 100%;
-                    }
-            }
-        }
+.about-video {
+    padding: 80px 0;
+    background: url(assets/images/locations-bg.jpg) repeat;
+    
+    h3 {
+        font-size: 40px;
+        color: $blackGrey;
+        margin: 0 0 20px;
+        text-transform: uppercase;
     }
 }
 
 .about-stats {
-    background: #eee;
-    height: 270px;
-    padding-top: 50px;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-
+    background: url(assets/images/menu_bg.jpg) repeat;
+    padding: 80px 0;
+    
     .container {
-        padding: 0;
+        overflow: hidden;
     }
 
     .stat-single {
@@ -306,16 +168,16 @@
 
     span {
         display: block;
+        text-transform: uppercase;
         text-align: center;
         font-size: 14px;
-        color: #666;
+        color: #ccc;
 
         &.bold {
-            font-family: 'Open Sans';
             font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: #000;
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: #fff;
         }
     }
 }
@@ -340,60 +202,40 @@
     }
 }
 
-
-.about-locations {
-    padding: 0 !important;
-}
-
 @media only screen and (max-width: 959px) {
     .about-banner {
-        height: 240px;
-
-        .container {
-            padding-top: 100px;
-        }
-
-        .banner-text1 {
-            font-size: 30px;
-        }
-
-        .banner-text2 {
-            font-size: 36px;
-        }
+        height: 292px;
     }
 
     .about-main {
-
-        .container {
-            padding: 15px 0 10px;
+    
+        & > .container {
+            padding: 60px 20px;
         }
     }
-
-    .about-sliders {
-        height: 300px;
-    }
-
+    
+    .about-video,
     .about-stats {
-        height: 240px;
-        padding-top: 20px;
+        padding: 60px 0;
     }
-
-    .about-locations {
-        height: 320px;
+    
+    .about-stats {
+        
+        .stat-single span:nth-of-type(2) {
+            width: 150px;
+            margin: 0 auto;
+        }
     }
 }
 
 @media only screen and (max-width: 767px) {
     .about-banner {
-        height: 110px;
-
-        .container {
-            padding-top: 30px;
-        }
+        height: 152px;
+        padding: 0 30px;
 
         .banner-text1 {
-            font-size: 18px;
-            margin-bottom: 5px;
+            font-size: 20px;
+            margin-bottom: 15px;
             text-align: center;
         }
 
@@ -405,138 +247,30 @@
 
     .about-main {
 
-        .container {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-
-        .about-sliders {
-            background: url(assets/images/about_sliders_mobile.jpg) no-repeat;
-            height: auto;
-
-            .testimonials-container {
-                position: relative;
-                width: 100%;
-                float: none;
-                padding-right: 0;
-                padding-top: 20px;
-
-                @media screen and (min-width: 320px) and (max-width: 419px) {
-                    height: 270px;
-                }
-
-                @media screen and (min-width: 420px) and (max-width: 420px) {
-                    height: 380px;
-                }
-
-                @media screen and (min-width: 700px) {
-                    height: 420px;
-                }
-
-                h3 {
-                    margin-bottom: 20px;
-                    padding-left: 30px;
-
-                    span {
-                        font-size: 50px;
-                    }
-                }
-
-                blockquote,
-                .minimize {
-                    color: #fff;
-                    font-size: 12px;
-                }
-
-                blockquote,
-                .owl-stage-outer {
-                    width: -webkit-calc(100% - 80px);
-                    width: calc(100% - 80px);
-                }
-
-                .owl-stage-outer {
-                    margin-left: 40px;
-                    z-index: 2;
-                }
-
-                .owl-controls {
-                    top: 0;
-                    height: 100%;
-                    left: -40px;
-                    width: 100%;
-                }
-
-                .owl-prev {
-                    position: relative;
-                    top: 30px;
-                    left: 42px;
-                }
-
-                .owl-next {
-                    position: relative;
-                    top: 30px;
-                    left: calc(100% - 26px);
-                    left: -webkit-calc(100% - 26px);
-                }
-
-                .view-all {
-                    display: block;
-                    position: absolute;
-                    right: 10px;
-                    top: 20px;
-                    font-size: 12px;
-                    color: #d92738;
-                    font-family: Raleway;
-                    text-decoration: none;
-                    font-weight: 700;
-                }
-
-                .extend-content {
-                    font-size: 12px;
-                    color: #d92738;
-                    font-family: Raleway;
-                    text-decoration: none;
-                    font-weight: 700;
-                    font-style: normal;
-                }
-
-                .credit {
-                    margin-top: 15px;
-                }
-            }
-
-            .videos-container {
-                width: 100%;
-                float: none;
-                padding-left: 0;
-                padding-bottom: 15px;
-            }
-        }
-
-        .about-stats {
-            @include clearfix;
-            height: auto;
-
-            .stat-single {
-                width: 50%;
-                margin-bottom: 15px;
-
-                .bold {
-                    margin-bottom: 0;
-                }
+        & > .container {
+            padding: 30px 20px;
+            
+            & > p {
+                font-size: 18px;
             }
         }
     }
-
-    .about-locations {
-        height: 245px;
-        padding-top: 15px !important;
+    
+    .about-video {
+        padding: 30px 0;
+        
+        h3 {
+            font-size: 20px;
+        }
     }
 
-    .page-subscribe-module {
+    .about-stats {
+        padding: 30px 0;
 
-        .container {
-            padding-top: 10px;
+        .stat-single {
+            float: none;
+            width: 100%;
+            margin-bottom: 15px;
         }
     }
 }

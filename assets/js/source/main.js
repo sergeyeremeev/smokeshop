@@ -89,7 +89,7 @@
             merge: true
         });
 
-        $(".video-slider, .shop-video-container").owlCarousel({
+        $(".shop-video-container").owlCarousel({
             margin: 0,
             stagePadding: 0,
             loop: true,

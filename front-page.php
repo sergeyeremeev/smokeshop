@@ -33,7 +33,7 @@ get_header(); ?>
                 <div class="home-about">
                     <div class="container">
                         <div class="home-about-image-mobile">
-                            <?php the_field('about_image'); ?>
+                            <?php echo get_the_post_thumbnail( '7', 'full' ); ?>
                         </div>
                         <div class="home-about-text">
                             <h2>About Us</h2>
@@ -44,7 +44,7 @@ get_header(); ?>
                             ?>
                         </div>
                         <div class="home-about-image">
-                            <?php the_field('about_image'); ?>
+                            <?php echo get_the_post_thumbnail( '7', 'full' ); ?>
                         </div>
                     </div>
                 </div>

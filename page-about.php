@@ -26,35 +26,32 @@ get_header(); ?>
 
                 <div class="about-main">
                     <div class="container">
-                        <?php
-                            $content = get_post_field( 'post_content', get_the_ID() );
-                            $content_parts = get_extended( $content );
-                            echo $content_parts['main'];
-                        ?>
+                        <p>
+                            <?php
+                                $content = get_post_field( 'post_content', get_the_ID() );
+                                $content_parts = get_extended( $content );
+                                echo $content_parts['main'];
+                            ?>
+                        </p>
                     </div>
 
-                    <div class="about-sliders">
+                    <div class="about-video">
                         <div class="container">
-                            <div class="testimonials-container">
-                                <h3><span>‘’</span>Client Testimonials</h3>
-                                <a href="#" class="view-all">view all</a>
-                                <?php the_field('testimonials_code'); ?>
-                            </div>
-                            <div class="videos-container">
-                                <h3>Videos</h3>
-                                <div class="video-slider">
-                                    <?php the_field('videos'); ?>
-                                </div>
+                            <h3>Video</h3>
+                            <div class="video-container">
+                                <?php the_field('video'); ?>
                             </div>
                         </div>
                     </div>
 
                     <div class="container">
-                        <?php if (strpos($post->post_content, '-->')) : ?>
-                        <?php $aftermore = 3 + strpos($post->post_content, '-->');
-                            echo substr($post->post_content,$aftermore);
-                        ?>
-                        <?php endif; ?>
+                        <p>
+                            <?php if (strpos($post->post_content, '-->')) : ?>
+                            <?php $aftermore = 3 + strpos($post->post_content, '-->');
+                                echo substr($post->post_content,$aftermore);
+                            ?>
+                            <?php endif; ?>
+                        </p>
                     </div>
 
                     <div class="about-stats">
@@ -89,10 +86,13 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-
-                    <div class="about-content-2">
+                    
+                    <div class="home-testimonials">
                         <div class="container">
-                            <?php the_field('content_2'); ?>
+                            <h2>Client Testimonials</h2>
+                            <div class="testimonials-container home-testimonials-container">
+                                <?php the_field('testimonials_code'); ?>
+                            </div>
                         </div>
                     </div>
 
@@ -100,16 +100,9 @@ get_header(); ?>
                         <img src="<?php the_field('page_image'); ?>" alt="SmokeShop">
                     </div>
 
-                    <div class="about-content-3">
-                        <div class="container">
-                            <?php the_field('content_3'); ?>
-                        </div>
-                    </div>
-
                     <div class="about-locations">
                         <div class="container">
                             <h2>Our Locations</h2>
-                            <a href="#" class="view-all">view all</a>
                             <div class="locations-container">
                                 <?php
                                     $args = array('post_type' => 'locations');
@@ -118,13 +111,15 @@ get_header(); ?>
                                     if (get_field('short_address') !== '') {
                                 ?>
                                     <div class="location-single">
+                                        <div class="location-image">
+                                            <img src="<?php the_field('shop_image'); ?>" alt="<?php the_title(); ?>">
+                                        </div>
                                         <h3><?php the_field('short_address'); ?></h3>
-                                        <a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
                                         <div class="location-info-box">
-                                            <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
-                                            <span class="phone"><span class="icon"></span><span class="text"><?php the_field('phone_number'); ?></span></span>
+                                            <span class="address"><div class="icon-container"><span class="icon"></span></div><span class="text"><?php the_field('full_address'); ?></span></span>
+                                            <span class="phone"><div class="icon-container"><span class="icon"></span></div><span class="text"><?php the_field('phone_number'); ?></span></span>
                                             <span class="open-hours">
-                                                <span class="icon"></span>
+                                                <div class="icon-container"><span class="icon"></span></div>
                                                 <span class="text">
                                                     <?php the_field('open_hours_1'); ?>
                                                     <?php if ( get_field('open_hours_2') ) { ?>
@@ -133,21 +128,14 @@ get_header(); ?>
                                                 </span>
                                             </span>
                                         </div>
+                                        <a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
                                     </div>
-                                <?php }
+                                <?php
+                                    }
                                     endwhile;
                                     wp_reset_postdata();
                                 ?>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="page-subscribe-module">
-                        <div class="container">
-                            <h2>BE THE FIRST TO GET EXCLUSIVES AND DISCOUNTS FROM US!</h2>
-                            <?php
-                                if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }
-                            ?>
                         </div>
                     </div>
                 </div>
