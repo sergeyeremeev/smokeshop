@@ -18,7 +18,7 @@ get_header(); ?>
                 <div class="coming-soon-section">
                     <div class="coming-soon-content">
                         <h2>Our online shop <span class="bold">is coming soon!</span></h2>
-                        <?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?>
+                        <?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
                     </div>
                 </div>
             <?php endwhile; // end of the loop. ?>
