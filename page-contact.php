@@ -19,16 +19,20 @@ get_header(); ?>
 
                 <div class="contact-banner" style="background: url(<?php the_field('banner_image'); ?>) no-repeat;">
                     <div class="container">
-                        <span class="banner-text1"><?php the_field('banner_text_1'); ?></span>
-                        <span class="banner-text2"><?php the_field('banner_text_2'); ?></span>
+                        <span class="banner-text"><?php the_field('banner_text'); ?></span>
                     </div>
                 </div>
 
                 <div class="contact-main">
                     <div class="container">
-                        <?php the_content(); ?>
+                        <div class="contact-content">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
 
-                        <div class="contact-blocks">
+                    <div class="contact-blocks">
+                        <div class="container">
+                            <h1>Contact Us</h1>
                             <div class="contact-block-single email">
                                 <div class="icon-space"><i></i></div>
                                 <span>Send us an Email and we will respond within 24 hours</span>
@@ -45,7 +49,7 @@ get_header(); ?>
                                     ?>
                                         <?php the_field('phone'); ?>
                                     <?php endwhile;
-                                          wp_reset_postdata(); ?>
+                                            wp_reset_postdata(); ?>
                                 </a>
                             </div>
                             <div class="contact-block-single chat">
@@ -59,6 +63,7 @@ get_header(); ?>
 
                 <div class="contact-form">
                     <div class="container">
+                        <i class="email-icon"></i>
                         <?php the_field('contact_form_code'); ?>
                     </div>
                 </div>

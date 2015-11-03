@@ -2981,74 +2981,76 @@ object {
    Blog pages
    ========================================================================== */
 .contact-banner {
-  height: 300px;
+  height: 350px;
   background-repeat: no-repeat;
   background-size: cover !important;
   background-position: center;
   font-family: Raleway;
 }
 .contact-banner .container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding-top: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.contact-banner .banner-text1,
-.contact-banner .banner-text2 {
+.contact-banner .banner-text {
   display: block;
-  line-height: 1;
-  font-size: 48px;
+  font-family: MontserratBold;
+  width: 500px;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 40px;
   text-transform: uppercase;
-}
-.contact-banner .banner-text1 {
-  font-weight: 900;
-  color: #d92738;
-}
-.contact-banner .banner-text2 {
   color: #fff;
-  font-weight: 300;
 }
 
-.contact-main {
-  padding-top: 50px;
-}
-.contact-main .container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-}
-.contact-main h1 {
+.contact-main .contact-content {
+  padding: 70px 0;
   font-size: 24px;
-  font-weight: 700;
-  color: #000;
-  text-transform: uppercase;
-  margin: 0 0 10px;
+  color: #1d1d1d;
+  font-family: MontserratUltraLight;
+  line-height: 1.7;
 }
-.contact-main p {
-  font-size: 14px;
-  color: #666;
+.contact-main .contact-content p {
+  margin: 0;
+}
+.contact-main .contact-content strong {
+  font-family: Montserrat;
+  font-weight: 700;
 }
 
 .contact-blocks {
-  margin: 50px 0;
+  padding: 80px 0;
+  background: url(assets/images/locations-bg.jpg) repeat;
 }
-.contact-blocks:before, .contact-blocks:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
+.contact-blocks .container {
+  overflow: hidden;
 }
-.contact-blocks:after {
-  clear: both;
+.contact-blocks h1 {
+  font-size: 40px;
+  color: #1d1d1d;
+  text-transform: uppercase;
+  margin: 0 0 20px;
 }
 
 .contact-block-single {
   width: 300px;
-  height: 240px;
   float: left;
-  margin-right: 30px;
-  border: 1px solid #ccc;
+  margin-right: 20px;
+  border: 1px solid #d9d9d9;
   text-align: center;
+  background: #fff;
+  padding-bottom: 50px;
+  box-shadow: 0px 3px 1px 0px rgba(1, 1, 1, 0.08);
+  margin-bottom: 4px;
 }
 .contact-block-single:last-of-type {
   margin-right: 0;
@@ -3067,16 +3069,20 @@ object {
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-justify-content: center;
-  height: 140px;
+  height: 178px;
+  width: 178px;
+  margin: 40px auto;
+  border-radius: 50%;
+  background: #d92738;
 }
 .contact-block-single .icon-space i {
   display: block;
 }
 .contact-block-single span {
-  font-family: 'Open Sans';
-  font-size: 14px;
-  color: #666;
-  width: 190px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #0c0c0c;
+  width: 210px;
   display: inline-block;
 }
 .contact-block-single a {
@@ -3091,84 +3097,164 @@ object {
   color: #be2231;
 }
 .contact-block-single.email i {
-  width: 70px;
+  width: 75px;
   height: 51px;
-  background: url(assets/images/envelope.png) no-repeat;
+  background: url(assets/images/envelope_new.png) no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .contact-block-single.email i {
-    background: url(assets/images/envelope_2x.png) no-repeat;
+    background: url(assets/images/envelope_new_2x.png) no-repeat;
     background-size: 100%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .contact-block-single.email i {
-    background: url(assets/images/envelope_3x.png) no-repeat;
+    background: url(assets/images/envelope_new_3x.png) no-repeat;
     background-size: 100%;
   }
 }
 .contact-block-single.phone i {
-  width: 67px;
-  height: 71px;
-  background: url(assets/images/phone_contact.png) no-repeat;
+  width: 50px;
+  height: 69px;
+  background: url(assets/images/phone_contact_new.png) no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .contact-block-single.phone i {
-    background: url(assets/images/phone_contact_2x.png) no-repeat;
+    background: url(assets/images/phone_contact_new_2x.png) no-repeat;
     background-size: 100%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .contact-block-single.phone i {
-    background: url(assets/images/phone_contact_3x.png) no-repeat;
+    background: url(assets/images/phone_contact_new_3x.png) no-repeat;
     background-size: 100%;
   }
 }
 .contact-block-single.chat i {
-  width: 70px;
-  height: 64px;
-  background: url(assets/images/chat.png) no-repeat;
+  width: 79px;
+  height: 65px;
+  background: url(assets/images/chat_new.png) no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .contact-block-single.chat i {
-    background: url(assets/images/chat_2x.png) no-repeat;
+    background: url(assets/images/chat_new_2x.png) no-repeat;
     background-size: 100%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .contact-block-single.chat i {
-    background: url(assets/images/chat_3x.png) no-repeat;
+    background: url(assets/images/chat_new_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+.contact-block-single:hover {
+  border: 1px solid #d92738;
+}
+.contact-block-single:hover .icon-space {
+  background: #f8f8f8;
+}
+.contact-block-single:hover.email i {
+  width: 75px;
+  height: 51px;
+  background: url(assets/images/envelope_new_red.png) no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .contact-block-single:hover.email i {
+    background: url(assets/images/envelope_new_red_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .contact-block-single:hover.email i {
+    background: url(assets/images/envelope_new_red_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+.contact-block-single:hover.phone i {
+  width: 50px;
+  height: 69px;
+  background: url(assets/images/phone_contact_new_red.png) no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .contact-block-single:hover.phone i {
+    background: url(assets/images/phone_contact_new_red_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .contact-block-single:hover.phone i {
+    background: url(assets/images/phone_contact_new_red_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+.contact-block-single:hover.chat i {
+  width: 79px;
+  height: 65px;
+  background: url(assets/images/chat_new_red.png) no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .contact-block-single:hover.chat i {
+    background: url(assets/images/chat_new_red_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .contact-block-single:hover.chat i {
+    background: url(assets/images/chat_new_red_3x.png) no-repeat;
     background-size: 100%;
   }
 }
 
 .contact-form {
-  height: 512px;
-  background: url(assets/images/contact_form_grey.jpg) no-repeat;
+  height: 676px;
+  padding-top: 80px;
+  background: url(assets/images/contact_form_new.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover !important;
   background-position: center;
 }
 .contact-form .container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding-top: 50px;
+  position: relative;
+}
+.contact-form .email-icon {
+  display: block;
+  width: 60px;
+  height: 38px;
+  background: url(assets/images/envelope_new.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .contact-form .email-icon {
+    background: url(assets/images/envelope_new_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .contact-form .email-icon {
+    background: url(assets/images/envelope_new_3x.png) no-repeat;
+    background-size: 100%;
+  }
 }
 .contact-form h2 {
-  margin: 0;
   color: #fff;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0 0 20px;
 }
 .contact-form p:first-of-type {
   margin: 0 0 20px;
-  width: 100%;
+  width: -webkit-calc(100% - 160px);
+  width: calc(100% - 160px);
 }
 .contact-form p:first-of-type span {
-  font-size: 14px;
+  font-size: 24px;
   color: #fff;
+  font-family: MontserratUltraLight;
+  line-height: 1.4;
 }
 .contact-form p {
   width: 49%;
@@ -3186,70 +3272,77 @@ object {
 .contact-form input,
 .contact-form select {
   width: 100%;
-  height: 50px;
+  height: 66px;
   float: left;
   border: 0;
   background: #fff;
-  padding-left: 15px;
+  padding-left: 28px;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form input::-webkit-input-placeholder,
 .contact-form select::-webkit-input-placeholder {
-  font-size: 14px;
-  color: #000;
-  font-family: Raleway;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form input:-moz-placeholder,
 .contact-form select:-moz-placeholder {
-  font-size: 14px;
-  color: #000;
-  font-family: Raleway;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form input::-moz-placeholder,
 .contact-form select::-moz-placeholder {
-  font-size: 14px;
-  color: #000;
-  font-family: Raleway;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form input:-ms-input-placeholder,
 .contact-form select:-ms-input-placeholder {
-  font-size: 14px;
-  color: #000;
-  font-family: Raleway;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
-.contact-form p:nth-of-type(6) {
+.contact-form p:nth-of-type(6),
+.contact-form p:nth-of-type(7) {
   width: 100%;
 }
 .contact-form .message-field {
   width: 100%;
   height: 120px;
   resize: none;
-  padding: 10px 15px;
+  padding: 20px 28px;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form .message-field::-webkit-input-placeholder {
-  font-size: 14px;
-  color: #000;
-  font-family: Raleway;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form .message-field:-moz-placeholder {
-  font-size: 14px;
-  color: #000;
-  font-family: Raleway;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form .message-field::-moz-placeholder {
-  font-size: 14px;
-  color: #000;
-  font-family: Raleway;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form .message-field:-ms-input-placeholder {
-  font-size: 14px;
-  color: #000;
-  font-family: Raleway;
+  font-size: 18px;
+  color: #c9c7c8;
+  font-family: Montserrat;
 }
 .contact-form .submit-btn {
-  width: 200px;
-  height: 50px;
+  width: 100%;
+  height: 66px;
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
   cursor: pointer;
@@ -3272,121 +3365,104 @@ object {
   width: 0;
   height: 0;
   position: relative;
-  top: -24px;
-  left: -webkit-calc(100% - 25px);
-  left: calc(100% - 25px);
+  top: -28px;
+  left: -webkit-calc(100% - 30px);
+  left: calc(100% - 30px);
   border-style: solid;
   border-width: 6px 6px 0;
-  border-color: #000 transparent transparent;
+  border-color: #c9c7c8 transparent transparent;
   pointer-events: none;
 }
 
-@media only screen and (max-width: 1280px) {
-  .contact-block-single {
-    width: 230px;
-    height: 220px;
-    margin-right: -webkit-calc( (100% - 230px - 230px - 230px) / 2);
-    margin-right: calc( (100% - 230px - 230px - 230px) / 2);
-  }
-  .contact-block-single .icon-space {
-    height: 125px;
-  }
-}
 @media only screen and (max-width: 959px) {
   .contact-banner {
-    height: 240px;
-    background-size: 100% 100% !important;
-  }
-  .contact-banner .banner-text1 {
-    font-size: 30px !important;
-  }
-  .contact-banner .banner-text2 {
-    font-size: 36px !important;
+    height: 290px;
   }
 
-  .contact-main {
-    padding-top: 30px;
+  .contact-content {
+    padding: 55px 0;
   }
 
-  h2 {
-    font-size: 16px;
-    margin-bottom: 15px;
+  .contact-blocks .contact-block-single {
+    width: -webkit-calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
+    height: 382px;
+  }
+  .contact-blocks .contact-block-single a {
+    max-width: -webkit-calc(100% - 105px);
+    max-width: calc(100% - 105px);
+    margin: 10px auto 0;
+    word-wrap: break-word;
   }
 
+  .contact-blocks,
   .contact-form {
-    height: 464px;
-  }
-  .contact-form .container {
-    padding-top: 30px;
+    padding: 60px 0;
   }
 
-  .wpcf7-form p:last-of-type {
-    width: 100%;
-    margin: 0;
+  .contact-form p:first-of-type span {
+    font-size: 20px;
   }
-
-  .submit-btn {
-    width: 100% !important;
+  .contact-form .email-icon {
+    right: 20px;
   }
 }
 @media only screen and (max-width: 767px) {
   .contact-banner {
-    height: 110px;
-    background-size: 100% 100% !important;
+    height: 174px;
+    background-position: center !important;
   }
-  .contact-banner .container {
-    padding-top: 33px;
-  }
-  .contact-banner .banner-text1 {
-    font-size: 18px !important;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-  .contact-banner .banner-text2 {
-    font-size: 18px !important;
-    text-align: center;
+  .contact-banner .banner-text {
+    font-size: 20px;
   }
 
-  .contact-main {
-    padding-top: 15px;
-  }
-
-  h2 {
-    margin-bottom: 5px;
+  .contact-main .contact-content {
+    padding: 30px 0;
+    font-size: 18px;
+    line-height: 2;
   }
 
   .contact-blocks {
-    margin-top: 10px;
-    margin-bottom: 0;
+    padding: 30px 0;
+  }
+  .contact-blocks h1 {
+    font-size: 20px;
+    margin: 0 0 20px;
   }
 
   .contact-block-single {
-    width: 100%;
-    height: 190px;
+    width: 100% !important;
+    height: auto !important;
     margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .contact-block-single .icon-space {
-    height: 100px;
+    margin-bottom: 15px;
   }
 
   .contact-form {
-    height: 600px;
+    padding: 30px 0;
   }
-  .contact-form .container {
-    padding-top: 15px;
+  .contact-form h2 {
+    font-size: 20px;
+    width: -webkit-calc(100% - 100px);
+    width: calc(100% - 100px);
+    margin: 0 0 10px;
+  }
+  .contact-form p:first-of-type {
+    margin-bottom: 10px;
+  }
+  .contact-form p:last-of-type {
+    margin-bottom: 0;
   }
 
-  .wpcf7-form h2 {
-    font-size: 16px;
-    text-align: center;
-  }
-  .wpcf7-form p:first-of-type {
-    text-align: center;
+  .wpcf7-form input {
+    height: 56px !important;
   }
   .wpcf7-form p {
-    width: 100%;
+    width: 100% !important;
     margin-right: 0;
+  }
+  .wpcf7-form textarea {
+    height: 66px !important;
+    overflow: hidden;
   }
 
   .submit-btn {

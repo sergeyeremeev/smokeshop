@@ -1,71 +1,75 @@
 .contact-banner {
-    height: 300px;
+    height: 350px;
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
     font-family: Raleway;
-
+    
     .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .banner-text1,
-    .banner-text2 {
+    .banner-text {
         display: block;
-        line-height: 1;
-        font-size: 48px;
+        font-family: MontserratBold;
+        width: 500px;
+        text-align: center;
+        line-height: 1.2;
+        font-size: 40px;
         text-transform: uppercase;
-    }
-
-    .banner-text1 {
-        font-weight: 900;
-        color: #d92738;
-    }
-
-    .banner-text2 {
         color: #fff;
-        font-weight: 300;
     }
 }
 
 .contact-main {
-    padding-top: 50px;
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-    }
-
-    h1 {
+    
+    .contact-content {
+        padding: 70px 0;
         font-size: 24px;
-        font-weight: 700;
-        color: #000;
-        text-transform: uppercase;
-        margin: 0 0 10px;
-    }
-
-    p {
-        font-size: 14px;
-        color: #666;
+        color: #1d1d1d;
+        font-family: MontserratUltraLight;
+        line-height: 1.7;
+        
+        p {
+            margin: 0;
+        }
+        
+        strong {
+            font-family: Montserrat;
+            font-weight: 700;
+        }
     }
 }
 
 .contact-blocks {
-    @include clearfix;
-    margin: 50px 0;
+    padding: 80px 0;
+    background: url(assets/images/locations-bg.jpg) repeat;
+    
+    .container {
+        overflow: hidden;
+    }
+    
+    h1 {
+        font-size: 40px;
+        color: #1d1d1d;
+        text-transform: uppercase;
+        margin: 0 0 20px;
+    }
 }
 
 .contact-block-single {
     width: 300px;
-    height: 240px;
     float: left;
-    margin-right: 30px;
-    border: 1px solid #ccc;
+    margin-right: 20px;
+    border: 1px solid #d9d9d9;
     text-align: center;
+    background: #fff;
+    padding-bottom: 50px;
+    box-shadow: 0px 3px 1px 0px rgba(1, 1, 1, 0.08);
+    margin-bottom: 4px;
+
 
     &:last-of-type {
         margin-right: 0;
@@ -84,7 +88,11 @@
         align-items: center;
         justify-content: center;
         -webkit-justify-content: center;
-        height: 140px;
+        height: 178px;
+        width: 178px;
+        margin: 40px auto;
+        border-radius: 50%;
+        background: $darkRed;
 
         i {
             display: block;
@@ -92,10 +100,10 @@
     }
 
     span {
-        font-family: 'Open Sans';
-        font-size: 14px;
-        color: #666;
-        width: 190px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: #0c0c0c;
+        width: 210px;
         display: inline-block;
     }
 
@@ -115,16 +123,16 @@
     &.email {
 
         i {
-            width: 70px;
+            width: 75px;
             height: 51px;
-            background: url(assets/images/envelope.png) no-repeat;
+            background: url(assets/images/envelope_new.png) no-repeat;
 
             @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                 only screen and (   min--moz-device-pixel-ratio: 1.5),
                 only screen and (     -o-min-device-pixel-ratio: 3/2),
                 only screen and (        min-device-pixel-ratio: 1.5),
                 only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/envelope_2x.png) no-repeat;
+                    background: url(assets/images/envelope_new_2x.png) no-repeat;
                     background-size: 100%;
                 }
 
@@ -133,7 +141,7 @@
                 only screen and (     -o-min-device-pixel-ratio: 3/2),
                 only screen and (        min-device-pixel-ratio: 1.5),
                 only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/envelope_3x.png) no-repeat;
+                    background: url(assets/images/envelope_new_3x.png) no-repeat;
                     background-size: 100%;
                 }
         }
@@ -142,16 +150,16 @@
     &.phone {
 
         i {
-            width: 67px;
-            height: 71px;
-            background: url(assets/images/phone_contact.png) no-repeat;
+            width: 50px;
+            height: 69px;
+            background: url(assets/images/phone_contact_new.png) no-repeat;
 
             @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                 only screen and (   min--moz-device-pixel-ratio: 1.5),
                 only screen and (     -o-min-device-pixel-ratio: 3/2),
                 only screen and (        min-device-pixel-ratio: 1.5),
                 only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/phone_contact_2x.png) no-repeat;
+                    background: url(assets/images/phone_contact_new_2x.png) no-repeat;
                     background-size: 100%;
                 }
 
@@ -160,7 +168,7 @@
                 only screen and (     -o-min-device-pixel-ratio: 3/2),
                 only screen and (        min-device-pixel-ratio: 1.5),
                 only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/phone_contact_3x.png) no-repeat;
+                    background: url(assets/images/phone_contact_new_3x.png) no-repeat;
                     background-size: 100%;
                 }
         }
@@ -169,16 +177,16 @@
     &.chat {
 
         i {
-            width: 70px;
-            height: 64px;
-            background: url(assets/images/chat.png) no-repeat;
+            width: 79px;
+            height: 65px;
+            background: url(assets/images/chat_new.png) no-repeat;
 
             @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                 only screen and (   min--moz-device-pixel-ratio: 1.5),
                 only screen and (     -o-min-device-pixel-ratio: 3/2),
                 only screen and (        min-device-pixel-ratio: 1.5),
                 only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/chat_2x.png) no-repeat;
+                    background: url(assets/images/chat_new_2x.png) no-repeat;
                     background-size: 100%;
                 }
 
@@ -187,42 +195,160 @@
                 only screen and (     -o-min-device-pixel-ratio: 3/2),
                 only screen and (        min-device-pixel-ratio: 1.5),
                 only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/chat_3x.png) no-repeat;
+                    background: url(assets/images/chat_new_3x.png) no-repeat;
                     background-size: 100%;
                 }
+        }
+    }
+    
+    &:hover {
+        border: 1px solid $darkRed;
+        
+        .icon-space {
+            background: #f8f8f8;
+        }
+            
+        &.email {
+
+            i {
+                width: 75px;
+                height: 51px;
+                background: url(assets/images/envelope_new_red.png) no-repeat;
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/envelope_new_red_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/envelope_new_red_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+        }
+    
+        &.phone {
+    
+            i {
+                width: 50px;
+                height: 69px;
+                background: url(assets/images/phone_contact_new_red.png) no-repeat;
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/phone_contact_new_red_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/phone_contact_new_red_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+        }
+    
+        &.chat {
+    
+            i {
+                width: 79px;
+                height: 65px;
+                background: url(assets/images/chat_new_red.png) no-repeat;
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/chat_new_red_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/chat_new_red_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
         }
     }
 }
 
 .contact-form {
-    height: 512px;
-    background: url(assets/images/contact_form_grey.jpg) no-repeat;
+    height: 676px;
+    padding-top: 80px;
+    background: url(assets/images/contact_form_new.jpg) no-repeat;
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
-
+    
     .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding-top: 50px;
+        position: relative;
+    }
+    
+    .email-icon {
+        display: block;
+        width: 60px;
+        height: 38px;
+        background: url(assets/images/envelope_new.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        right: 10px;
+        top: 0;
+        
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (   min--moz-device-pixel-ratio: 1.5),
+            only screen and (     -o-min-device-pixel-ratio: 3/2),
+            only screen and (        min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/envelope_new_2x.png) no-repeat;
+                background-size: 100%;
+            }
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (   min--moz-device-pixel-ratio: 1.5),
+            only screen and (     -o-min-device-pixel-ratio: 3/2),
+            only screen and (        min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/envelope_new_3x.png) no-repeat;
+                background-size: 100%;
+            }
     }
 
     h2 {
-        margin: 0;
         color: #fff;
-        font-size: 24px;
+        font-size: 40px;
         font-weight: 700;
         text-transform: uppercase;
+        margin: 0 0 20px;
     }
 
     p:first-of-type {
         margin: 0 0 20px;
-        width: 100%;
+        width: calc(100% - 160px);
 
         span {
-            font-size: 14px;
+            font-size: 24px;
             color: #fff;
+            font-family: MontserratUltraLight;
+            line-height: 1.4;
         }
     }
 
@@ -245,38 +371,42 @@
     input,
     select {
         width: 100%;
-        height: 50px;
+        height: 66px;
         float: left;
         border: 0;
         background: #fff;
-        padding-left: 15px;
+        padding-left: 28px;
+        font-size: 18px;
+        color: #c9c7c8;
+        font-family: Montserrat;
 
         &::-webkit-input-placeholder {
-            font-size: 14px;
-            color: #000;
-            font-family: Raleway;
+            font-size: 18px;
+            color: #c9c7c8;
+            font-family: Montserrat;
         }
 
         &:-moz-placeholder {
-            font-size: 14px;
-            color: #000;
-            font-family: Raleway;
+            font-size: 18px;
+            color: #c9c7c8;
+            font-family: Montserrat;
         }
 
         &::-moz-placeholder {
-            font-size: 14px;
-            color: #000;
-            font-family: Raleway;
+            font-size: 18px;
+            color: #c9c7c8;
+            font-family: Montserrat;
         }
 
         &:-ms-input-placeholder {
-            font-size: 14px;
-            color: #000;
-            font-family: Raleway;
+            font-size: 18px;
+            color: #c9c7c8;
+            font-family: Montserrat;
         }
     }
 
-    p:nth-of-type(6) {
+    p:nth-of-type(6),
+    p:nth-of-type(7) {
         width: 100%;
     }
 
@@ -284,38 +414,41 @@
         width: 100%;
         height: 120px;
         resize: none;
-        padding: 10px 15px;
+        padding: 20px 28px;
+        font-size: 18px;
+        color: #c9c7c8;
+        font-family: Montserrat;
 
         &::-webkit-input-placeholder {
-            font-size: 14px;
-            color: #000;
-            font-family: Raleway;
+            font-size: 18px;
+            color: #c9c7c8;
+            font-family: Montserrat;
         }
 
         &:-moz-placeholder {
-            font-size: 14px;
-            color: #000;
-            font-family: Raleway;
+            font-size: 18px;
+            color: #c9c7c8;
+            font-family: Montserrat;
         }
 
         &::-moz-placeholder {
-            font-size: 14px;
-            color: #000;
-            font-family: Raleway;
+            font-size: 18px;
+            color: #c9c7c8;
+            font-family: Montserrat;
         }
 
         &:-ms-input-placeholder {
-            font-size: 14px;
-            color: #000;
-            font-family: Raleway;
+            font-size: 18px;
+            color: #c9c7c8;
+            font-family: Montserrat;
         }
     }
 
     .submit-btn {
-        width: 200px;
-        height: 50px;
+        width: 100%;
+        height: 66px;
         color: #fff;
-        font-weight: 900;
+        font-weight: 700;
         font-size: 18px;
         text-transform: uppercase;
         cursor: pointer;
@@ -343,137 +476,118 @@
             width: 0;
             height: 0;
             position: relative;
-            top: -24px;
-            left: -webkit-calc(100% - 25px);
-            left: calc(100% - 25px);
+            top: -28px;
+            left: -webkit-calc(100% - 30px);
+            left: calc(100% - 30px);
             border-style: solid;
             border-width: 6px 6px 0;
-            border-color: #000 transparent transparent;
+            border-color: #c9c7c8 transparent transparent;
             pointer-events: none;
-        }
-    }
-}
-
-@media only screen and (max-width: 1280px) {
-    .contact-block-single {
-        width: 230px;
-        height: 220px;
-        margin-right: calc( (100% - 230px - 230px - 230px) / 2);
-
-        .icon-space {
-            height: 125px;
         }
     }
 }
 
 @media only screen and (max-width: 959px) {
     .contact-banner {
-        height: 240px;
-        background-size: 100% 100% !important;
-
-        .banner-text1 {
-            font-size: 30px !important;
+        height: 290px;
+    }
+    
+    .contact-content {
+        padding: 55px 0;
+    }
+    
+    .contact-blocks .contact-block-single {
+        width: calc((100% - 40px) / 3);
+        height: 382px;
+        
+        a {
+            max-width: calc(100% - 105px);
+            margin: 10px auto 0;
+            word-wrap: break-word;
         }
-
-        .banner-text2 {
-            font-size: 36px !important;
-        }
     }
-
-    .contact-main {
-        padding-top: 30px;
-    }
-
-    h2 {
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
+    
+    .contact-blocks,
     .contact-form {
-        height: 464px;
-
-        .container {
-            padding-top: 30px;
+        padding: 60px 0;
+    }
+    
+    .contact-form {
+        
+        p:first-of-type span {
+            font-size: 20px;
         }
-    }
-
-    .wpcf7-form p:last-of-type {
-        width: 100%;
-        margin: 0;
-    }
-
-    .submit-btn {
-        width: 100% !important;
+        
+        .email-icon {
+            right: 20px;
+        }
     }
 }
 
 @media only screen and (max-width: 767px) {
     .contact-banner {
-        height: 110px;
-        background-size: 100% 100% !important;
+        height: 174px;
+        background-position: center !important;
 
-        .container {
-            padding-top: 33px;
-        }
-
-        .banner-text1 {
-            font-size: 18px !important;
-            text-align: center;
-            margin-bottom: 5px;
-        }
-
-        .banner-text2 {
-            font-size: 18px !important;
-            text-align: center;
+        .banner-text {
+            font-size: 20px;
         }
     }
-
-    .contact-main {
-        padding-top: 15px;
-    }
-
-    h2 {
-        margin-bottom: 5px;
+    
+    .contact-main .contact-content {
+        padding: 30px 0;
+        font-size: 18px;
+        line-height: 2;
     }
 
     .contact-blocks {
-        margin-top: 10px;
-        margin-bottom: 0;
-    }
-
-    .contact-block-single {
-        width: 100%;
-        height: 190px;
-        margin-right: 0;
-        margin-bottom: 10px;
-
-        .icon-space {
-            height: 100px;
+        padding: 30px 0;
+        
+        h1 {
+            font-size: 20px;
+            margin: 0 0 20px;
         }
     }
 
-    .contact-form {
-        height: 600px;
+    .contact-block-single {
+        width: 100% !important;
+        height: auto !important;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 
-        .container {
-            padding-top: 15px;
+    .contact-form {
+        padding: 30px 0;
+        
+        h2 {
+            font-size: 20px;
+            width: calc(100% - 100px);
+            margin: 0 0 10px;
+        }
+        
+        p:first-of-type {
+            margin-bottom: 10px;
+        }
+        
+        p:last-of-type {
+            margin-bottom: 0;
         }
     }
 
     .wpcf7-form {
-
-        h2 {
-            font-size: 16px;
-            text-align: center;
-        }
-
-        p:first-of-type {
-            text-align: center;
+        
+        input {
+            height: 56px !important;
         }
 
         p {
-            width: 100%;
+            width: 100% !important;
             margin-right: 0;
+        }
+        
+        textarea {
+            height: 66px !important;
+            overflow: hidden;
         }
     }
 
