@@ -2,8 +2,8 @@
 .single-article,
 .page-template-page-content,
 .single {
-    font-family: Raleway !important;
-
+    font-family: Arial, Helvetica, sans-serif !important;
+    
     .content-banner {
         height: 400px;
         background: url(assets/images/content_banner.jpg) no-repeat;
@@ -11,29 +11,46 @@
         background-size: cover !important;
         background-position: center;
     }
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
+    
+    h1,
+    h2,
+    h3 {
+        font-family: Montserrat !important;
     }
-
-    h1 {
-        margin: 15px 0;
+    
+    #main {
+        padding: 80px 0;
+        background: url(assets/images/locations-bg.jpg) repeat;
     }
 
     h1,
     h1 a {
-        font-size: 24px;
-        color: #000;
+        font-size: 40px;
+        color: #0c0c0c;
         font-weight: 700;
         text-decoration: none;
     }
+    
+    h1 {
+        margin: 0 0 30px;
+    }
+    
+    h2 {
+        padding-top: 50px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        margin: 10px 0 25px;
+    }
 
-    .entry-content {
+    .entry-content,
+    .page-content {
         margin-top: 0 !important;
-        font-size: 14px;
-        color: #666;
+        font-size: 16px;
+        color: #0c0c0c;
+        
+        p {
+            margin: 0 0 40px;
+            line-height: 1.8;
+        }
 
         strong {
             color: #000;
@@ -44,6 +61,16 @@
 
             &:hover {
                 color: #be2231;
+            }
+        }
+        
+        ul {
+            list-style-image: url(assets/images/dot.png);
+            padding-left: 20px;
+            line-height: 1.5;
+                
+            li {
+                text-indent: 10px;
             }
         }
     }
@@ -618,6 +645,10 @@
         .content-banner {
             height: 240px;
         }
+        
+        #main {
+            padding: 60px 0;
+        }
     }
 
     .blog article {
@@ -671,14 +702,22 @@
         .content-banner {
             height: 150px;
         }
+        
+        #main {
+            padding: 30px 0;
+        }
 
         h1 a,
         h1 {
-            font-size: 16px;
+            font-size: 20px;
         }
 
         h1 {
-            margin-bottom: 5px !important;
+            margin-bottom: 20px !important;
+        }
+        
+        h2 {
+            padding-top: 30px;
         }
 
         .entry-content {
@@ -687,7 +726,11 @@
         }
 
         .page-content {
-            font-size: 12px;
+            font-size: 14px;
+            
+            p {
+                margin-bottom: 30px;
+            }
         }
     }
 

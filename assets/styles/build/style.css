@@ -4472,7 +4472,7 @@ object {
 .single-article,
 .page-template-page-content,
 .single {
-  font-family: Raleway !important;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 .blog .content-banner,
 .single-article .content-banner,
@@ -4484,19 +4484,26 @@ object {
   background-size: cover !important;
   background-position: center;
 }
-.blog .container,
-.single-article .container,
-.page-template-page-content .container,
-.single .container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-}
 .blog h1,
+.blog h2,
+.blog h3,
 .single-article h1,
+.single-article h2,
+.single-article h3,
 .page-template-page-content h1,
-.single h1 {
-  margin: 15px 0;
+.page-template-page-content h2,
+.page-template-page-content h3,
+.single h1,
+.single h2,
+.single h3 {
+  font-family: Montserrat !important;
+}
+.blog #main,
+.single-article #main,
+.page-template-page-content #main,
+.single #main {
+  padding: 80px 0;
+  background: url(assets/images/locations-bg.jpg) repeat;
 }
 .blog h1,
 .blog h1 a,
@@ -4506,36 +4513,99 @@ object {
 .page-template-page-content h1 a,
 .single h1,
 .single h1 a {
-  font-size: 24px;
-  color: #000;
+  font-size: 40px;
+  color: #0c0c0c;
   font-weight: 700;
   text-decoration: none;
 }
+.blog h1,
+.single-article h1,
+.page-template-page-content h1,
+.single h1 {
+  margin: 0 0 30px;
+}
+.blog h2,
+.single-article h2,
+.page-template-page-content h2,
+.single h2 {
+  padding-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0 25px;
+}
 .blog .entry-content,
+.blog .page-content,
 .single-article .entry-content,
+.single-article .page-content,
 .page-template-page-content .entry-content,
-.single .entry-content {
+.page-template-page-content .page-content,
+.single .entry-content,
+.single .page-content {
   margin-top: 0 !important;
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
+  color: #0c0c0c;
+}
+.blog .entry-content p,
+.blog .page-content p,
+.single-article .entry-content p,
+.single-article .page-content p,
+.page-template-page-content .entry-content p,
+.page-template-page-content .page-content p,
+.single .entry-content p,
+.single .page-content p {
+  margin: 0 0 40px;
+  line-height: 1.8;
 }
 .blog .entry-content strong,
+.blog .page-content strong,
 .single-article .entry-content strong,
+.single-article .page-content strong,
 .page-template-page-content .entry-content strong,
-.single .entry-content strong {
+.page-template-page-content .page-content strong,
+.single .entry-content strong,
+.single .page-content strong {
   color: #000;
 }
 .blog .entry-content a,
+.blog .page-content a,
 .single-article .entry-content a,
+.single-article .page-content a,
 .page-template-page-content .entry-content a,
-.single .entry-content a {
+.page-template-page-content .page-content a,
+.single .entry-content a,
+.single .page-content a {
   color: #d92738;
 }
 .blog .entry-content a:hover,
+.blog .page-content a:hover,
 .single-article .entry-content a:hover,
+.single-article .page-content a:hover,
 .page-template-page-content .entry-content a:hover,
-.single .entry-content a:hover {
+.page-template-page-content .page-content a:hover,
+.single .entry-content a:hover,
+.single .page-content a:hover {
   color: #be2231;
+}
+.blog .entry-content ul,
+.blog .page-content ul,
+.single-article .entry-content ul,
+.single-article .page-content ul,
+.page-template-page-content .entry-content ul,
+.page-template-page-content .page-content ul,
+.single .entry-content ul,
+.single .page-content ul {
+  list-style-image: url(assets/images/dot.png);
+  padding-left: 20px;
+  line-height: 1.5;
+}
+.blog .entry-content ul li,
+.blog .page-content ul li,
+.single-article .entry-content ul li,
+.single-article .page-content ul li,
+.page-template-page-content .entry-content ul li,
+.page-template-page-content .page-content ul li,
+.single .entry-content ul li,
+.single .page-content ul li {
+  text-indent: 10px;
 }
 
 .blog .header-main {
@@ -5007,6 +5077,12 @@ object {
   .single .content-banner {
     height: 240px;
   }
+  .blog #main,
+  .single-article #main,
+  .page-template-page-content #main,
+  .single #main {
+    padding: 60px 0;
+  }
 
   .blog article h1 {
     padding: 0 0 5px;
@@ -5048,6 +5124,12 @@ object {
   .single .content-banner {
     height: 150px;
   }
+  .blog #main,
+  .single-article #main,
+  .page-template-page-content #main,
+  .single #main {
+    padding: 30px 0;
+  }
   .blog h1 a,
   .blog h1,
   .single-article h1 a,
@@ -5056,13 +5138,19 @@ object {
   .page-template-page-content h1,
   .single h1 a,
   .single h1 {
-    font-size: 16px;
+    font-size: 20px;
   }
   .blog h1,
   .single-article h1,
   .page-template-page-content h1,
   .single h1 {
-    margin-bottom: 5px !important;
+    margin-bottom: 20px !important;
+  }
+  .blog h2,
+  .single-article h2,
+  .page-template-page-content h2,
+  .single h2 {
+    padding-top: 30px;
   }
   .blog .entry-content,
   .single-article .entry-content,
@@ -5075,7 +5163,13 @@ object {
   .single-article .page-content,
   .page-template-page-content .page-content,
   .single .page-content {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .blog .page-content p,
+  .single-article .page-content p,
+  .page-template-page-content .page-content p,
+  .single .page-content p {
+    margin-bottom: 30px;
   }
 
   .blog #main > .container {
