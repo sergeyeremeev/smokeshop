@@ -10,6 +10,17 @@
         testimonialsNum = testimonialSingle.length,
         i,
         $this;
+        
+    // sticky header
+    $(document).on('scroll', function () {
+        if ($(document).width() >= 768) {
+            if ($(window).scrollTop() > 180) {
+                $('body').addClass("sticky-header");
+            } else {
+                $('body').removeClass("sticky-header");
+            }
+        }
+    });
 
     // search toggle
     searchField.on('focus', function () {

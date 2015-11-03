@@ -1293,6 +1293,20 @@ address {
   height: 61px;
 }
 
+.sticky-header {
+  padding-top: 66px;
+}
+.sticky-header #site-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+.sticky-header.admin-bar #site-navigation {
+  top: 32px;
+}
+
 @media only screen and (max-width: 959px) {
   #site-navigation .container {
     padding: 0;

@@ -262,6 +262,25 @@
     }
 }
 
+.sticky-header {
+    padding-top: 66px;
+    
+    #site-navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+    }
+    
+    &.admin-bar {
+        
+        #site-navigation {
+            top: 32px;
+        }
+    }
+}
+
 @media only screen and (max-width: 959px) {
     #site-navigation .container {
         padding: 0;
