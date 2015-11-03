@@ -1,47 +1,66 @@
+.our-shops-banner {
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center;
+    background: url(assets/images/our-shops-banner.jpg) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    h2 {
+        font-size: 40px;
+        margin: 0;
+        font-family: MontserratBold;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
 .search-container {
-    height: 680px;
+    height: 850px;
     position: relative;
 
     .search-map {
-        height: 680px;
+        height: 850px;
         width: 100%;
     }
 
     .container {
-        width: 330px;
+        width: 360px;
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translateX(-480px);
+        transform: translateX(-470px);
         z-index: 2;
     }
 
     .search-box {
         position: relative;
-        width: 330px;
-        top: 20px;
-        font-family: 'Open Sans';
+        width: 360px;
+        font-family: Arial, Helvetica, sans-serif;
 
         .search-page-form {
-            height: 50px;
+            height: 62px;
             background: #fff;
-            padding: 10px 15px;
 
             .search-menu {
-                display: block !important;
-                height: 17px;
-                width: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 100%;
+                width: 62px;
                 float: left;
-                position: relative;
-                top: 7px;
-                margin-right: 5px;
+                border-right: 1px solid #e5e5e5;
+                cursor: pointer;
 
                 span {
                     display: block;
-                    width: 100%;
                     height: 3px;
+                    width: 25px;
                     margin-bottom: 4px;
-                    background: #d92738;
+                    background: $darkRed;
                     border-radius: 1px;
 
                     &:last-child {
@@ -52,47 +71,49 @@
 
             form {
                 float: left;
-                width: 240px;
-                height: 30px;
-                border-right: 1px solid #000;
-
-                label {
-                    height: 30px;
-                }
+                width: calc(100% - 124px);
+                height: 62px;
+                border-right: 1px solid #e5e5e5;
 
                 .input-wrapper {
-                    height: 30px;
+                    display: block;
+                    float: left;
+                    height: 62px;
+                    width: calc(100% - 60px);
                 }
 
                 .search-field {
-                    width: 200px;
+                    width: 100%;
                     height: 100%;
-                    font-size: 14px;
-                    font-family: Raleway;
-                    font-weight: 700;
+                    font-size: 20px;
+                    color: #a5a5a5;
                 }
             }
 
             input {
                 border: none;
                 background: #fff;
-                padding-left: 5px;
+                padding: 0 0 0 20px;
             }
 
             .search-submit {
                 color: #fff;
+                float: left;
+                padding: 0;
                 width: 18px;
                 height: 18px;
+                background: url(assets/images/search_icon_hover_2x.png) no-repeat;
+                background-size: 100%;
                 position: relative;
-                top: 2px;
-                background: url(assets/images/search_icon_hover.png);
+                left: 20px;
+                top: 20px;
 
                 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                     only screen and (   min--moz-device-pixel-ratio: 1.5),
                     only screen and (     -o-min-device-pixel-ratio: 3/2),
                     only screen and (        min-device-pixel-ratio: 1.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/search_icon_hover_2x.png) no-repeat;
+                        background: url(assets/images/search_icon_hover_3x.png) no-repeat;
                         background-size: 100%;
                     }
 
@@ -107,35 +128,86 @@
             }
 
             .clear-menu {
+                cursor: pointer;
+                width: 62px;
+                height: 100%;
+                float: left;
 
                 span {
-                    font-size: 24px;
-                    font-weight: 400;
-                    font-family: Raleway;
-                    color: #d92738;
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    background: url(assets/images/search-close.jpg) no-repeat;
+                    background-size: 100%;
                     position: relative;
-                    top: -1px;
-                    cursor: pointer;
-                    margin-left: 12px;
+                    top: 20px;
+                    left: 20px;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/search-close_2x.jpg) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/search-close_3x.jpg) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+                
+                &:hover {
+                    
+                    span {
+                        background: url(assets/images/search-close_hover.jpg) no-repeat;
+                        background-size: 100%;
+                        
+                        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                            only screen and (   min--moz-device-pixel-ratio: 1.5),
+                            only screen and (     -o-min-device-pixel-ratio: 3/2),
+                            only screen and (        min-device-pixel-ratio: 1.5),
+                            only screen and (min-resolution: 192dpi) {
+                                background: url(assets/images/search-close_hover_2x.jpg) no-repeat;
+                                background-size: 100%;
+                            }
+        
+                        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                            only screen and (   min--moz-device-pixel-ratio: 2.5),
+                            only screen and (     -o-min-device-pixel-ratio: 5/2),
+                            only screen and (        min-device-pixel-ratio: 2.5),
+                            only screen and (min-resolution: 192dpi) {
+                                background: url(assets/images/search-close_hover_3x.jpg) no-repeat;
+                                background-size: 100%;
+                            }
+                    }
                 }
             }
         }
 
         .search-results {
-            background: #fff;
-            padding-right: 10px;
             height: auto;
             min-height: 52px;
-            max-height: 330px;
-            overflow-y: scroll;
-            margin-top: 10px;
+            max-height: 738px;
+            overflow: hidden;
+            margin: 1px 0;
 
             .search-result-single {
                 @include clearfix;
-                height: 110px;
-                padding-left: 15px;
-                padding-top: 12px;
-                border-bottom: 1px solid #ccc;
+                background: #fff;
+                height: 246px;
+                padding: 20px;
+                position: relative;
+                margin-bottom: 1px;
+                
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
 
                 &.visible {
                     display: block;
@@ -147,38 +219,32 @@
 
                 h2 {
                     margin: 0;
-                    font-size: 14px;
-                    color: #000;
+                    font-size: 20px;
+                    color: $blackGrey;
                     display: inline-block;
-                    margin-bottom: 5px;
-                    font-family: Raleway;
-
-                    a {
-                        color: #d92738;
-                        text-decoration: none;
-                        font-size: 12px;
-                    }
                 }
 
                 .search-result-info {
                     float: left;
-                    padding-right: 5px;
-                    width: calc(100% - 82px);
-                    width: -webkit-calc(100% - 82px);
                 }
 
                 .search-result-image {
-                    width: 82px;
-                    height: 82px;
-                    float: left;
+                    width: 96px;
+                    height: 96px;
+                    position: absolute;
+                    right: 20px;
+                    top: 35px;
 
                     img {
                         width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
                     }
                 }
 
                 .address,
-                .open-hours {
+                .open-hours,
+                .phone {
                     height: 21px;
                     margin-bottom: 14px;
                     display: -webkit-box;
@@ -191,63 +257,36 @@
                     -ms-flex-align: center;
                     -webkit-align-items: center;
                     align-items: center;
+                    margin-top: 20px;
+                    line-height: 1.1;
+                    
+                    .text {
+                        font-size: 15px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: $blackGrey;
+                        display: block;
+                        width: -webkit-calc(100% - 40px);
+                        width: calc(100% - 40px);
+                    }
                 }
 
                 .address {
-
-                    .icon {
-                        display: inline-block;
-                        width: 16px;
-                        height: 21px;
-                        background: url(assets/images/location_marker.png) no-repeat;
-                        background-size: 100%;
-                        margin-right: 12px;
-
-                        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                            only screen and (   min--moz-device-pixel-ratio: 1.5),
-                            only screen and (     -o-min-device-pixel-ratio: 3/2),
-                            only screen and (        min-device-pixel-ratio: 1.5),
-                            only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/location_marker_2x.png) no-repeat;
-                                background-size: 100%;
-                            }
-
-                        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                            only screen and (   min--moz-device-pixel-ratio: 2.5),
-                            only screen and (     -o-min-device-pixel-ratio: 5/2),
-                            only screen and (        min-device-pixel-ratio: 2.5),
-                            only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/location_marker_3x.png) no-repeat;
-                                background-size: 100%;
-                            }
-                    }
-
-                    .text {
-                        font-size: 12px;
-                        color: #000;
-                        display: block;
-                        width: -webkit-calc(100% - 28px);
-                        width: calc(100% - 28px);
-                        font-family: 'Open Sans';
-                    }
-                }
-
-                .open-hours {
+                    width: 210px;
 
                     .icon {
                         display: inline-block;
                         width: 21px;
-                        height: 21px;
-                        background: url(assets/images/calendar_icon.png) no-repeat;
+                        height: 15px;
+                        background: url(assets/images/envelope_new_red.png) no-repeat;
                         background-size: 100%;
-                        margin-right: 7px;
+                        margin-right: 19px;
 
                         @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                             only screen and (   min--moz-device-pixel-ratio: 1.5),
                             only screen and (     -o-min-device-pixel-ratio: 3/2),
                             only screen and (        min-device-pixel-ratio: 1.5),
                             only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/calendar_icon_2x.png) no-repeat;
+                                background: url(assets/images/envelope_new_red_2x.png) no-repeat;
                                 background-size: 100%;
                             }
 
@@ -256,23 +295,98 @@
                             only screen and (     -o-min-device-pixel-ratio: 5/2),
                             only screen and (        min-device-pixel-ratio: 2.5),
                             only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/calendar_icon_3x.png) no-repeat;
+                                background: url(assets/images/envelope_new_red_3x.png) no-repeat;
                                 background-size: 100%;
                             }
                     }
+                }
+                
+                .phone {
+                    width: 210px;
 
-                    .text {
-                        font-size: 12px;
-                        color: #000;
-                        display: block;
-                        width: -webkit-calc(100% - 28px);
-                        width: calc(100% - 28px);
-                        font-family: 'Open Sans';
+                    .icon {
+                        display: inline-block;
+                        width: 16px;
+                        height: 22px;
+                        background: url(assets/images/phone_contact_new_red.png) no-repeat;
+                        background-size: 100%;
+                        margin-right: 22px;
+                        margin-left: 2px;
+                        
+
+                        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                            only screen and (   min--moz-device-pixel-ratio: 1.5),
+                            only screen and (     -o-min-device-pixel-ratio: 3/2),
+                            only screen and (        min-device-pixel-ratio: 1.5),
+                            only screen and (min-resolution: 192dpi) {
+                                background: url(assets/images/phone_contact_new_red_2x.png) no-repeat;
+                                background-size: 100%;
+                            }
+
+                        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                            only screen and (   min--moz-device-pixel-ratio: 2.5),
+                            only screen and (     -o-min-device-pixel-ratio: 5/2),
+                            only screen and (        min-device-pixel-ratio: 2.5),
+                            only screen and (min-resolution: 192dpi) {
+                                background: url(assets/images/phone_contact_new_red_3x.png) no-repeat;
+                                background-size: 100%;
+                            }
+                    }
+                }
+
+                .open-hours {
+                    width: 260px;
+
+                    .icon {
+                        display: inline-block;
+                        width: 22px;
+                        height: 23px;
+                        background: url(assets/images/new-clock-icon.png) no-repeat;
+                        background-size: 100%;
+                        margin-right: 18px;
+
+                        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                            only screen and (   min--moz-device-pixel-ratio: 1.5),
+                            only screen and (     -o-min-device-pixel-ratio: 3/2),
+                            only screen and (        min-device-pixel-ratio: 1.5),
+                            only screen and (min-resolution: 192dpi) {
+                                background: url(assets/images/new-clock-icon_2x.png) no-repeat;
+                                background-size: 100%;
+                            }
+
+                        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                            only screen and (   min--moz-device-pixel-ratio: 2.5),
+                            only screen and (     -o-min-device-pixel-ratio: 5/2),
+                            only screen and (        min-device-pixel-ratio: 2.5),
+                            only screen and (min-resolution: 192dpi) {
+                                background: url(assets/images/new-clock-icon_3x.png) no-repeat;
+                                background-size: 100%;
+                            }
                     }
 
                     .open-hours-optional {
                         display: block;
                     }
+                }
+            }
+            
+            .learn-more {
+                clear: both;
+                display: block;
+                height: 46px;
+                line-height: 46px;
+                background: #f8f8f8;
+                text-align: center;
+                color: $darkRed;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 700;
+                position: relative;
+                top: 6px;
+                
+                &:hover {
+                    background: $veryDarkRed;
+                    color: #fff;
                 }
             }
 
@@ -292,14 +406,14 @@
         }
 
         .search-footer {
-            height: 42px;
+            height: 47px;
+            color: #a5a5a5;
             background: #fff;
-            line-height: 42px;
-            font-size: 12px;
-            font-family: 'Open Sans';
-            font-weight: 600;
-            padding-left: 15px;
+            line-height: 47px;
+            font-size: 16px;
+            padding-left: 20px;
             position: relative;
+            margin-top: 3px;
 
             .results-count {
                 font-weight: 400;
@@ -308,63 +422,24 @@
 
         .controls {
             position: absolute;
-            top: 9px;
-            right: 25px;
+            top: 0;
+            right: 20px;
 
-            .left,
-            .right {
-                display: inline-block;
-                float: left;
-                width: 24px;
-                height: 24px;
-                text-indent: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-
+            .right, 
             .left {
-                background: url(assets/images/prev_grey.png) no-repeat;
-                margin-right: 12px;
-
-                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                    only screen and (   min--moz-device-pixel-ratio: 1.5),
-                    only screen and (     -o-min-device-pixel-ratio: 3/2),
-                    only screen and (        min-device-pixel-ratio: 1.5),
-                    only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/prev_grey_2x.png) no-repeat;
-                        background-size: 100%;
-                    }
-
-                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                    only screen and (   min--moz-device-pixel-ratio: 2.5),
-                    only screen and (     -o-min-device-pixel-ratio: 5/2),
-                    only screen and (        min-device-pixel-ratio: 2.5),
-                    only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/prev_grey_3x.png) no-repeat;
-                        background-size: 100%;
-                    }
+                display: inline-block;
+                font-family: WebSymbols;
+                font-size: 16px;
+                color: #828282;
+                cursor: pointer;
+                
+                &:hover {
+                    color: $darkRed;
+                }
             }
-
-            .right{
-                background: url(assets/images/next_grey.png) no-repeat;
-
-                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                    only screen and (   min--moz-device-pixel-ratio: 1.5),
-                    only screen and (     -o-min-device-pixel-ratio: 3/2),
-                    only screen and (        min-device-pixel-ratio: 1.5),
-                    only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/next_grey_2x.png) no-repeat;
-                        background-size: 100%;
-                    }
-
-                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                    only screen and (   min--moz-device-pixel-ratio: 2.5),
-                    only screen and (     -o-min-device-pixel-ratio: 5/2),
-                    only screen and (        min-device-pixel-ratio: 2.5),
-                    only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/next_grey_3x.png) no-repeat;
-                        background-size: 100%;
-                    }
+            
+            .left {
+                margin-right: 10px;
             }
         }
     }
@@ -379,162 +454,53 @@
     display: none;
 }
 
-@media only screen and (max-width: 1279px) {
-    .search-container {
-
-        .container {
-            left: 50%;
-            transform: translateX(-460px);
-        }
-    }
-}
-
 @media only screen and (max-width: 960px) {
+    .our-shops-banner {
+        height: 290px;
+    }
+    
     .search-container {
 
         .container {
-            left: 20px;
+            left: 0;
             transform: none;
-            padding: 0 !important;
+            padding: 0;
         }
     }
 }
-
 
 @media only screen and (max-width: 767px) {
-    .search-container {
-        height: auto !important;
-        overflow: hidden;
+    .our-shops-banner {
+        height: 174px;
+        
+        h2 {
+            font-size: 20px;
+        }
+    }
+    
+    .search-container .container {
+        width: 100%;
+    }
 
-        .container {
-            position: relative;
-            margin-top: -50px;
-            top: 40px;
-            left: 10px;
-            width: calc(100% - 20px);
-            width: -webkit-calc(100% - 20px);
+    .search-container .search-box {
+        width: 100%;
 
-            .search-box {
-                width: 100%;
+        .search-page-form {
 
-                .search-results,
-                .search-footer {
-                    display: none;
-                }
+            form {
 
-                form {
-                    width: calc(100% - 60px);
-                    width: -webkit-calc(100% - 60px);
-
-                    label {
-                        width: calc(100% - 35px);
-                        width: -webkit-calc(100% - 35px);
-                        display: inline-block;
-                    }
-
-                    .input-wrapper,
-                    .search-field {
-                        width: 100%;
-                    }
+                .search-field {
+                    font-size: 18px;
                 }
             }
         }
-    }
 
-    .wpgmp_map,
-    .search-map {
-        height: 400px !important;
-    }
-
-    .search-result-single-mobile {
-
-        &.visible {
-            display: block;
+        .search-results {
+            max-height: 246px;
         }
 
-        &.hidden {
-            display: none;
-        }
-
-    }
-
-    .search-results-mobile {
-        display: block;
-
-        .no-results-msg-mobile {
-            display: block;
-            height: 55px;
-            line-height: 55px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            color: #000;
-            border-bottom: 1px solid #ccc;
-        }
-
-        a {
-            display: block;
-            height: 55px;
-            text-decoration: none;
-            color: #000;
-            border-bottom: 1px solid #ccc;
-
-            .address {
-                padding-left: 15px;
-                height: 100%;
-                display: -webkit-box;
-                display: -moz-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-align: center;
-                -webkit-flex-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-
-                .icon {
-                    display: inline-block;
-                    width: 16px;
-                    height: 21px;
-                    background: url(assets/images/location_marker.png) no-repeat;
-                    background-size: 100%;
-                    margin-right: 12px;
-
-                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                        only screen and (   min--moz-device-pixel-ratio: 1.5),
-                        only screen and (     -o-min-device-pixel-ratio: 3/2),
-                        only screen and (        min-device-pixel-ratio: 1.5),
-                        only screen and (min-resolution: 192dpi) {
-                            background: url(assets/images/location_marker_2x.png) no-repeat;
-                            background-size: 100%;
-                        }
-
-                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                        only screen and (   min--moz-device-pixel-ratio: 2.5),
-                        only screen and (     -o-min-device-pixel-ratio: 5/2),
-                        only screen and (        min-device-pixel-ratio: 2.5),
-                        only screen and (min-resolution: 192dpi) {
-                            background: url(assets/images/location_marker_3x.png) no-repeat;
-                            background-size: 100%;
-                        }
-                }
-
-                .text {
-                    font-size: 12px;
-                    color: #000;
-                    display: block;
-                    width: -webkit-calc(100% - 28px);
-                    width: calc(100% - 28px);
-                    font-family: 'Open Sans';
-
-                    h2 {
-                        margin: 0;
-                        font-size: 14px;
-                    }
-                }
-            }
+        .search-footer {
+            margin-top: 1px;
         }
     }
 }

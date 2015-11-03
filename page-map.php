@@ -9,13 +9,16 @@ get_header(); ?>
 
     <section id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
+            <div class="our-shops-banner">
+                <h2>Our Shops</h2>
+            </div>
             <div class="search-container">
                 <div class="container">
                     <div class="search-box">
                         <div id="shop-search" class="search-page-form">
                             <div class="search-menu"><span></span><span></span><span></span></div>
                             <?php get_search_form(); ?>
-                            <div class="clear-menu"><span>X</span></div>
+                            <div class="clear-menu"><span></span></div>
                         </div>
                         <div class="search-results">
                             <?php
@@ -26,8 +29,9 @@ get_header(); ?>
                             ?>
                                 <div class="search-result-single">
                                     <div class="search-result-info">
-                                        <h2><span><?php the_title(); ?></span> <a href="<?php the_permalink(); ?>">read more</a></h2>
+                                        <h2><span><?php the_title(); ?></span></h2>
                                         <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
+                                        <span class="phone"><span class="icon"></span><span class="text"><?php the_field('phone_number'); ?></span></span>
                                         <span class="open-hours">
                                             <span class="icon"></span>
                                             <span class="text">
@@ -41,6 +45,7 @@ get_header(); ?>
                                     <div class="search-result-image">
                                         <img src="<?php the_field('shop_image'); ?>" alt="<?php the_title(); ?>">
                                     </div>
+                                    <a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
                                 </div>
                                 <?php }
                                       endwhile;
@@ -49,8 +54,8 @@ get_header(); ?>
                         <div class="search-footer">
                             <span>Showing results <span class="results-count"></span></span>
                             <div class="controls">
-                                <div class="left"></div>
-                                <div class="right"></div>
+                                <div class="left">&lt;</div>
+                                <div class="right">&gt;</div>
                             </div>
                         </div>
                     </div>

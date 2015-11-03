@@ -246,12 +246,13 @@
                              Math.ceil($('.search-results').find('.search-result-single').length / 10));
 
     // clear search menu
-    $('.clear-menu').find('span').on('click', function () {
-        $(this).closest('div').prev('form').find('.search-field').val('');
-        $(this).closest('.search-page-form').next('.search-results').find('.search-result-single').addClass('visible').removeClass('hidden');
-        $(this).closest('.container').siblings('.search-results-mobile').find('.search-result-single').addClass('visible').removeClass('hidden');
+    $('.clear-menu').on('click', function () {
+        $this = $(this);
+        $this.prev('form').find('.search-field').val('');
+        $this.closest('.search-page-form').next('.search-results').find('.search-result-single').addClass('visible').removeClass('hidden');
+        $this.closest('.container').siblings('.search-results-mobile').find('.search-result-single').addClass('visible').removeClass('hidden');
 
-        $('.wpgmp_search_form').find('input').val($(this).val());
+        $('.wpgmp_search_form').find('input').val($this.val());
         $('.wpgmp_search_form').find('input').trigger('keyup').trigger('touchend');
     });
 
