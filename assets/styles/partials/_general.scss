@@ -288,6 +288,16 @@ address {
 	}
 }
 
+.ninja-forms-error-msg,
+.ninja-forms-field-error {
+    display: none !important;
+}
+
+.ninja-forms-error input {
+    border: 1px solid #C15B50 !important;
+    background: #F7D6F5 !important
+}
+
 .view-all {
     display: none !important;
 }

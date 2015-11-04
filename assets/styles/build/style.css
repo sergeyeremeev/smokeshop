@@ -994,6 +994,16 @@ address {
   }
 }
 
+.ninja-forms-error-msg,
+.ninja-forms-field-error {
+  display: none !important;
+}
+
+.ninja-forms-error input {
+  border: 1px solid #C15B50 !important;
+  background: #F7D6F5 !important;
+}
+
 .view-all {
   display: none !important;
 }
@@ -3950,6 +3960,24 @@ object {
   right: 0;
 }
 
+.shop-tour {
+  height: 845px;
+  background: url(assets/images/tour-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center;
+  padding: 80px 0;
+}
+.shop-tour h2 {
+  font-size: 40px !important;
+  color: #fff !important;
+  text-align: center !important;
+  text-transform: uppercase;
+  margin: 0 0 40px !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
 .shop-reviews {
   padding: 80px 0;
 }
@@ -4645,6 +4673,7 @@ object {
   .about-shop,
   .shop-media,
   .shop-reviews,
+  .shop-tour,
   .location-featured-products,
   .location-brands,
   .review-stats {
@@ -4665,6 +4694,10 @@ object {
   }
   .location-featured-products .product-single .learn-more {
     font-size: 14px;
+  }
+
+  .shop-tour {
+    height: 805px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -4694,6 +4727,7 @@ object {
   .about-shop,
   .shop-media,
   .shop-reviews,
+  .shop-tour,
   .location-featured-products,
   .location-brands,
   .review-stats {
@@ -4702,6 +4736,7 @@ object {
   .about-shop h2,
   .shop-media h2,
   .shop-reviews h2,
+  .shop-tour h2,
   .location-featured-products h2,
   .location-brands h2,
   .review-stats h2 {
@@ -4723,6 +4758,14 @@ object {
   .shop-media .controls .left,
   .shop-media .controls .right {
     font-size: 16px;
+  }
+
+  .shop-tour {
+    height: 275px;
+    padding: 30px 0;
+  }
+  .shop-tour iframe {
+    height: 175px !important;
   }
 
   .shop-reviews form {

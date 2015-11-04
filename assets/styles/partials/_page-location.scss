@@ -285,6 +285,25 @@
     }
 }
 
+.shop-tour {
+    height: 845px;
+    background: url(assets/images/tour-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center;
+    padding: 80px 0;
+    
+    h2 {
+        font-size: 40px !important;
+        color: #fff !important;
+        text-align: center !important;
+        text-transform: uppercase;
+        margin: 0 0 40px !important;
+        border: 0 !important;
+        padding: 0 !important;
+    }
+}
+
 .shop-reviews {
     padding: 80px 0;
     
@@ -1160,6 +1179,7 @@
     .about-shop,
     .shop-media,
     .shop-reviews,
+    .shop-tour,
     .location-featured-products,
     .location-brands,
     .review-stats {
@@ -1184,6 +1204,10 @@
         .learn-more {
             font-size: 14px;
         }
+    }
+    
+    .shop-tour {
+        height: 805px;
     }
 }
 
@@ -1218,6 +1242,7 @@
     .about-shop,
     .shop-media,
     .shop-reviews,
+    .shop-tour,
     .location-featured-products,
     .location-brands,
     .review-stats {
@@ -1244,6 +1269,15 @@
             .right {
                 font-size: 16px;
             }
+        }
+    }
+    
+    .shop-tour {
+        height: 275px;
+        padding: 30px 0;
+        
+        iframe {
+            height: 175px !important;
         }
     }
 

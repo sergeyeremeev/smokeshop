@@ -243,12 +243,12 @@
         $('.search-footer').find('.controls').find('div').on('click', function (e) {
             if ($(document).width() >= 768) {
                 if ($(this).hasClass('right')) {
-                    if ($('.search-result-single:first-child').position().top === 63 && $('.search-result-single:last-child').position().top > 557) {
+                    if ($('.search-result-single:first-child').css('margin-top') === '0px' && $('.search-result-single').length > 3) {
                         $('.search-result-single:first-child').css('margin-top', '-741px');
                         $('.results-count').text('4 - ' + $('.search-result-single').length);
                     }
                 } else {
-                    if ($('.search-result-single:first-child').position().top !== 63) {
+                    if ($('.search-result-single:first-child').css('margin-top') !== '0px') {
                         $('.search-result-single:first-child').css('margin-top', '0');
                         $('.results-count').text('1 - 3');
                     }

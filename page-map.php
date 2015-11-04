@@ -22,7 +22,7 @@ get_header(); ?>
                         </div>
                         <div class="search-results">
                             <?php
-                                $args = array('post_type' => 'locations');
+                                $args = array('post_type' => 'locations', 'posts_per_page' => 5);
                                 $loop = new WP_Query( $args );
                                 while ( $loop->have_posts() ) : $loop->the_post();
                                 if (get_field('short_address') !== '') {

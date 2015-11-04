@@ -89,11 +89,12 @@ get_header(); ?>
                             <?php the_field('shop_media'); ?>
                         </div>
                     </div>
-                    <!--<div class="shop-tour">
+                    <div class="shop-tour">
                         <div class="container">
                             <h2>Virtual Tour</h2>
+                            <?php the_field('virtual_tour'); ?>
                         </div>
-                    </div>-->
+                    </div>
                     <div class="shop-reviews">
                         <div class="container">
                             <div class="review-top">
