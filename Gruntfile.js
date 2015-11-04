@@ -15,10 +15,6 @@ module.exports = function(grunt) {
             js: {
                 files: '<%= jshint.all %>',
                 tasks: ['jshint', 'uglify']
-            },
-            images: {
-                files: ['assets/images/**/*.{png,jpg,gif}'],
-                tasks: ['imagemin']
             }
         },
 
@@ -114,23 +110,6 @@ module.exports = function(grunt) {
                         'assets/js/source/main.js'
                     ]
                 }
-            }
-        },
-
-        // image optimization
-        imagemin: {
-            dist: {
-                options: {
-                    optimizationLevel: 5,
-                    progressive: true,
-                    interlaced: true
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'assets/images/',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: 'assets/images/'
-                }]
             }
         },
 

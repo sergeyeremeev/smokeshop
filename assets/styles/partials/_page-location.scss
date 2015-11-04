@@ -1,40 +1,39 @@
+.single.single-locations #main {
+    padding: 0;
+    background: none;
+    padding: 0;
+}
+
 .location-banner {
-    height: 300px;
+    height: 350px;
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding-top: 50px;
-    }
+    padding-top: 60px;
 
     .shop-image {
-        width: 200px;
         float: left;
-        margin-right: 20px;
+        margin-right: 50px;
 
         img {
             border-radius: 50%;
+            width: 230px;
+            height: 230px;
         }
     }
 
     h1 {
-        font-size: 36px;
-        color: #d92738;
-        font-weight: 900;
+        font-size: 40px;
+        color: #fff !important;
+        font-family: MontserratBold;
         text-transform: uppercase;
         line-height: 1;
-        margin: 20px 0 15px;
-        font-family: Raleway;
+        margin: 0;
     }
 
     .location-info-box {
-        font-family: 'Open Sans';
         font-size: 12px;
-        color: #000;
+        color: #fff;
         overflow: hidden;
         float: left;
         font-weight: 600;
@@ -55,870 +54,1262 @@
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
+        margin-top: 32px;
+        
+        .icon {
+            width: 36px;
+            height: 36px;
+            background: $darkRed;
+            border-radius: 50%;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .text {
+            font-size: 20px;
+            font-weight: 300;
+        }
     }
 
     .address {
+        margin-top: 30px;
 
         .icon {
-            display: inline-block;
-            width: 16px;
-            height: 21px;
-            background: url(assets/images/location_marker.png) no-repeat;
-            background-size: 100%;
-            margin-right: 12px;
-
-            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                only screen and (   min--moz-device-pixel-ratio: 1.5),
-                only screen and (     -o-min-device-pixel-ratio: 3/2),
-                only screen and (        min-device-pixel-ratio: 1.5),
-                only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/location_marker_2x.png) no-repeat;
-                    background-size: 100%;
-                }
-
-            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                only screen and (   min--moz-device-pixel-ratio: 2.5),
-                only screen and (     -o-min-device-pixel-ratio: 5/2),
-                only screen and (        min-device-pixel-ratio: 2.5),
-                only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/location_marker_3x.png) no-repeat;
-                    background-size: 100%;
-                }
-        }
-
-        .text {
-            display: block;
-            width: -webkit-calc(100% - 28px);
-            width: calc(100% - 28px);
+            
+            i {
+                display: inline-block;
+                width: 15px;
+                height: 22px;
+                background: url(assets/images/pin.png) no-repeat;
+                background-size: 100%;
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/pin_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/pin_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
         }
     }
 
     .phone {
 
         .icon {
-            display: inline-block;
-            width: 21px;
-            height: 22px;
-            background: url(assets/images/phone_icon.png) no-repeat;
-            background-size: 100%;
-            margin-right: 7px;
-
-            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                only screen and (   min--moz-device-pixel-ratio: 1.5),
-                only screen and (     -o-min-device-pixel-ratio: 3/2),
-                only screen and (        min-device-pixel-ratio: 1.5),
-                only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/phone_icon_2x.png) no-repeat;
-                    background-size: 100%;
-                }
-
-            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                only screen and (   min--moz-device-pixel-ratio: 2.5),
-                only screen and (     -o-min-device-pixel-ratio: 5/2),
-                only screen and (        min-device-pixel-ratio: 2.5),
-                only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/phone_icon_3x.png) no-repeat;
-                    background-size: 100%;
-                }
+            
+            i {
+                display: inline-block;
+                width: 16px;
+                height: 22px;
+                background: url(assets/images/phone_contact_new.png) no-repeat;
+                background-size: 100%;
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/phone_contact_new_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+    
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/phone_contact_new_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
         }
-
+        
         .text {
-            display: block;
-            width: -webkit-calc(100% - 28px);
-            width: calc(100% - 28px);
+            font-weight: 700;
         }
     }
 
     .open-hours {
 
         .icon {
-            display: inline-block;
-            width: 21px;
-            height: 21px;
-            background: url(assets/images/calendar_icon.png) no-repeat;
-            background-size: 100%;
-            margin-right: 7px;
-
-            @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                only screen and (   min--moz-device-pixel-ratio: 1.5),
-                only screen and (     -o-min-device-pixel-ratio: 3/2),
-                only screen and (        min-device-pixel-ratio: 1.5),
-                only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/calendar_icon_2x.png) no-repeat;
-                    background-size: 100%;
-                }
-
-            @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                only screen and (   min--moz-device-pixel-ratio: 2.5),
-                only screen and (     -o-min-device-pixel-ratio: 5/2),
-                only screen and (        min-device-pixel-ratio: 2.5),
-                only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/calendar_icon_3x.png) no-repeat;
-                    background-size: 100%;
-                }
-        }
-
-        .text {
-            display: block;
-            width: -webkit-calc(100% - 28px);
-            width: calc(100% - 28px);
-        }
-    }
-
-    .open-hours-optional {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .postid-55 {
-
-        .location-banner {
-
-            .location-info-box {
-                color: #fff;
-            }
-        }
-    }
-}
-
-.location-main {
-    @include clearfix;
-    padding: 40px 0;
-
-    .container {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-    }
-
-    .left-col {
-        width: 640px;
-        float: left;
-        margin-right: 20px;
-
-        h2 {
-            font-size: 14px;
-            font-weight: 700;
-            margin: 0 0 10px;
-            line-height: 1;
-            text-transform: uppercase;
-        }
-
-        .owl-controls {
-            top: -32px;
-        }
-    }
-
-    .shop-photos {
-        border: 1px solid #ccc;
-        padding: 20px;
-        margin-bottom: 20px;
-
-        p {
-            margin: 0;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    .photo-container,
-    .video-container {
-        border: 1px solid #ccc;
-    }
-
-    .shop-videos {
-        border: 1px solid #ccc;
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-
-    .shop-reviews {
-        border: 1px solid #ccc;
-        padding: 20px;
-
-        header {
-            border-bottom: 1px solid #ccc;
-
-            h2 {
+            
+            i {
                 display: inline-block;
-            }
-
-            a {
-                font-size: 14px;
-                color: #d92738;
-                text-decoration: none;
-                float: right;
-                font-weight: 700;
-            }
-        }
-
-        .review-stats {
-            @include clearfix;
-            position: relative;
-        }
-
-        .stats-left {
-            width: 100px;
-            margin-right: 75px;
-            float: left;
-            position: relative;
-            top: -5px;
-
-            .total-rating {
-                font-size: 72px;
-                line-height: 1;
-                color: #d92738;
-                margin-bottom: 5px;
-                text-align: center;
-            }
-
-            .stars {
-                margin: 0 auto;
-                width: 80px;
-
-                i {
-                    display: inline-block;
-                    width: 12px;
-                    height: 11px;
-                    margin-right: 5px;
-
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-
-                &.stars0 {
-                    i {
-                        background: url(assets/images/star_grey.png) no-repeat;
-                    }
-                }
-
-                &.stars1 {
-
-                    i {
-                        background: url(assets/images/star_grey.png) no-repeat;
-                    }
-
-                    i:nth-of-type(1) {
-                        background: url(assets/images/star_red.png) no-repeat;
-                    }
-                }
-
-                &.stars2 {
-                    i {
-                        background: url(assets/images/star_grey.png) no-repeat;
-                    }
-
-                    i:nth-of-type(1),
-                    i:nth-of-type(2) {
-                        background: url(assets/images/star_red.png) no-repeat;
-                    }
-                }
-
-                &.stars3 {
-                    i {
-                        background: url(assets/images/star_grey.png) no-repeat;
-                    }
-
-                    i:nth-of-type(1),
-                    i:nth-of-type(2),
-                    i:nth-of-type(3) {
-                        background: url(assets/images/star_red.png) no-repeat;
-                    }
-                }
-
-                &.stars4 {
-                    i {
-                        background: url(assets/images/star_red.png) no-repeat;
-                    }
-
-                    i:nth-of-type(5) {
-                        background: url(assets/images/star_grey.png) no-repeat;
-                    }
-                }
-
-                &.stars5 {
-                    i {
-                        background: url(assets/images/star_red.png) no-repeat;
-                    }
-                }
-            }
-
-            span {
-                display: inline-block;
-                width: 100%;
-                text-align: center;
-                font-size: 12px;
-                color: #666;
-                font-family: 'Open Sans';
-                position: relative;
-                top: -7px;
-            }
-        }
-
-        .stats-right {
-            margin-top: 10px;
-            width: 210px;
-            float: left;
-
-            ul:nth-of-type(1) {
-                width: 42px;
-                padding: 0;
-                margin: 0;
-                float: left;
-                list-style-type: none;
-
-                li {
-                    height: 15px;
-                    margin-bottom: 5px;
-                    font-size: 12px;
-                    color: #666;
-                    font-family: 'Open Sans';
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-
-            ul:nth-of-type(2) {
-                width: calc(100% - 42px);
-                width: -webkit-calc(100% - 42px);
-                float: left;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                border-left: 1px solid #ccc;
-                position: relative;
-                top: 5px;
-
-                li {
-                    height: 11px;
-                    margin-bottom: 9px;
-                    background: #f7d4d7;
-                    position: relative;
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-
-                    span {
-                        position: absolute;
-                        right: -1px;
-                        top: 0;
-                        bottom: 0;
-                        display: inline-block;
-                        width: 1px;
-                        background: #d92738;
-                    }
-
-                    &.empty span {
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        .toggle-review-form {
-            position: absolute;
-            top: 15px;
-            right: 0;
-            text-align: center;
-            display: block;
-            width: 200px;
-            height: 50px;
-            line-height: 50px;
-            border: 1px solid #d92738;
-            color: #d92738;
-            font-size: 18px;
-            font-weight: 900;
-            background: #fff;
-            text-transform: uppercase;
-            text-decoration: none;
-
-            &:hover {
-                background: #d92738;
-                color: #fff;
-            }
-        }
-
-        #review-form {
-            display: none;
-
-            form > input:nth-of-type(1),
-            form > input:nth-of-type(2) {
-                height: 50px;
-                float: left;
-                width: 49%;
-                margin-right: 2%;
-                color: #000;
-                font-size: 14px;
-                font-weight: 600;
-                padding-left: 15px;
-                border: 1px solid #ccc;
-                font-family: Raleway;
-
-                &:nth-of-type(2) {
-                    margin-right: 0;
-                }
-
-                &::-webkit-input-placeholder {
-                    font-size: 14px;
-                    color: #000;
-                    font-family: Raleway;
-                    font-weight: 600;
-                }
-
-                &:-moz-placeholder {
-                    font-size: 14px;
-                    color: #000;
-                    font-family: Raleway;
-                    font-weight: 600;
-                }
-
-                &::-moz-placeholder {
-                    font-size: 14px;
-                    color: #000;
-                    font-family: Raleway;
-                    font-weight: 600;
-                }
-
-                &:-ms-input-placeholder {
-                    font-size: 14px;
-                    color: #000;
-                    font-family: Raleway;
-                    font-weight: 600;
-                }
-            }
-
-            .rating-label {
-                height: 50px;
-                line-height: 50px;
-                display: inline-block;
-                font-size: 14px;
-                font-weight: 600;
-                color: #000;
-                margin-right: 10px;
-                padding-left: 15px;
-            }
-
-            .radio-inputs {
-                display: inline-block;
-                overflow: hidden;
-                position: relative;
-                top: 11px;
-
-                input {
-                    position: absolute;
-                    left: -100%;
-                }
-
-                label {
-                    display: inline-block;
-                    width: 24px;
-                    height: 22px;
-                    background: url(assets/images/star_red_large.png) no-repeat;
-                    margin-right: 10px;
-                    cursor: pointer;
-
-                    &.non-selected {
-                        background: url(assets/images/star_grey_large.png) no-repeat;
-                    }
-                }
-            }
-
-            textarea {
-                resize: none;
-                width: 100%;
-                height: 200px;
-                padding: 10px 15px;
-                color: #000;
-                font-size: 14px;
-                font-weight: 600;
-                font-family: Raleway;
-                margin-bottom: 10px;
-
-                &::-webkit-input-placeholder {
-                    font-size: 14px;
-                    color: #000;
-                    font-family: Raleway;
-                    font-weight: 600;
-                }
-
-                &:-moz-placeholder {
-                    font-size: 14px;
-                    color: #000;
-                    font-family: Raleway;
-                    font-weight: 600;
-                }
-
-                &::-moz-placeholder {
-                    font-size: 14px;
-                    color: #000;
-                    font-family: Raleway;
-                    font-weight: 600;
-                }
-
-                &:-ms-input-placeholder {
-                    font-size: 14px;
-                    color: #000;
-                    font-family: Raleway;
-                    font-weight: 600;
-                }
-            }
-
-            button[type="submit"] {
-                border: none;
-                background: #d92738;
-                height: 50px;
-                line-height: 50px;
-                width: 100%;
-                color: #fff;
-                font-size: 18px;
-                font-weight: 700;
-                text-transform: uppercase;
-            }
-        }
-
-        .review-content {
-            margin-top: 5px;
-            font-family: Raleway;
-
-            .single-review:nth-of-type(n+2) {
-                display: none;
-            }
-
-            .testimonial {
-                font-size: 14px;
-                color: #666;
-                font-style: italic;
-                margin-bottom: 15px;
-            }
-
-            .author {
-                font-size: 14px;
-                color: #d92738;
-            }
-        }
-    }
-
-    .right-col {
-        width: 300px;
-        float: left;
-
-        h3 {
-            font-size: 14px;
-            color: #fff;
-            text-transform: uppercase;
-            line-height: 1;
-            margin: 0 0 10px;
-        }
-    }
-
-    .find-shop {
-        height: 120px;
-        border: 1px solid #ccc;
-        background: #d92738;
-        padding: 18px;
-        margin-bottom: 20px;
-
-        .shop-select {
-            float: left;
-            width: calc(100% - 50px);
-            width: -webkit-calc(100% - 50px);
-
-            select {
-                height: 50px;
-                width: 100%;
-                border: 0;
-                background: #fff;
-                font-size: 14px;
-                color: #000;
-                padding-left: 8px;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                display: inline-block;
-                cursor: pointer;
-                outline: 0;
-            }
-
-            &:after {
-                content: '';
-                width: 0;
-                height: 0;
-                position: relative;
-                top: -24px;
-                left: -webkit-calc(100% - 25px);
-                left: calc(100% - 25px);
-                border-style: solid;
-                border-width: 6px 6px 0;
-                border-color: #000 transparent transparent;
-                pointer-events: none;
-            }
-        }
-
-        .find-shops-go {
-            display: block;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            background: #000;
-            font-weight: 900;
-            font-size: 14px;
-            text-transform: uppercase;
-            float: left;
-            text-align: center;
-            text-decoration: none;
-            color: #fff;
-        }
-    }
-
-    .directions {
-        height: 284px;
-        border: 1px solid #ccc;
-        padding: 18px 18px 0 18px;
-        margin-bottom: 20px;
-
-        h3 {
-            color: #000;
-        }
-
-        .address {
-            margin-top: 10px;
-            height: 21px;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-align: center;
-            -webkit-flex-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-
-            .icon {
-                display: inline-block;
-                width: 16px;
-                height: 21px;
-                background: url(assets/images/location_marker.png) no-repeat;
+                width: 22px;
+                height: 23px;
+                background: url(assets/images/clock_white.png) no-repeat;
                 background-size: 100%;
-                margin-right: 12px;
-
+    
                 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                     only screen and (   min--moz-device-pixel-ratio: 1.5),
                     only screen and (     -o-min-device-pixel-ratio: 3/2),
                     only screen and (        min-device-pixel-ratio: 1.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/location_marker_2x.png) no-repeat;
+                        background: url(assets/images/clock_white_2x.png) no-repeat;
                         background-size: 100%;
                     }
-
+    
                 @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
                     only screen and (   min--moz-device-pixel-ratio: 2.5),
                     only screen and (     -o-min-device-pixel-ratio: 5/2),
                     only screen and (        min-device-pixel-ratio: 2.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/location_marker_3x.png) no-repeat;
+                        background: url(assets/images/clock_white_3x.png) no-repeat;
                         background-size: 100%;
                     }
             }
-
-            .text {
-                display: block;
-                width: -webkit-calc(100% - 28px);
-                width: calc(100% - 28px);
-                font-family: 'Open Sans';
-                font-size: 12px;
-                color: #000;
-                font-weight: 600;
-            }
-        }
-    }
-
-    .about-shop {
-        border: 1px solid #ccc;
-        padding: 18px;
-        margin-bottom: 20px;
-        font-size: 14px;
-        color: #666;
-
-        h3 {
-            color: #000;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-    }
-
-    .badges {
-        border: 1px solid #ccc;
-        height: 140px;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-flex-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-
-        img:first-child {
-            margin: 0 10px 0 20px;
         }
     }
 }
 
-@media only screen and (max-width: 1279px) {
-    .location-banner {
-        background-position: 60% !important
+.about-shop {
+    padding: 80px 0;
+    
+    h2 {
+        font-size: 40px;
+        color: $blackGrey;
+        margin: 0 0 40px !important;
+        padding: 0 !important;
+        border: 0 !important;
+        text-transform: uppercase;
+    }
+    
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: $blackGrey;
+        line-height: 1.6;
+    }
+}
+
+.shop-media {
+    padding: 80px 0 40px;
+    background: url(assets/images/locations-bg.jpg) repeat;
+    
+    h2 {
+        font-size: 40px;
+        color: $blackGrey;
+        margin: 0 0 40px !important;
+        padding: 0 !important;
+        border: 0 !important;
+        text-transform: uppercase;
+    }
+    
+    .html5gallery-box-1,
+    .html5gallery-elem-1,
+    .html5gallery-elem-img-1 {
+        width: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+    
+    .html5gallery-elem-1 a,
+    .html5gallery-car-left-1,
+    .html5gallery-car-right-1 {
+        display: none !important;
+    }
+    
+    .html5gallery-car-list-1,
+    .html5gallery-car-mask-1 {
+        width: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+    
+    .html5gallery-car-1 {
+        width: 100% !important;
+        left: 0 !important;
+        transform: translateY(-20px);
+    }
+    
+    .html5gallery-tn-img-1 > div,
+    .html5gallery-tn-img-1 > div img {
+        width: 100% !important;
+        height: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+    
+    .html5gallery-thumbs-1 > div:first-of-type {
+        margin-left: 0 !important;
+    }
+    
+    .html5gallery-tn-img-play-1 {
+        background: url(assets/images/play_btn_new.png) no-repeat center center !important;
+        
+        &:hover {
+            background: url(assets/images/play_btn_red_new.png) no-repeat center center !important;
+        }
+    }
+    
+    .controls {
+        position: relative;
+        width: 100%;
+        top: -70px;
+
+        .right, 
+        .left {
+            position: absolute;
+            top: 0;
+            display: inline-block;
+            font-family: WebSymbols;
+            font-size: 20px;
+            color: #828282;
+            cursor: pointer;
+            
+            &:hover {
+                color: $darkRed;
+            }
+        }
+        
+        .left {
+            right: 25px;
+        }
+        
+        .right {
+            right: 0;
+        }
+    }
+}
+
+.shop-reviews {
+    padding: 80px 0;
+    
+    h2 {
+        font-size: 40px !important;
+        color: $blackGrey !important;
+        text-transform: uppercase;
+        margin: 0 0 40px !important;
+        border: 0 !important;
+        padding: 0 !important;
     }
 
-    .left-col {
-        width: 625px !important;
-        margin-right: 10px !important;
+    .review-stats {
+        @include clearfix;
+        position: relative;
     }
 
-    .right-col {
-        width: 285px !important;
+    #review-form {
+        
+        form {
+            overflow: hidden;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        form > input:nth-of-type(1),
+        form > input:nth-of-type(2) {
+            height: 56px;
+            float: left;
+            width: calc(50% - 10px);
+            margin-right: 20px;
+            color: #a0a0a0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            padding-left: 20px;
+            border: 1px solid #dfdfdf;
+            box-shadow: inset 0px 2px 1px 0px rgba(1, 1, 1, 0.05);
+
+            &:nth-of-type(2) {
+                margin-right: 0;
+            }
+
+            &::-webkit-input-placeholder {
+                color: #a0a0a0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+
+            &:-moz-placeholder {
+                color: #a0a0a0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+
+            &::-moz-placeholder {
+                color: #a0a0a0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+
+            &:-ms-input-placeholder {
+                color: #a0a0a0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+        }
+        
+        .choose-rating {
+            float: left;
+        }
+
+        .rating-label {
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            color: $blackGrey;
+            margin-right: 10px;
+        }
+
+        .radio-inputs {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            top: 8px;
+
+            input {
+                position: absolute;
+                left: -100%;
+            }
+
+            label {
+                display: inline-block;
+                width: 19px;
+                height: 18px;
+                background: url(assets/images/star_red.png) no-repeat;
+                margin-right: 10px;
+                cursor: pointer;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_red_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_red_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+
+                &.non-selected {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+        }
+
+        textarea {
+            resize: none;
+            width: 100%;
+            height: 124px;
+            padding: 20px;
+            color: #a0a0a0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 20px 0;
+            border: 1px solid #dfdfdf;
+            box-shadow: inset 0px 2px 1px 0px rgba(1, 1, 1, 0.05);
+
+            &::-webkit-input-placeholder {
+                color: #a0a0a0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+
+            &:-moz-placeholder {
+                color: #a0a0a0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+
+            &::-moz-placeholder {
+                color: #a0a0a0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+
+            &:-ms-input-placeholder {
+                color: #a0a0a0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+        }
+
+        button[type="submit"] {
+            float: right;
+            border: none;
+            background: $darkRed;
+            height: 46px;
+            line-height: 46px;
+            width: 360px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            
+            &:hover {
+                background: $veryDarkRed;
+            }
+        }
+    }
+    
+    .review-stats {
+        padding: 60px 0 0;
+        
+        h2 {
+            color: $blackGrey !important;
+            font-size: 40px !important;
+            padding: 0 !important;
+            border: 0 !important;
+            margin: 0 !important;
+            float: left;
+        }
+    }
+    
+    .stats {
+        float: right;
+
+        .total-rating {
+            float: right;
+            font-size: 40px;
+            line-height: 1;
+            color: $blackGrey;
+            margin-left: 15px;
+            font-weight: 700;
+        }
+
+        .stars {
+            width: 135px;
+            float: right;
+            position: relative;
+            top: 8px;
+
+            i {
+                display: inline-block;
+                width: 19px;
+                height: 18px;
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &.stars0 {
+                i {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+
+            &.stars1 {
+
+                i {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+
+                i:nth-of-type(1) {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                }
+            }
+
+            &.stars2 {
+                i {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+
+                i:nth-of-type(1),
+                i:nth-of-type(2) {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+
+            &.stars3 {
+                i {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+
+                i:nth-of-type(1),
+                i:nth-of-type(2),
+                i:nth-of-type(3) {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+
+            &.stars4 {
+                i {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+
+                i:nth-of-type(5) {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+
+            &.stars5 {
+                i {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+        }
+    }
+
+    .review-content {
+        margin-top: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        .single-review {
+            overflow: hidden;
+            padding: 60px 0;
+            border-bottom: 1px solid #e5e5e5;
+            
+            &:nth-of-type(n+4) {
+                display: none;
+            }
+        }
+
+        .testimonial {
+            font-size: 18px;
+            color: $blackGrey;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .author {
+            font-size: 14px;
+            font-weight: 700;
+            color: $blackGrey;
+            float: left;
+            padding-right: 20px;
+            border-right: 1px solid #e5e5e5;
+        }
+        
+        .date {
+            font-size: 14px;
+            color: #a5a5a5;
+            margin-left: 20px;
+            float: left;
+            position: relative; 
+            top: -2px;
+        }
+        
+        .stars {
+            width: 90px;
+            height: 13px;
+            float: right;
+            display: block;
+
+            i {
+                display: inline-block;
+                width: 14px;
+                height: 13px;
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &.starszero {
+                i {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+
+            &.starsone {
+
+                i {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    background-size: 100%;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+
+                i:nth-of-type(1) {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                }
+            }
+
+            &.starstwo {
+                i {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    background-size: 100%;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+
+                i:nth-of-type(1),
+                i:nth-of-type(2) {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                    background-size: 100%;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+
+            &.starsthree {
+                i {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    background-size: 100%;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+
+                i:nth-of-type(1),
+                i:nth-of-type(2),
+                i:nth-of-type(3) {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                    background-size: 100%;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+
+            &.starsfour {
+                i {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                    background-size: 100%;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+
+                i:nth-of-type(5) {
+                    background: url(assets/images/star_grey.png) no-repeat;
+                    background-size: 100%;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_grey_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+
+            &.starsfive {
+                i {
+                    background: url(assets/images/star_gold.png) no-repeat;
+                    background-size: 100%;
+                    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                        only screen and (   min--moz-device-pixel-ratio: 1.5),
+                        only screen and (     -o-min-device-pixel-ratio: 3/2),
+                        only screen and (        min-device-pixel-ratio: 1.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_2x.png) no-repeat;
+                            background-size: 100%;
+                        }
+    
+                    @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                        only screen and (   min--moz-device-pixel-ratio: 2.5),
+                        only screen and (     -o-min-device-pixel-ratio: 5/2),
+                        only screen and (        min-device-pixel-ratio: 2.5),
+                        only screen and (min-resolution: 192dpi) {
+                            background: url(assets/images/star_gold_3x.png) no-repeat;
+                            background-size: 100%;
+                        }
+                }
+            }
+        }
+    }
+}
+
+.location-featured-products {
+    padding: 80px 0;
+    background: url(assets/images/locations-bg.jpg) repeat;
+    
+    h2 {
+        font-size: 40px !important;
+        color: $blackGrey !important;
+        text-transform: uppercase;
+        margin: 0 0 40px !important;
+        border: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .product-single {
+        width: 300px;
+        border: 1px solid #e5e5e5;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0px 3px 1px 0px rgba(1, 1, 1, 0.08);
+        margin-bottom: 4px;
+        
+        .image-container {
+            width: 100%;
+            height: 256px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            
+            img {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        
+        h1 {
+            font-size: 20px !important;
+            color: $blackGrey !important;
+            margin: 0 0 20px 10px !important;
+            white-space: nowrap;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .brand {
+            margin: 0 10px 25px;
+            font-size: 16px;
+            color: #a5a5a5;
+            font-family: Arial, Helvetica, sans-serif;
+            
+            .brand-name {
+                font-weight: 700;
+            }
+        }
+        
+        .learn-more {
+            margin: 0 10px 10px;
+            display: block;
+            height: 46px;
+            line-height: 46px;
+            background: #f8f8f8;
+            text-align: center;
+            color: $darkRed;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            
+            &:hover {
+                background: $veryDarkRed;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.location-brands {
+    padding: 80px 0;
+    
+    h2 {
+        font-size: 40px !important;
+        color: $blackGrey !important;
+        text-transform: uppercase;
+        margin: 0 0 40px !important;
+        border: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .brands-container {
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+        box-shadow: 0px 3px 1px 0px rgba(1, 1, 1, 0.03);
+    }
+    
+    .brand-single {
+        width: 188px;
+        height: 112px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e5e5e5;
+        border-left: 0;
+        
+        img {
+            width: auto !important;
+            height: auto !important;
+        }
     }
 }
 
 @media only screen and (max-width: 959px) {
-    .left-col,
-    .right-col {
-        width: 100% !important;
-        margin-right: 0 !important;
+    .location-banner {
+        
+        .shop-image {
+            margin-right: 30px;
+        }
+        
+        .open-hours-optional {
+            display: block;
+        }
     }
-
-    .right-col {
-        margin-top: 20px;
+    
+    .about-shop,
+    .shop-media,
+    .shop-reviews,
+    .location-featured-products,
+    .location-brands,
+    .review-stats {
+        padding: 60px 0;
     }
-
-    .badges {
-        display: none !important;
+    
+    .location-featured-products .product-single {
+        width: 230px;
+        
+        .image-container {
+            height: 196px;
+        }
+        
+        h1 {
+            font-size: 16px !important;
+        }
+        
+        .brand {
+            font-size: 12px;
+        }
+        
+        .learn-more {
+            font-size: 14px;
+        }
     }
 }
 
 @media only screen and (max-width: 767px) {
     .location-banner {
-        height: 150px;
+        height: 420px;
         background-position: 75% !important;
-
-        .container {
-            padding-top: 100px;
-        }
+        padding-top: 30px;
 
         .shop-image {
             width: 100%;
             float: none;
-            margin-right: 0;
             text-align: center;
+            margin: 0 0 30px;
 
             img {
-                width: 100px;
-                height: 100px;
+                width: 140px;
+                height: 140px;
             }
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 20px;
+            margin: 0 0 20px;
         }
-
-        .location-info-box {
-            float: none;
-            width: 300px;
-            margin: 0 auto;
+        
+        .location-info-box .text {
+            font-size: 16px;
         }
     }
-
-    .location-main {
-        margin-top: 220px;
-        border-top: 1px solid #ccc;
-        padding-top: 15px;
+    
+    .about-shop,
+    .shop-media,
+    .shop-reviews,
+    .location-featured-products,
+    .location-brands,
+    .review-stats {
+        padding: 30px 0;
+        
+        h2 {
+            font-size: 20px !important;
+            margin: 0 0 20px !important;
+        }
+    }
+    
+    .about-shop p {
+        font-size: 14px;
+        line-height: 2;
+    }
+    
+    .shop-media {
         padding-bottom: 0;
-    }
-
-    .shop-photos,
-    .shop-videos,
-    .about-shop {
-        padding: 0 !important;
-        border: 0 !important;
-    }
-
-    .directions .wpgmp_map {
-        height: 200px !important;
-        overflow: hidden;
+        
+        .controls {
+            top: -42px;
+            
+            .left,
+            .right {
+                font-size: 16px;
+            }
+        }
     }
 
     .shop-reviews {
-
-        .review-top {
-
-            .stats-left {
-                width: 40%;
-                margin-right: 10%;
+        
+        form {
+            padding-bottom: 30px !important;
+        }
+        
+        input {
+            width: 100% !important;
+            margin-right: 0 !important;
+            float: none !important;
+            margin-bottom: 15px !important;
+        }
+        
+        textarea {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        button[type="submit"] {
+            width: 100% !important;
+        }
+        
+        .review-stats {
+            padding: 30px 0 0 !important;
+        
+            h2,
+            .total-rating {
+                font-size: 20px !important;
             }
-
-            .stats-right{
-                width: 50%;
-                float: none;
-                display: inline-block;
-            }
-
-            .toggle-review-form {
-                position: relative;
-                right: inherit;
-                width: 100%;
-                float: none;
-                clear: both;
-                top: 0;
-                margin-bottom: 10px;
-
-                &:hover {
-                    background: #fff;
-                    color: #d92738;
-                }
-
-                &.toggled {
-                    background: #d92738;
-                    color: #fff;
-                }
+            
+            & > .stats .stars {
+                display: none;
             }
         }
-
+        
         .review-content {
-
-            .testimonial,
+            
+            .single-review {
+                padding: 30px 0;
+                
+                &:nth-of-type(n+4) {
+                    display: none;
+                }
+            }
+    
+            .testimonial {
+                font-size: 14px;
+                line-height: 2;
+                margin-bottom: 15px;
+            }
+    
             .author {
-                font-size: 12px !important;
-            }
-
-            .extend-content {
-                color: #d92738;
-                text-decoration: none;
-                font-weight: 700;
                 font-size: 12px;
-                font-style: normal;
-                font-family: Raleway;
             }
-        }
-    }
-
-    .about-shop {
-
-        .extend-content {
-            color: #d92738;
-            font-size: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-family: Raleway;
+            
+            .date {
+                font-size: 12px;
+            }
+            
+            .stars {
+                position: relative;
+                top: -6px;
+            }
         }
     }
 }

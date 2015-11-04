@@ -56,10 +56,10 @@ get_header(); ?>
 
                             <div class="location-info-box">
                                 <h1><?php the_title(); ?></h1>
-                                <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
-                                <span class="phone"><span class="icon"></span><span class="text"><?php the_field('phone_number'); ?></span></span>
+                                <span class="address"><span class="icon"><i></i></span><span class="text"><?php the_field('full_address'); ?></span></span>
+                                <span class="phone"><span class="icon"><i></i></span><span class="text"><?php the_field('phone_number'); ?></span></span>
                                 <span class="open-hours">
-                                    <span class="icon"></span>
+                                    <span class="icon"><i></i></span>
                                     <span class="text">
                                         <?php the_field('open_hours_1'); ?>
                                         <?php if ( get_field('open_hours_2') ) { ?>
@@ -74,97 +74,75 @@ get_header(); ?>
 
                 <div class="location-main">
                     <div class="container">
-                        <div class="left-col">
-                            <div class="shop-photos">
-                                <h2>Photos</h2>
-                                <div class="photo-container">
-                                    <?php the_field('shop_photos'); ?>
-                                </div>
+                        <div class="about-shop">
+                            <h2>About the Shop</h2>
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                    <div class="shop-media">
+                        <div class="container">
+                            <h2>Photos &amp; Videos</h2>
+                            <div class="controls">
+                                <div class="left">&lt;</div>
+                                <div class="right">&gt;</div>
                             </div>
-                            <div class="shop-videos">
-                                <h2>Videos</h2>
-                                <div class="video-container shop-video-container">
-                                    <?php the_field('shop_videos'); ?>
-                                </div>
-                            </div>
-                            <div class="shop-reviews">
-                                <div class="review-top">
-                                    <?php
-                                        $one = 0;
-                                        $two = 0;
-                                        $three = 0;
-                                        $four = 0;
-                                        $five = 0;
-                                        $total_submissions = 0;
-
-                                        $args = array('post_type' => 'location-review');
-                                        $loop = new WP_Query( $args );
-                                        while ( $loop->have_posts() ) : $loop->the_post();
-
-                                            if ($this_location == get_field('location_name')) {
-                                                if (get_field('stars') == 'one') {
-                                                    $one += 1;
-                                                } elseif (get_field('stars') == 'two') {
-                                                    $two += 1;
-                                                } elseif (get_field('stars') == 'three') {
-                                                    $three += 1;
-                                                } elseif (get_field('stars') == 'four') {
-                                                    $four += 1;
-                                                } else {
-                                                    $five += 1;
-                                                }
-                                                $total_submissions += 1;
+                            <?php the_field('shop_media'); ?>
+                        </div>
+                    </div>
+                    <!--<div class="shop-tour">
+                        <div class="container">
+                            <h2>Virtual Tour</h2>
+                        </div>
+                    </div>-->
+                    <div class="shop-reviews">
+                        <div class="container">
+                            <div class="review-top">
+                                <?php
+                                    $one = 0;
+                                    $two = 0;
+                                    $three = 0;
+                                    $four = 0;
+                                    $five = 0;
+                                    $total_submissions = 0;
+    
+                                    $args = array('post_type' => 'location-review');
+                                    $loop = new WP_Query( $args );
+                                    while ( $loop->have_posts() ) : $loop->the_post();
+    
+                                        if ($this_location == get_field('location_name')) {
+                                            if (get_field('stars') == 'one') {
+                                                $one += 1;
+                                            } elseif (get_field('stars') == 'two') {
+                                                $two += 1;
+                                            } elseif (get_field('stars') == 'three') {
+                                                $three += 1;
+                                            } elseif (get_field('stars') == 'four') {
+                                                $four += 1;
+                                            } else {
+                                                $five += 1;
                                             }
-
-                                        endwhile;
-                                        wp_reset_postdata();
-
-                                        $sum_one = $one;
-                                        $sum_two = $two * 2;
-                                        $sum_three = $three * 3;
-                                        $sum_four = $four * 4;
-                                        $sum_five = $five * 5;
-                                        $total_vote = $sum_one + $sum_two + $sum_three + $sum_four + $sum_five;
-                                    ?>
-                                    <header>
-                                        <h2>Reviews</h2><a class="view-all" href="#">view all</a>
-                                    </header>
-                                    <div class="review-stats">
-                                        <div class="stats-left">
-                                            <div class="total-rating"><?php echo number_format(($total_vote / $total_submissions), 1); ?></div>
-                                            <?php if ($total_submissions > 0) {?>
-                                                <div class="stars stars<?php echo round($total_vote / $total_submissions); ?>"><i></i><i></i><i></i><i></i><i></i></div>
-                                            <?php } else { ?>
-                                                <div class="stars stars0"><i></i><i></i><i></i><i></i><i></i></div>
-                                            <?php } ?>
-                                            <span><?php echo $total_submissions; ?> reviews</span>
-                                        </div>
-                                        <div class="stats-right">
-                                            <ul>
-                                                <li>5 star</li>
-                                                <li>4 star</li>
-                                                <li>3 star</li>
-                                                <li>2 star</li>
-                                                <li>1 star</li>
-                                            </ul>
-                                            <ul>
-                                                <li class="<?php echo ($five == 0) ? 'empty' : 'non-empty'; ?>" style="width: <?php echo ($five / $total_submissions) * 100; ?>%"><span></span></li>
-                                                <li class="<?php echo ($four == 0) ? 'empty' : 'non-empty'; ?>" style="width: <?php echo ($four / $total_submissions) * 100; ?>%"><span></span></li>
-                                                <li class="<?php echo ($three == 0) ? 'empty' : 'non-empty'; ?>" style="width: <?php echo ($three / $total_submissions) * 100; ?>%"><span></span></li>
-                                                <li class="<?php echo ($two == 0) ? 'empty' : 'non-empty'; ?>" style="width: <?php echo ($two / $total_submissions) * 100; ?>%"><span></span></li>
-                                                <li class="<?php echo ($one == 0) ? 'empty' : 'non-empty'; ?>" style="width: <?php echo ($one / $total_submissions) * 100; ?>%"><span></span></li>
-                                            </ul>
-                                        </div>
-
-                                        <a class="toggle-review-form" href="#">Write a Review</a>
-                                    </div>
-                                </div>
-
+                                            $total_submissions += 1;
+                                        }
+    
+                                    endwhile;
+                                    wp_reset_postdata();
+    
+                                    $sum_one = $one;
+                                    $sum_two = $two * 2;
+                                    $sum_three = $three * 3;
+                                    $sum_four = $four * 4;
+                                    $sum_five = $five * 5;
+                                    $total_vote = $sum_one + $sum_two + $sum_three + $sum_four + $sum_five;
+                                ?>
+                                <header>
+                                    <h2>Write Your Review</h2>
+                                </header>
                                 <div id="review-form">
                                     <form action="" method="POST">
                                         <input type="text" name="name" required placeholder="Your Name" value="<?php if ( isset( $_POST['name'] ) ) echo $_POST['name']; ?>" />
                                         <input type="text" name="company_name" placeholder="Company Name" />
-                                        <div class="">
+                                        <textarea name="testimonial" required placeholder="Write your review"><?php if ( isset( $_POST['testimonial'] ) ) { if ( function_exists( 'stripslashes' ) ) { echo stripslashes( $_POST['testimonial'] ); } else { echo $_POST['testimonial']; } } ?></textarea>
+                                        <div class="choose-rating">
                                             <label class="rating-label">Choose Rating</label>
                                             <div class="radio-inputs">
                                                 <input id="review1" type="radio" name="stars" value="one">
@@ -178,8 +156,7 @@ get_header(); ?>
                                                 <input id="review5" type="radio" name="stars" value="five">
                                                 <label for="review5"></label>
                                             </div>
-                                        </div>
-                                        <textarea name="testimonial" required placeholder="Testimonial"><?php if ( isset( $_POST['testimonial'] ) ) { if ( function_exists( 'stripslashes' ) ) { echo stripslashes( $_POST['testimonial'] ); } else { echo $_POST['testimonial']; } } ?></textarea>
+                                        </div>  
                                         <input type="hidden" name="submitted" id="submitted" value="true" />
                                         <?php wp_nonce_field( 'post_nonce', 'post_nonce_field' ); ?>
                                         <button type="submit">Submit</button>
@@ -191,57 +168,79 @@ get_header(); ?>
                                         <span class="success">Thanks for review</span>
                                     <?php } ?>
                                 </div>
-
-                                <div class="review-content">
-                                    <?php
-                                        $queryObject = new WP_Query( 'post_type=location-review' );
-                                        // The Loop!
-                                        if ($queryObject->have_posts()) {
-                                            while ($queryObject->have_posts()) {
-                                                $queryObject->the_post();
-                                                if ($this_location == get_field('location_name')) { ?>
-                                                    <div class="single-review">
-                                                        <div class="testimonial minimize"><?php the_field('testimonial'); ?></div>
-                                                        <span class="author"><?php the_field('name'); ?></span>
-                                                    </div>
-                                                <?php } ?>
-                                            <?php
-                                            }
+                                <div class="review-stats">
+                                    <h2>Customer Reviews</h2>
+                                    <div class="stats">
+                                        <div class="total-rating"><?php echo number_format(($total_vote / $total_submissions), 1); ?></div>
+                                        <?php if ($total_submissions > 0) {?>
+                                            <div class="stars stars<?php echo round($total_vote / $total_submissions); ?>"><i></i><i></i><i></i><i></i><i></i></div>
+                                        <?php } else { ?>
+                                            <div class="stars stars0"><i></i><i></i><i></i><i></i><i></i></div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="review-content">
+                                <?php
+                                    $queryObject = new WP_Query( 'post_type=location-review' );
+                                    // The Loop!
+                                    if ($queryObject->have_posts()) {
+                                        while ($queryObject->have_posts()) {
+                                            $queryObject->the_post();
+                                            if ($this_location == get_field('location_name')) { ?>
+                                                <div class="single-review">
+                                                    <div class="testimonial minimize"><?php the_field('testimonial'); ?></div>
+                                                    <span class="author"><?php the_field('name'); ?></span>
+                                                    <span class="date"><?php echo get_the_date(); ?></span>
+                                                    <?php if ($total_submissions > 0) {?>
+                                                        <span class="stars stars<?php the_field('stars'); ?>"><i></i><i></i><i></i><i></i><i></i></span>
+                                                    <?php } else { ?>
+                                                        <span class="stars starszero"><i></i><i></i><i></i><i></i><i></i></span>
+                                                    <?php } ?>
+                                                </div>
+                                            <?php } ?>
+                                        <?php
                                         }
-                                        wp_reset_postdata();
-                                    ?>
-                                </div>
+                                    }
+                                    wp_reset_postdata();
+                                ?>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="location-featured-products">
+                        <div class="container">
+                            <h2>Featured Products</h2>
+                            <div class="products-container">
+                                <?php
+                                    $args = array('post_type' => 'products');
+                                    $loop = new WP_Query( $args );
+                                    while ( $loop->have_posts() ) : $loop->the_post();  
+                                ?>
+                                    <div class="product-single">
+                                        <div class="image-container">
+                                            <img src="<?php the_field('image'); ?>" alt="<?php the_title(); ?>">
+                                        </div>
+                                        <h1><?php the_title(); ?></h1>
+                                        <div class="brand">By: <span class="brand-name"><?php the_field('brand'); ?></span> </div>
+                                        <a href="#" class="learn-more">learn more</a>
+                                    </div>
+                                <?php endwhile;
+                                    wp_reset_postdata();
+                                ?>
                             </div>
                         </div>
-                        <div class="right-col">
-                            <div class="find-shop">
-                                <h3>Find a shop near me</h3>
-                                <div class="shop-select">
-                                    <select name="shop" id="select-shop">
-                                        <option value="all">All States</option>
-                                        <option value="florida">Philadelphia, PA</option>
-                                        <option value="nj">Pembroke Pines, FL</option>
-                                        <option value="pensylvania">Boca Raton, FL</option>
-                                        <option value="nj">Chicago, IL</option>
-                                        <option value="pensylvania">Glassboro, NJ</option>
-                                    </select>
-                                </div>
-                                <a href="#" class="find-shops-go">Go</a>
-                            </div>
-                            <div class="directions">
-                                <h3>Directions</h3>
-                                <?php the_field('google_map_shortcode'); ?>
-                                <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
-                            </div>
-                            <div class="about-shop">
-                                <h3>About the shop</h3>
-                                <div class="minimize"><?php the_content(); ?></div>
-                            </div>
-                            <div class="badges">
-                                <img src="/wp-content/themes/smokeshop/assets/images/best_price.jpg" alt="Best Price">
-                                <img src="/wp-content/themes/smokeshop/assets/images/quality.jpg" alt="Quality Guaranteed">
+                    </div>
+                    <div class="location-brands">
+                        <div class="container">
+                            <h2>Brands</h2>
+                            <div class="brands-container">
+                                <?php the_field('brands'); ?>    
                             </div>
                         </div>
+                    </div>
+                    <div class="location-map">
+                        <?php the_field('google_map_shortcode'); ?>
                     </div>
                 </div>
 
