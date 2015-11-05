@@ -52,7 +52,7 @@ get_header(); ?>
                                       wp_reset_postdata(); ?>
                         </div>
                         <div class="search-footer">
-                            <span>Showing results <span class="results-count">1 - 3</span></span>
+                            <span>Showing results <span class="results-count"></span></span>
                             <div class="controls">
                                 <div class="left">&lt;</div>
                                 <div class="right">&gt;</div>

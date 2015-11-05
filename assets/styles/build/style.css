@@ -981,19 +981,6 @@ address {
     background-size: 100% !important;
   }
 }
-@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  .mejs-overlay-button {
-    background: url(assets/images/play_btn_2x.png) no-repeat !important;
-    background-size: 100% !important;
-  }
-}
-@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2.5), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  .mejs-overlay-button {
-    background: url(assets/images/play_btn_2x.png) no-repeat !important;
-    background-size: 100% !important;
-  }
-}
-
 .ninja-forms-error-msg,
 .ninja-forms-field-error {
   display: none !important;
