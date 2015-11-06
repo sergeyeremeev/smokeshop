@@ -388,6 +388,11 @@
                     background: $veryDarkRed;
                     color: #fff;
                 }
+                
+                &.disabled {
+                    cursor: default;
+                    pointer-events: none;
+                }
             }
 
             .no-results-msg {

@@ -51,6 +51,12 @@
             testimonialSingle.slice(i, i + 2).wrapAll("<div class='testimonials-wrap'></div>");
         }
     }
+    
+    // change first location button
+    $('.location-single:first-of-type, .search-result-single:first-of-type').find('.learn-more').text('Coming Soon').addClass('disabled');
+    $('.location-single:first-of-type, .search-result-single:first-of-type').find('.learn-more').on('click', function (e) {
+        e.preventDefault();
+    })
 
     // carousels
     $(document).ready(function () {

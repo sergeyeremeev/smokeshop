@@ -105,7 +105,7 @@ get_header(); ?>
                             <h2>Our Locations</h2>
                             <div class="locations-container">
                                 <?php
-                                    $args = array('post_type' => 'locations', 'posts_per_page' => 5);
+                                    $args = array('post_type' => 'locations', 'posts_per_page' => -1);
                                     $loop = new WP_Query( $args );
                                     while ( $loop->have_posts() ) : $loop->the_post();
                                 ?>

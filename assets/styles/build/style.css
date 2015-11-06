@@ -991,6 +991,10 @@ address {
   background: #F7D6F5 !important;
 }
 
+.ninja-forms-success-msg {
+  color: #fff !important;
+}
+
 .view-all {
   display: none !important;
 }
@@ -2404,9 +2408,12 @@ object {
 }
 .home-locations .location-single .location-image img,
 .about-locations .location-single .location-image img {
-  height: 100%;
+  height: auto;
   width: auto;
   margin: 0 auto;
+  -webkit-transform: translateY(-25%);
+      -ms-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 .home-locations .location-single h3,
 .about-locations .location-single h3 {
@@ -2414,6 +2421,11 @@ object {
   color: #0c0c0c;
   margin: 0 0 25px;
   padding-left: 10px;
+  padding-bottom: 1px;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .home-locations .location-single .location-info-box,
 .about-locations .location-single .location-info-box {
@@ -2536,6 +2548,11 @@ object {
 .home-locations .location-single .learn-more:active,
 .about-locations .location-single .learn-more:active {
   background: #c31e2e;
+}
+.home-locations .location-single .learn-more.disabled,
+.about-locations .location-single .learn-more.disabled {
+  cursor: default;
+  pointer-events: none;
 }
 
 .page-subscribe-module {
@@ -3538,6 +3555,11 @@ object {
   margin: 0 0 20px;
   text-transform: uppercase;
 }
+.about-video .wp-video,
+.about-video .mejs-video {
+  width: 100% !important;
+  height: 640px !important;
+}
 
 .about-stats {
   background: url(assets/images/menu_bg.jpg) repeat;
@@ -3695,6 +3717,10 @@ object {
   }
   .about-video h3 {
     font-size: 20px;
+  }
+  .about-video .wp-video,
+  .about-video .mejs-video {
+    height: 280px !important;
   }
 
   .about-stats {
@@ -4579,6 +4605,7 @@ object {
   font-size: 20px !important;
   color: #0c0c0c !important;
   margin: 0 0 20px 10px !important;
+  padding-bottom: 1px;
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
@@ -4643,10 +4670,13 @@ object {
           justify-content: center;
   border: 1px solid #e5e5e5;
   border-left: 0;
+  overflow: hidden;
 }
 .location-brands .brand-single img {
   width: auto !important;
   height: auto !important;
+  max-height: 100% !important;
+  max-width: 100% !important;
 }
 
 @media only screen and (max-width: 959px) {
@@ -6171,6 +6201,10 @@ object {
 .search-container .search-box .search-results .learn-more:hover {
   background: #c31e2e;
   color: #fff;
+}
+.search-container .search-box .search-results .learn-more.disabled {
+  cursor: default;
+  pointer-events: none;
 }
 .search-container .search-box .search-results .no-results-msg {
   text-align: center;

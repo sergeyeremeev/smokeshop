@@ -55,7 +55,7 @@ get_header(); ?>
                             </div>
 
                             <div class="location-info-box">
-                                <h1><?php the_title(); ?></h1>
+                                <h1><?php the_field('short_address'); ?></h1>
                                 <span class="address"><span class="icon"><i></i></span><span class="text"><?php the_field('full_address'); ?></span></span>
                                 <span class="phone"><span class="icon"><i></i></span><span class="text"><?php the_field('phone_number'); ?></span></span>
                                 <span class="open-hours">
@@ -106,7 +106,7 @@ get_header(); ?>
                                     $five = 0;
                                     $total_submissions = 0;
     
-                                    $args = array('post_type' => 'location-review');
+                                    $args = array('post_type' => 'location-review', 'posts_per_page' => -1);
                                     $loop = new WP_Query( $args );
                                     while ( $loop->have_posts() ) : $loop->the_post();
     
@@ -214,9 +214,10 @@ get_header(); ?>
                             <h2>Featured Products</h2>
                             <div class="products-container">
                                 <?php
-                                    $args = array('post_type' => 'products');
+                                    $args = array('post_type' => 'products', 'posts_per_page' => -1);
                                     $loop = new WP_Query( $args );
                                     while ( $loop->have_posts() ) : $loop->the_post();  
+                                        if ($this_location == get_field('shop')) {
                                 ?>
                                     <div class="product-single">
                                         <div class="image-container">
@@ -226,7 +227,9 @@ get_header(); ?>
                                         <div class="brand">By: <span class="brand-name"><?php the_field('brand'); ?></span> </div>
                                         <a href="#" class="learn-more">learn more</a>
                                     </div>
-                                <?php endwhile;
+                                <?php 
+                                        }
+                                    endwhile;
                                     wp_reset_postdata();
                                 ?>
                             </div>

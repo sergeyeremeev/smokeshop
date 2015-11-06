@@ -234,9 +234,10 @@
             margin-bottom: 20px;
             
             img {
-                height: 100%;
+                height: auto;
                 width: auto;
                 margin: 0 auto;
+                transform: translateY(-25%);
             }
         }
 
@@ -245,6 +246,11 @@
             color: $blackGrey;
             margin: 0 0 25px;
             padding-left: 10px;
+            padding-bottom: 1px;
+            max-width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         .location-info-box {
@@ -378,6 +384,11 @@
             
             &:active {
                 background: $veryDarkRed;
+            }
+            
+            &.disabled {
+                cursor: default;
+                pointer-events: none;
             }
         }
     }

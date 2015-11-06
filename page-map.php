@@ -22,14 +22,13 @@ get_header(); ?>
                         </div>
                         <div class="search-results">
                             <?php
-                                $args = array('post_type' => 'locations', 'posts_per_page' => 5);
+                                $args = array('post_type' => 'locations', 'posts_per_page' => -1);
                                 $loop = new WP_Query( $args );
                                 while ( $loop->have_posts() ) : $loop->the_post();
-                                if (get_field('short_address') !== '') {
                             ?>
                                 <div class="search-result-single">
                                     <div class="search-result-info">
-                                        <h2><span><?php the_title(); ?></span></h2>
+                                        <h2><span><?php the_field('short_address'); ?></span></h2>
                                         <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
                                         <span class="phone"><span class="icon"></span><span class="text"><?php the_field('phone_number'); ?></span></span>
                                         <span class="open-hours">
@@ -47,9 +46,10 @@ get_header(); ?>
                                     </div>
                                     <a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
                                 </div>
-                                <?php }
-                                      endwhile;
-                                      wp_reset_postdata(); ?>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata(); 
+                                ?>
                         </div>
                         <div class="search-footer">
                             <span>Showing results <span class="results-count"></span></span>
