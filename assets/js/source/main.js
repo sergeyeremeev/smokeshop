@@ -10,7 +10,8 @@
         testimonialsNum = testimonialSingle.length,
         i,
         $this,
-        locCount = 1;
+        locCount = 1,
+        selectedOption;
         
     // sticky header
     $(document).on('scroll', function () {
@@ -56,7 +57,19 @@
     $('.location-single:first-of-type, .search-result-single:first-of-type').find('.learn-more').text('Coming Soon').addClass('disabled');
     $('.location-single:first-of-type, .search-result-single:first-of-type').find('.learn-more').on('click', function (e) {
         e.preventDefault();
-    })
+    });
+    
+    // subscribe form, select the correct list
+    $('#ninja_forms_field_16').change(function () {
+        selectedOption = $('#ninja_forms_field_16').find('option:selected').text();
+        $('#ninja_forms_field_15 option').attr('selected', false);
+        
+        if (selectedOption === 'Choose the shop') {
+            $('#ninja_forms_field_15').find('option:contains("clients")').attr('selected', true);
+        } else {
+            $('#ninja_forms_field_15').find('option:contains(' + selectedOption + ')').attr('selected', true);
+        }
+    });
 
     // carousels
     $(document).ready(function () {

@@ -2017,12 +2017,12 @@ address {
     display: inline;
   }
   .site-info .social-list {
-    width: 316px;
+    width: 291px;
     float: none;
     margin: 0 auto;
   }
   .site-info .social-list li {
-    margin-right: 20px;
+    margin-right: 15px;
   }
   .site-info .social-list li:last-child {
     margin-right: 0;
@@ -2567,7 +2567,7 @@ object {
   font-size: 40px;
   color: #fff;
   text-transform: uppercase;
-  margin: 0 0 50px;
+  margin: 0 0 45px;
   line-height: 1.2;
 }
 .page-subscribe-module .field-wrap {
@@ -2580,8 +2580,11 @@ object {
 .page-subscribe-module .field-wrap:nth-of-type(1) {
   margin-right: 20px;
 }
-.page-subscribe-module .field-wrap:nth-of-type(3) {
+.page-subscribe-module .field-wrap:nth-of-type(4) {
   width: 100%;
+}
+.page-subscribe-module .field-wrap.optin_mailchimp-wrap {
+  display: none !important;
 }
 .page-subscribe-module .field-wrap input,
 .page-subscribe-module .field-wrap select {
