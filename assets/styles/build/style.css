@@ -3574,68 +3574,72 @@ object {
 }
 .about-stats .icon-space i {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 112px;
+  height: 112px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
+.about-stats .customers i {
+  background: url(assets/images/customer_icon_new.png) no-repeat;
+  background-size: 100%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .about-stats .customers i {
+    background: url(assets/images/customer_icon_new_2x.png) no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .about-stats .customers i {
+    background: url(assets/images/customer_icon_new_3x.png) no-repeat;
+    background-size: 100%;
+  }
+}
 .about-stats .products i {
-  background: url(assets/images/product_icon.png) no-repeat;
+  background: url(assets/images/product_icon_new.png) no-repeat;
+  background-size: 100%;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .about-stats .products i {
-    background: url(assets/images/product_icon_2x.png) no-repeat;
+    background: url(assets/images/product_icon_new_2x.png) no-repeat;
     background-size: 100%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .about-stats .products i {
-    background: url(assets/images/product_icon_3x.png) no-repeat;
+    background: url(assets/images/product_icon_new_3x.png) no-repeat;
     background-size: 100%;
   }
 }
-.about-stats .clients i {
-  background: url(assets/images/customer_icon.png) no-repeat;
+.about-stats .reviews i {
+  background: url(assets/images/review_icon.png) no-repeat;
+  background-size: 100%;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .about-stats .clients i {
-    background: url(assets/images/customer_icon_2x.png) no-repeat;
+  .about-stats .reviews i {
+    background: url(assets/images/review_icon_2x.png) no-repeat;
     background-size: 100%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .about-stats .clients i {
-    background: url(assets/images/customer_icon_3x.png) no-repeat;
-    background-size: 100%;
-  }
-}
-.about-stats .discount i {
-  background: url(assets/images/discount_icon.png) no-repeat;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .about-stats .discount i {
-    background: url(assets/images/discount_icon_2x.png) no-repeat;
-    background-size: 100%;
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .about-stats .discount i {
-    background: url(assets/images/discount_icon_3x.png) no-repeat;
+  .about-stats .reviews i {
+    background: url(assets/images/review_icon_3x.png) no-repeat;
     background-size: 100%;
   }
 }
 .about-stats .locations i {
-  background: url(assets/images/location_icon.png) no-repeat;
+  background: url(assets/images/map_pin_icon.png) no-repeat;
+  background-size: 100%;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .about-stats .locations i {
-    background: url(assets/images/location_icon_2x.png) no-repeat;
+    background: url(assets/images/map_pin_icon_2x.png) no-repeat;
     background-size: 100%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min--moz-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .about-stats .locations i {
-    background: url(assets/images/location_icon_3x.png) no-repeat;
+    background: url(assets/images/map_pin_icon_3x.png) no-repeat;
     background-size: 100%;
   }
 }
@@ -4677,6 +4681,9 @@ object {
   height: auto !important;
   max-height: 100% !important;
   max-width: 100% !important;
+}
+.location-brands .brand-single:hover {
+  border: 1px solid #d92738;
 }
 
 @media only screen and (max-width: 959px) {

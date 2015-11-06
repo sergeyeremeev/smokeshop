@@ -78,21 +78,45 @@
 
     .icon-space i {
         display: block;
-        width: 100px;
-        height: 100px;
+        width: 112px;
+        height: 112px;
         margin: 0 auto;
         margin-bottom: 20px;
     }
 
+    .customers i {
+        background: url(assets/images/customer_icon_new.png) no-repeat;
+        background-size: 100%;
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (   min--moz-device-pixel-ratio: 1.5),
+            only screen and (     -o-min-device-pixel-ratio: 3/2),
+            only screen and (        min-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/customer_icon_new_2x.png) no-repeat;
+                background-size: 100%;
+            }
+
+        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+            only screen and (   min--moz-device-pixel-ratio: 2.5),
+            only screen and (     -o-min-device-pixel-ratio: 5/2),
+            only screen and (        min-device-pixel-ratio: 2.5),
+            only screen and (min-resolution: 192dpi) {
+                background: url(assets/images/customer_icon_new_3x.png) no-repeat;
+                background-size: 100%;
+            }
+    }
+
     .products i {
-        background: url(assets/images/product_icon.png) no-repeat;
+        background: url(assets/images/product_icon_new.png) no-repeat;
+        background-size: 100%;
 
         @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
             only screen and (   min--moz-device-pixel-ratio: 1.5),
             only screen and (     -o-min-device-pixel-ratio: 3/2),
             only screen and (        min-device-pixel-ratio: 1.5),
             only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/product_icon_2x.png) no-repeat;
+                background: url(assets/images/product_icon_new_2x.png) no-repeat;
                 background-size: 100%;
             }
 
@@ -101,20 +125,21 @@
             only screen and (     -o-min-device-pixel-ratio: 5/2),
             only screen and (        min-device-pixel-ratio: 2.5),
             only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/product_icon_3x.png) no-repeat;
+                background: url(assets/images/product_icon_new_3x.png) no-repeat;
                 background-size: 100%;
             }
     }
 
-    .clients i {
-        background: url(assets/images/customer_icon.png) no-repeat;
+    .reviews i {
+        background: url(assets/images/review_icon.png) no-repeat;
+        background-size: 100%;
 
         @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
             only screen and (   min--moz-device-pixel-ratio: 1.5),
             only screen and (     -o-min-device-pixel-ratio: 3/2),
             only screen and (        min-device-pixel-ratio: 1.5),
             only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/customer_icon_2x.png) no-repeat;
+                background: url(assets/images/review_icon_2x.png) no-repeat;
                 background-size: 100%;
             }
 
@@ -123,42 +148,21 @@
             only screen and (     -o-min-device-pixel-ratio: 5/2),
             only screen and (        min-device-pixel-ratio: 2.5),
             only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/customer_icon_3x.png) no-repeat;
-                background-size: 100%;
-            }
-    }
-
-    .discount i {
-        background: url(assets/images/discount_icon.png) no-repeat;
-
-        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-            only screen and (   min--moz-device-pixel-ratio: 1.5),
-            only screen and (     -o-min-device-pixel-ratio: 3/2),
-            only screen and (        min-device-pixel-ratio: 1.5),
-            only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/discount_icon_2x.png) no-repeat;
-                background-size: 100%;
-            }
-
-        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-            only screen and (   min--moz-device-pixel-ratio: 2.5),
-            only screen and (     -o-min-device-pixel-ratio: 5/2),
-            only screen and (        min-device-pixel-ratio: 2.5),
-            only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/discount_icon_3x.png) no-repeat;
+                background: url(assets/images/review_icon_3x.png) no-repeat;
                 background-size: 100%;
             }
     }
 
     .locations i {
-        background: url(assets/images/location_icon.png) no-repeat;
+        background: url(assets/images/map_pin_icon.png) no-repeat;
+        background-size: 100%;
 
         @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
             only screen and (   min--moz-device-pixel-ratio: 1.5),
             only screen and (     -o-min-device-pixel-ratio: 3/2),
             only screen and (        min-device-pixel-ratio: 1.5),
             only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/location_icon_2x.png) no-repeat;
+                background: url(assets/images/map_pin_icon_2x.png) no-repeat;
                 background-size: 100%;
             }
 
@@ -167,7 +171,7 @@
             only screen and (     -o-min-device-pixel-ratio: 5/2),
             only screen and (        min-device-pixel-ratio: 2.5),
             only screen and (min-resolution: 192dpi) {
-                background: url(assets/images/location_icon_3x.png) no-repeat;
+                background: url(assets/images/map_pin_icon_3x.png) no-repeat;
                 background-size: 100%;
             }
     }

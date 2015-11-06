@@ -56,32 +56,32 @@ get_header(); ?>
 
                     <div class="about-stats">
                         <div class="container">
+                            <div class="stat-single customers">
+                                <div class="icon-space">
+                                    <i></i>
+                                </div>
+                                <span class="bold">21,500</span>
+                                <span>Happy Customers</span>
+                            </div>
                             <div class="stat-single products">
                                 <div class="icon-space">
                                     <i></i>
                                 </div>
-                                <span class="bold">38,000,000</span>
-                                <span>Total Products Sold</span>
-                            </div>
-                            <div class="stat-single clients">
-                                <div class="icon-space">
-                                    <i></i>
-                                </div>
                                 <span class="bold">140,000</span>
-                                <span>New Happy Clients</span>
+                                <span>Products Sold</span>
                             </div>
-                            <div class="stat-single discount">
+                            <div class="stat-single reviews">
                                 <div class="icon-space">
                                     <i></i>
                                 </div>
-                                <span class="bold">25,000</span>
-                                <span>Discount Products</span>
+                                <span class="bold">Thousands</span>
+                                <span>Of Positive Reviews</span>
                             </div>
                             <div class="stat-single locations">
                                 <div class="icon-space">
                                     <i></i>
                                 </div>
-                                <span class="bold">5</span>
+                                <span class="bold">6</span>
                                 <span>United States Locations</span>
                             </div>
                         </div>
