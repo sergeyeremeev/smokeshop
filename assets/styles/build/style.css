@@ -3912,23 +3912,77 @@ object {
 }
 .shop-media .html5gallery-box-1,
 .shop-media .html5gallery-elem-1,
-.shop-media .html5gallery-elem-img-1 {
+.shop-media .html5gallery-elem-img-1,
+.shop-media .html5gallery-box-2,
+.shop-media .html5gallery-elem-2,
+.shop-media .html5gallery-elem-img-2,
+.shop-media .html5gallery-box-3,
+.shop-media .html5gallery-elem-3,
+.shop-media .html5gallery-elem-img-3,
+.shop-media .html5gallery-box-4,
+.shop-media .html5gallery-elem-4,
+.shop-media .html5gallery-elem-img-4,
+.shop-media .html5gallery-box-5,
+.shop-media .html5gallery-elem-5,
+.shop-media .html5gallery-elem-img-5,
+.shop-media .html5gallery-box-6,
+.shop-media .html5gallery-elem-6,
+.shop-media .html5gallery-elem-img-6,
+.shop-media .html5gallery-box-7,
+.shop-media .html5gallery-elem-7,
+.shop-media .html5gallery-elem-img-7 {
   width: 100% !important;
   left: 0 !important;
   top: 0 !important;
 }
 .shop-media .html5gallery-elem-1 a,
 .shop-media .html5gallery-car-left-1,
-.shop-media .html5gallery-car-right-1 {
+.shop-media .html5gallery-car-right-1,
+.shop-media .html5gallery-elem-2 a,
+.shop-media .html5gallery-car-left-2,
+.shop-media .html5gallery-car-right-2,
+.shop-media .html5gallery-elem-3 a,
+.shop-media .html5gallery-car-left-3,
+.shop-media .html5gallery-car-right-3,
+.shop-media .html5gallery-elem-4 a,
+.shop-media .html5gallery-car-left-4,
+.shop-media .html5gallery-car-right-4,
+.shop-media .html5gallery-elem-5 a,
+.shop-media .html5gallery-car-left-5,
+.shop-media .html5gallery-car-right-5,
+.shop-media .html5gallery-elem-6 a,
+.shop-media .html5gallery-car-left-6,
+.shop-media .html5gallery-car-right-6,
+.shop-media .html5gallery-elem-7 a,
+.shop-media .html5gallery-car-left-7,
+.shop-media .html5gallery-car-right-7 {
   display: none !important;
 }
 .shop-media .html5gallery-car-list-1,
-.shop-media .html5gallery-car-mask-1 {
+.shop-media .html5gallery-car-mask-1,
+.shop-media .html5gallery-car-list-2,
+.shop-media .html5gallery-car-mask-2,
+.shop-media .html5gallery-car-list-3,
+.shop-media .html5gallery-car-mask-3,
+.shop-media .html5gallery-car-list-4,
+.shop-media .html5gallery-car-mask-4,
+.shop-media .html5gallery-car-list-5,
+.shop-media .html5gallery-car-mask-5,
+.shop-media .html5gallery-car-list-6,
+.shop-media .html5gallery-car-mask-6,
+.shop-media .html5gallery-car-list-7,
+.shop-media .html5gallery-car-mask-7 {
   width: 100% !important;
   left: 0 !important;
   top: 0 !important;
 }
-.shop-media .html5gallery-car-1 {
+.shop-media .html5gallery-car-1,
+.shop-media .html5gallery-car-2,
+.shop-media .html5gallery-car-3,
+.shop-media .html5gallery-car-4,
+.shop-media .html5gallery-car-5,
+.shop-media .html5gallery-car-6,
+.shop-media .html5gallery-car-7 {
   width: 100% !important;
   left: 0 !important;
   -webkit-transform: translateY(-20px);
@@ -3936,19 +3990,49 @@ object {
           transform: translateY(-20px);
 }
 .shop-media .html5gallery-tn-img-1 > div,
-.shop-media .html5gallery-tn-img-1 > div img {
+.shop-media .html5gallery-tn-img-1 > div img,
+.shop-media .html5gallery-tn-img-2 > div,
+.shop-media .html5gallery-tn-img-2 > div img,
+.shop-media .html5gallery-tn-img-3 > div,
+.shop-media .html5gallery-tn-img-3 > div img,
+.shop-media .html5gallery-tn-img-4 > div,
+.shop-media .html5gallery-tn-img-4 > div img,
+.shop-media .html5gallery-tn-img-5 > div,
+.shop-media .html5gallery-tn-img-5 > div img,
+.shop-media .html5gallery-tn-img-6 > div,
+.shop-media .html5gallery-tn-img-6 > div img,
+.shop-media .html5gallery-tn-img-7 > div,
+.shop-media .html5gallery-tn-img-7 > div img {
   width: 100% !important;
   height: 100% !important;
   left: 0 !important;
   top: 0 !important;
 }
-.shop-media .html5gallery-thumbs-1 > div:first-of-type {
+.shop-media .html5gallery-thumbs-1 > div:first-of-type,
+.shop-media .html5gallery-thumbs-2 > div:first-of-type,
+.shop-media .html5gallery-thumbs-3 > div:first-of-type,
+.shop-media .html5gallery-thumbs-4 > div:first-of-type,
+.shop-media .html5gallery-thumbs-5 > div:first-of-type,
+.shop-media .html5gallery-thumbs-6 > div:first-of-type,
+.shop-media .html5gallery-thumbs-7 > div:first-of-type {
   margin-left: 0 !important;
 }
-.shop-media .html5gallery-tn-img-play-1 {
+.shop-media .html5gallery-tn-img-play-1,
+.shop-media .html5gallery-tn-img-play-2,
+.shop-media .html5gallery-tn-img-play-3,
+.shop-media .html5gallery-tn-img-play-4,
+.shop-media .html5gallery-tn-img-play-5,
+.shop-media .html5gallery-tn-img-play-6,
+.shop-media .html5gallery-tn-img-play-7 {
   background: url(assets/images/play_btn_new.png) no-repeat center center !important;
 }
-.shop-media .html5gallery-tn-img-play-1:hover {
+.shop-media .html5gallery-tn-img-play-1:hover,
+.shop-media .html5gallery-tn-img-play-2:hover,
+.shop-media .html5gallery-tn-img-play-3:hover,
+.shop-media .html5gallery-tn-img-play-4:hover,
+.shop-media .html5gallery-tn-img-play-5:hover,
+.shop-media .html5gallery-tn-img-play-6:hover,
+.shop-media .html5gallery-tn-img-play-7:hover {
   background: url(assets/images/play_btn_red_new.png) no-repeat center center !important;
 }
 .shop-media .controls {
