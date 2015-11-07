@@ -4741,8 +4741,9 @@ object {
 }
 .location-brands .brands-container {
   border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
+  border-right: 0;
   box-shadow: 0px 3px 1px 0px rgba(1, 1, 1, 0.03);
+  margin-right: -1px;
 }
 .location-brands .brand-single {
   width: 188px;
