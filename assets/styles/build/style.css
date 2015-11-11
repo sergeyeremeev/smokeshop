@@ -4767,8 +4767,8 @@ object {
 .location-brands .brand-single img {
   width: auto !important;
   height: auto !important;
-  max-height: 100% !important;
-  max-width: 100% !important;
+  max-height: 95% !important;
+  max-width: 95% !important;
 }
 .location-brands .brand-single:hover {
   border: 1px solid #d92738;
