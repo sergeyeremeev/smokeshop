@@ -28,7 +28,7 @@ get_header(); ?>
                             ?>
                                 <div class="search-result-single">
                                     <div class="search-result-info">
-                                        <h2><span><?php the_field('short_address'); ?></span></h2>
+                                        <a href="<?php the_permalink(); ?>"><h2><span><?php the_field('short_address'); ?></span></h2></a>
                                         <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
                                         <span class="phone"><span class="icon"></span><span class="text"><?php the_field('phone_number'); ?></span></span>
                                         <span class="open-hours">

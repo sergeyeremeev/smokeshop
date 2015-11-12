@@ -40,7 +40,7 @@ get_header(); ?>
                             </div>
                             <div class="contact-block-single phone">
                                 <div class="icon-space"><i></i></div>
-                                <span>Call our 24 hour hotline for FREE informations</span>
+                                <span>Call our hotline for FREE informations</span>
                                 <a href="#">
                                     <?php
                                         $args = array('post_type' => 'social');

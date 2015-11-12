@@ -331,7 +331,8 @@
         var searchValue = $(this).val().toLowerCase();
         $.each(searchResults, function () {
             $this = $(this);
-            if ($this.find('.address .text').text().toLowerCase().indexOf(searchValue) > -1) {
+            if ($this.find('.address .text').text().toLowerCase().indexOf(searchValue) > -1 || 
+                $this.find('h2 span').text().toLowerCase().indexOf(searchValue) > -1) {
                 $(this).addClass('visible').removeClass('hidden');
             } else {
                 $(this).addClass('hidden').removeClass('visible');

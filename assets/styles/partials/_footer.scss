@@ -204,6 +204,7 @@
 
 .footer-col4 {
     padding-right: 0;
+    height: auto;
     
     p {
         font-size: 14px;
@@ -290,6 +291,7 @@
 
 .social-list {
     @include clearfix;
+    display: none !important;
     float: right;
     list-style-type: none;
     padding: 0;

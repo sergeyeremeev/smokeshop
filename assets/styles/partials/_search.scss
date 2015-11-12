@@ -45,6 +45,7 @@
             background: #fff;
 
             .search-menu {
+                display: none !important;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -71,7 +72,7 @@
 
             form {
                 float: left;
-                width: calc(100% - 124px);
+                width: calc(100% - 62px);
                 height: 62px;
                 border-right: 1px solid #e5e5e5;
 
@@ -226,6 +227,10 @@
 
                 .search-result-info {
                     float: left;
+                    
+                    & > a:hover h2 {
+                        color: #d92738;
+                    }
                 }
 
                 .search-result-image {

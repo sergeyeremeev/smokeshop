@@ -1697,6 +1697,7 @@ address {
 
 .footer-col4 {
   padding-right: 0;
+  height: auto;
 }
 .footer-col4 p {
   font-size: 14px;
@@ -1776,6 +1777,7 @@ address {
 }
 
 .social-list {
+  display: none !important;
   float: right;
   list-style-type: none;
   padding: 0;
@@ -5999,6 +6001,7 @@ object {
   background: #fff;
 }
 .search-container .search-box .search-page-form .search-menu {
+  display: none !important;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6035,8 +6038,8 @@ object {
 }
 .search-container .search-box .search-page-form form {
   float: left;
-  width: -webkit-calc(100% - 124px);
-  width: calc(100% - 124px);
+  width: -webkit-calc(100% - 62px);
+  width: calc(100% - 62px);
   height: 62px;
   border-right: 1px solid #e5e5e5;
 }
@@ -6166,6 +6169,9 @@ object {
 }
 .search-container .search-box .search-results .search-result-single .search-result-info {
   float: left;
+}
+.search-container .search-box .search-results .search-result-single .search-result-info > a:hover h2 {
+  color: #d92738;
 }
 .search-container .search-box .search-results .search-result-single .search-result-image {
   width: 96px;
