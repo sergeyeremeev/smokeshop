@@ -173,19 +173,19 @@
         }
     }
 
-    &.chat {
+    &.stores {
 
         i {
-            width: 79px;
-            height: 65px;
-            background: url(assets/images/chat_new.png) no-repeat;
+            width: 69px;
+            height: 72px;
+            background: url(assets/images/location_icon_new.png) no-repeat;
 
             @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                 only screen and (   min--moz-device-pixel-ratio: 1.5),
                 only screen and (     -o-min-device-pixel-ratio: 3/2),
                 only screen and (        min-device-pixel-ratio: 1.5),
                 only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/chat_new_2x.png) no-repeat;
+                    background: url(assets/images/location_icon_2x.png) no-repeat;
                     background-size: 100%;
                 }
 
@@ -194,7 +194,7 @@
                 only screen and (     -o-min-device-pixel-ratio: 3/2),
                 only screen and (        min-device-pixel-ratio: 1.5),
                 only screen and (min-resolution: 192dpi) {
-                    background: url(assets/images/chat_new_3x.png) no-repeat;
+                    background: url(assets/images/location_icon_3x.png) no-repeat;
                     background-size: 100%;
                 }
         }
@@ -261,19 +261,19 @@
             }
         }
     
-        &.chat {
+        &.stores {
     
             i {
-                width: 79px;
-                height: 65px;
-                background: url(assets/images/chat_new_red.png) no-repeat;
+                width: 69px;
+                height: 72px;
+                background: url(assets/images/location_icon_new_red.png) no-repeat;
     
                 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                     only screen and (   min--moz-device-pixel-ratio: 1.5),
                     only screen and (     -o-min-device-pixel-ratio: 3/2),
                     only screen and (        min-device-pixel-ratio: 1.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/chat_new_red_2x.png) no-repeat;
+                        background: url(assets/images/location_icon_new_red_2x.png) no-repeat;
                         background-size: 100%;
                     }
     
@@ -282,7 +282,7 @@
                     only screen and (     -o-min-device-pixel-ratio: 3/2),
                     only screen and (        min-device-pixel-ratio: 1.5),
                     only screen and (min-resolution: 192dpi) {
-                        background: url(assets/images/chat_new_red_3x.png) no-repeat;
+                        background: url(assets/images/location_icon_new_red_3x.png) no-repeat;
                         background-size: 100%;
                     }
             }

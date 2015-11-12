@@ -52,10 +52,10 @@ get_header(); ?>
                                             wp_reset_postdata(); ?>
                                 </a>
                             </div>
-                            <div class="contact-block-single chat">
+                            <div class="contact-block-single stores">
                                 <div class="icon-space"><i></i></div>
-                                <span>We are available for instant Live chat with you</span>
-                                <a href="#">START NOW</a>
+                                <span>Visit our<br>Stores</span>
+                                <a href="<?php echo get_page_link(9); ?>">Shop Locator</a>
                             </div>
                         </div>
                     </div>

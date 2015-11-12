@@ -3162,20 +3162,20 @@ object {
     background-size: 100%;
   }
 }
-.contact-block-single.chat i {
-  width: 79px;
-  height: 65px;
-  background: url(assets/images/chat_new.png) no-repeat;
+.contact-block-single.stores i {
+  width: 69px;
+  height: 72px;
+  background: url(assets/images/location_icon_new.png) no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .contact-block-single.chat i {
-    background: url(assets/images/chat_new_2x.png) no-repeat;
+  .contact-block-single.stores i {
+    background: url(assets/images/location_icon_2x.png) no-repeat;
     background-size: 100%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .contact-block-single.chat i {
-    background: url(assets/images/chat_new_3x.png) no-repeat;
+  .contact-block-single.stores i {
+    background: url(assets/images/location_icon_3x.png) no-repeat;
     background-size: 100%;
   }
 }
@@ -3219,20 +3219,20 @@ object {
     background-size: 100%;
   }
 }
-.contact-block-single:hover.chat i {
-  width: 79px;
-  height: 65px;
-  background: url(assets/images/chat_new_red.png) no-repeat;
+.contact-block-single:hover.stores i {
+  width: 69px;
+  height: 72px;
+  background: url(assets/images/location_icon_new_red.png) no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .contact-block-single:hover.chat i {
-    background: url(assets/images/chat_new_red_2x.png) no-repeat;
+  .contact-block-single:hover.stores i {
+    background: url(assets/images/location_icon_new_red_2x.png) no-repeat;
     background-size: 100%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .contact-block-single:hover.chat i {
-    background: url(assets/images/chat_new_red_3x.png) no-repeat;
+  .contact-block-single:hover.stores i {
+    background: url(assets/images/location_icon_new_red_3x.png) no-repeat;
     background-size: 100%;
   }
 }
@@ -3980,6 +3980,15 @@ object {
   width: 100% !important;
   left: 0 !important;
   top: 0 !important;
+}
+.shop-media .html5gallery-elem-image-1,
+.shop-media .html5gallery-elem-image-2,
+.shop-media .html5gallery-elem-image-3,
+.shop-media .html5gallery-elem-image-4,
+.shop-media .html5gallery-elem-image-5,
+.shop-media .html5gallery-elem-image-6,
+.shop-media .html5gallery-elem-image-7 {
+  width: 100% !important;
 }
 .shop-media .html5gallery-car-1,
 .shop-media .html5gallery-car-2,
