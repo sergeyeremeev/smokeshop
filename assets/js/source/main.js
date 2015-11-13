@@ -53,10 +53,16 @@
         }
     }
     
-    // change first location button
+    // change first location button and prevent linking to new location page
     $('.location-single:first-of-type, .search-result-single:first-of-type').find('.learn-more').text('Coming Soon').addClass('disabled');
     $('.location-single:first-of-type, .search-result-single:first-of-type').find('.learn-more').on('click', function (e) {
         e.preventDefault();
+    });
+    
+    $('.search-result-single').children('.search-result-info').children('a').on('click', function (e) {
+        if ($(this).next('.address').children('.text').text().indexOf('Chester') !== -1) {
+            e.preventDefault();
+        } 
     });
     
     // subscribe form, select the correct list
@@ -363,13 +369,16 @@
     // location media controls 
     $('.shop-media').find('.controls').on('click', '.left', function () {
         galleryNum = $(this).closest('.controls').next('.wonderplugingallery-container').attr('id').slice(-1);
-        console.log(galleryNum);
-        $('.html5gallery-car-left-' + galleryNum).trigger('click');
+        if (!$('.html5gallery-tn-selected-' + galleryNum).is(':first-child')) {
+            $('.html5gallery-tn-selected-' + galleryNum).prev('.html5gallery-tn-' + galleryNum).find('img').trigger('click');
+        }
     });
     
     $('.shop-media').find('.controls').on('click', '.right', function () {
         galleryNum = $(this).closest('.controls').next('.wonderplugingallery-container').attr('id').slice(-1);
-        $('.html5gallery-car-right-' + galleryNum).trigger('click');
+        if (!$('.html5gallery-tn-selected-' + galleryNum).is(':last-child')) {
+            $('.html5gallery-tn-selected-' + galleryNum).next('.html5gallery-tn-' + galleryNum).find('img').trigger('click');
+        }
     });
     
     // location brands 

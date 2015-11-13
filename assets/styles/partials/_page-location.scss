@@ -235,26 +235,12 @@
     }
     
     .html5gallery-elem-1 a,
-    .html5gallery-car-left-1,
-    .html5gallery-car-right-1,
     .html5gallery-elem-2 a,
-    .html5gallery-car-left-2,
-    .html5gallery-car-right-2,
     .html5gallery-elem-3 a,
-    .html5gallery-car-left-3,
-    .html5gallery-car-right-3,
     .html5gallery-elem-4 a,
-    .html5gallery-car-left-4,
-    .html5gallery-car-right-4,
     .html5gallery-elem-5 a,
-    .html5gallery-car-left-5,
-    .html5gallery-car-right-5,
     .html5gallery-elem-6 a,
-    .html5gallery-car-left-6,
-    .html5gallery-car-right-6,
-    .html5gallery-elem-7 a,
-    .html5gallery-car-left-7,
-    .html5gallery-car-right-7 {
+    .html5gallery-elem-7 a,{
         display: none !important;
     }
     
@@ -1337,6 +1323,7 @@
         
         .banner-info .location-info-box {
             width: 100%;
+            max-width: 100%;
         }
         
         .location-info-box .text {

@@ -3941,26 +3941,12 @@ object {
   top: 0 !important;
 }
 .shop-media .html5gallery-elem-1 a,
-.shop-media .html5gallery-car-left-1,
-.shop-media .html5gallery-car-right-1,
 .shop-media .html5gallery-elem-2 a,
-.shop-media .html5gallery-car-left-2,
-.shop-media .html5gallery-car-right-2,
 .shop-media .html5gallery-elem-3 a,
-.shop-media .html5gallery-car-left-3,
-.shop-media .html5gallery-car-right-3,
 .shop-media .html5gallery-elem-4 a,
-.shop-media .html5gallery-car-left-4,
-.shop-media .html5gallery-car-right-4,
 .shop-media .html5gallery-elem-5 a,
-.shop-media .html5gallery-car-left-5,
-.shop-media .html5gallery-car-right-5,
 .shop-media .html5gallery-elem-6 a,
-.shop-media .html5gallery-car-left-6,
-.shop-media .html5gallery-car-right-6,
-.shop-media .html5gallery-elem-7 a,
-.shop-media .html5gallery-car-left-7,
-.shop-media .html5gallery-car-right-7 {
+.shop-media .html5gallery-elem-7 a {
   display: none !important;
 }
 .shop-media .html5gallery-car-list-1,
@@ -4849,6 +4835,7 @@ object {
   }
   .location-banner .banner-info .location-info-box {
     width: 100%;
+    max-width: 100%;
   }
   .location-banner .location-info-box .text {
     font-size: 16px;
