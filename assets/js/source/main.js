@@ -369,7 +369,6 @@
     
     $('.shop-media').find('.controls').on('click', '.right', function () {
         galleryNum = $(this).closest('.controls').next('.wonderplugingallery-container').attr('id').slice(-1);
-        console.log(galleryNum);
         $('.html5gallery-car-right-' + galleryNum).trigger('click');
     });
     
