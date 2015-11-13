@@ -10,8 +10,8 @@
         testimonialsNum = testimonialSingle.length,
         i,
         $this,
-        locCount = 1,
-        selectedOption;
+        selectedOption,
+        galleryNum;
         
     // sticky header
     $(document).on('scroll', function () {
@@ -362,11 +362,15 @@
     
     // location media controls 
     $('.shop-media').find('.controls').on('click', '.left', function () {
-        $('.html5gallery-car-left-1').trigger('click');
+        galleryNum = $(this).closest('.controls').next('.wonderplugingallery-container').attr('id').slice(-1);
+        console.log(galleryNum);
+        $('.html5gallery-car-left-' + galleryNum).trigger('click');
     });
     
     $('.shop-media').find('.controls').on('click', '.right', function () {
-        $('.html5gallery-car-right-1').trigger('click');
+        galleryNum = $(this).closest('.controls').next('.wonderplugingallery-container').attr('id').slice(-1);
+        console.log(galleryNum);
+        $('.html5gallery-car-right-' + galleryNum).trigger('click');
     });
     
     // location brands 

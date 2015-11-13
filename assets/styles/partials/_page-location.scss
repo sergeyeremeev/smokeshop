@@ -1271,6 +1271,10 @@
         .open-hours-optional {
             display: block;
         }
+        
+        .banner-info .location-info-box {
+            max-width: calc(100% - 260px);
+        }
     }
     
     .about-shop,
@@ -1329,6 +1333,10 @@
         h1 {
             font-size: 20px;
             margin: 0 0 20px;
+        }
+        
+        .banner-info .location-info-box {
+            width: 100%;
         }
         
         .location-info-box .text {

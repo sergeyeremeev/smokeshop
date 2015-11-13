@@ -4792,6 +4792,10 @@ object {
   .location-banner .open-hours-optional {
     display: block;
   }
+  .location-banner .banner-info .location-info-box {
+    max-width: -webkit-calc(100% - 260px);
+    max-width: calc(100% - 260px);
+  }
 
   .about-shop,
   .shop-media,
@@ -4842,6 +4846,9 @@ object {
   .location-banner h1 {
     font-size: 20px;
     margin: 0 0 20px;
+  }
+  .location-banner .banner-info .location-info-box {
+    width: 100%;
   }
   .location-banner .location-info-box .text {
     font-size: 16px;
