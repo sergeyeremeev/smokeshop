@@ -11,7 +11,8 @@
         i,
         $this,
         selectedOption,
-        galleryNum;
+        galleryNum,
+        contentClass;
         
     // sticky header
     $(document).on('scroll', function () {
@@ -338,7 +339,8 @@
         $.each(searchResults, function () {
             $this = $(this);
             if ($this.find('.address .text').text().toLowerCase().indexOf(searchValue) > -1 || 
-                $this.find('h2 span').text().toLowerCase().indexOf(searchValue) > -1) {
+                $this.find('h2 span').text().toLowerCase().indexOf(searchValue) > -1 ||
+                $this.find('.state').text().toLowerCase().indexOf(searchValue) > -1) {
                 $(this).addClass('visible').removeClass('hidden');
             } else {
                 $(this).addClass('hidden').removeClass('visible');
@@ -392,5 +394,37 @@
             navText: ['&lt','&gt']
         });
     });
+    
+    // google map infowindow content
+    if ($('body').hasClass('page-template-page-map')) {
+        $(document).on('click touchend', function () {
+            if ($('.gm-style-iw').width() !== 0) {
+                contentClass = $('.gm-style-iw').children().children().children().attr('class');
+                switch(contentClass) {
+                    case 'Boca Raton':
+                        contentClass = 'Boca';
+                        $('.gm-style-iw').children().children().children().attr('class', contentClass);
+                        break;
+                    case 'PEMBROKE PINES':
+                        contentClass = 'Pembroke';
+                        $('.gm-style-iw').children().children().children().attr('class', contentClass);
+                        break;
+                    case 'West Chester':
+                        contentClass = 'Chester';
+                        $('.gm-style-iw').children().children().children().attr('class', contentClass);
+                        break;
+                }
+                var searchResults = $('.search-results').find('.search-result-single');
+                
+                $.each(searchResults, function () {
+                    $this = $(this);
+                    if ($this.find('.address .text').text().toLowerCase().indexOf(contentClass.toLowerCase()) > -1) {
+                        $('.' + contentClass).empty();
+                        $this.clone().appendTo('.' + contentClass);
+                    }
+                });
+            } 
+        });
+    }
 
 })(jQuery);

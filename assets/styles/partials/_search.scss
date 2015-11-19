@@ -1,4 +1,5 @@
 .our-shops-banner {
+    display: none !important;
     height: 350px;
     background-repeat: no-repeat;
     background-size: cover !important;
@@ -27,21 +28,21 @@
     }
 
     .container {
-        width: 360px;
+        width: 420px;
+        padding: 0 !important;
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-470px);
+        left: 0;
         z-index: 2;
     }
 
     .search-box {
         position: relative;
-        width: 360px;
+        width: 420px;
         font-family: Arial, Helvetica, sans-serif;
 
         .search-page-form {
-            height: 62px;
+            height: 50px;
             background: #fff;
 
             .search-menu {
@@ -51,7 +52,7 @@
                 justify-content: center;
                 flex-direction: column;
                 height: 100%;
-                width: 62px;
+                width: 50px;
                 float: left;
                 border-right: 1px solid #e5e5e5;
                 cursor: pointer;
@@ -72,15 +73,15 @@
 
             form {
                 float: left;
-                width: calc(100% - 62px);
-                height: 62px;
+                width: calc(100% - 50px);
+                height: 50px;
                 border-right: 1px solid #e5e5e5;
 
                 .input-wrapper {
                     display: block;
                     float: left;
-                    height: 62px;
-                    width: calc(100% - 60px);
+                    height: 50px;
+                    width: calc(100% - 50px);
                 }
 
                 .search-field {
@@ -106,8 +107,8 @@
                 background: url(assets/images/search_icon_hover_2x.png) no-repeat;
                 background-size: 100%;
                 position: relative;
-                left: 20px;
-                top: 20px;
+                left: 16px;
+                top: 16px;
 
                 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                     only screen and (   min--moz-device-pixel-ratio: 1.5),
@@ -130,7 +131,7 @@
 
             .clear-menu {
                 cursor: pointer;
-                width: 62px;
+                width: 50px;
                 height: 100%;
                 float: left;
 
@@ -141,8 +142,8 @@
                     background: url(assets/images/search-close.jpg) no-repeat;
                     background-size: 100%;
                     position: relative;
-                    top: 20px;
-                    left: 20px;
+                    top: 16px;
+                    left: 16px;
                     
                     @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
                         only screen and (   min--moz-device-pixel-ratio: 1.5),
@@ -187,230 +188,6 @@
                                 background-size: 100%;
                             }
                     }
-                }
-            }
-        }
-
-        .search-results {
-            height: auto;
-            min-height: 52px;
-            max-height: 738px;
-            overflow: hidden;
-            margin: 1px 0;
-
-            .search-result-single {
-                @include clearfix;
-                background: #fff;
-                height: 246px;
-                padding: 20px;
-                position: relative;
-                margin-bottom: 1px;
-                
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-
-                &.visible {
-                    display: block;
-                }
-
-                &.hidden {
-                    display: none;
-                }
-
-                h2 {
-                    margin: 0;
-                    font-size: 20px;
-                    color: $blackGrey;
-                    display: inline-block;
-                }
-
-                .search-result-info {
-                    float: left;
-                    
-                    & > a:hover h2 {
-                        color: #d92738;
-                    }
-                }
-
-                .search-result-image {
-                    width: 96px;
-                    height: 96px;
-                    position: absolute;
-                    right: 20px;
-                    top: 35px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 50%;
-                    }
-                }
-
-                .address,
-                .open-hours,
-                .phone {
-                    height: 21px;
-                    margin-bottom: 14px;
-                    display: -webkit-box;
-                    display: -moz-box;
-                    display: -ms-flexbox;
-                    display: -webkit-flex;
-                    display: flex;
-                    -webkit-box-align: center;
-                    -webkit-flex-align: center;
-                    -ms-flex-align: center;
-                    -webkit-align-items: center;
-                    align-items: center;
-                    margin-top: 20px;
-                    line-height: 1.1;
-                    
-                    .text {
-                        font-size: 15px;
-                        font-family: Arial, Helvetica, sans-serif;
-                        color: $blackGrey;
-                        display: block;
-                        width: -webkit-calc(100% - 40px);
-                        width: calc(100% - 40px);
-                    }
-                }
-
-                .address {
-                    width: 210px;
-
-                    .icon {
-                        display: inline-block;
-                        width: 21px;
-                        height: 15px;
-                        background: url(assets/images/envelope_new_red.png) no-repeat;
-                        background-size: 100%;
-                        margin-right: 19px;
-
-                        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                            only screen and (   min--moz-device-pixel-ratio: 1.5),
-                            only screen and (     -o-min-device-pixel-ratio: 3/2),
-                            only screen and (        min-device-pixel-ratio: 1.5),
-                            only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/envelope_new_red_2x.png) no-repeat;
-                                background-size: 100%;
-                            }
-
-                        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                            only screen and (   min--moz-device-pixel-ratio: 2.5),
-                            only screen and (     -o-min-device-pixel-ratio: 5/2),
-                            only screen and (        min-device-pixel-ratio: 2.5),
-                            only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/envelope_new_red_3x.png) no-repeat;
-                                background-size: 100%;
-                            }
-                    }
-                }
-                
-                .phone {
-                    width: 210px;
-
-                    .icon {
-                        display: inline-block;
-                        width: 16px;
-                        height: 22px;
-                        background: url(assets/images/phone_contact_new_red.png) no-repeat;
-                        background-size: 100%;
-                        margin-right: 22px;
-                        margin-left: 2px;
-                        
-
-                        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                            only screen and (   min--moz-device-pixel-ratio: 1.5),
-                            only screen and (     -o-min-device-pixel-ratio: 3/2),
-                            only screen and (        min-device-pixel-ratio: 1.5),
-                            only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/phone_contact_new_red_2x.png) no-repeat;
-                                background-size: 100%;
-                            }
-
-                        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                            only screen and (   min--moz-device-pixel-ratio: 2.5),
-                            only screen and (     -o-min-device-pixel-ratio: 5/2),
-                            only screen and (        min-device-pixel-ratio: 2.5),
-                            only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/phone_contact_new_red_3x.png) no-repeat;
-                                background-size: 100%;
-                            }
-                    }
-                }
-
-                .open-hours {
-                    width: 260px;
-
-                    .icon {
-                        display: inline-block;
-                        width: 22px;
-                        height: 23px;
-                        background: url(assets/images/new-clock-icon.png) no-repeat;
-                        background-size: 100%;
-                        margin-right: 18px;
-
-                        @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                            only screen and (   min--moz-device-pixel-ratio: 1.5),
-                            only screen and (     -o-min-device-pixel-ratio: 3/2),
-                            only screen and (        min-device-pixel-ratio: 1.5),
-                            only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/new-clock-icon_2x.png) no-repeat;
-                                background-size: 100%;
-                            }
-
-                        @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
-                            only screen and (   min--moz-device-pixel-ratio: 2.5),
-                            only screen and (     -o-min-device-pixel-ratio: 5/2),
-                            only screen and (        min-device-pixel-ratio: 2.5),
-                            only screen and (min-resolution: 192dpi) {
-                                background: url(assets/images/new-clock-icon_3x.png) no-repeat;
-                                background-size: 100%;
-                            }
-                    }
-
-                    .open-hours-optional {
-                        display: block;
-                    }
-                }
-            }
-            
-            .learn-more {
-                clear: both;
-                display: block;
-                height: 46px;
-                line-height: 46px;
-                background: #f8f8f8;
-                text-align: center;
-                color: $darkRed;
-                font-size: 14px;
-                text-transform: uppercase;
-                font-weight: 700;
-                position: relative;
-                top: 6px;
-                
-                &:hover {
-                    background: $veryDarkRed;
-                    color: #fff;
-                }
-                
-                &.disabled {
-                    cursor: default;
-                    pointer-events: none;
-                }
-            }
-
-            .no-results-msg {
-                text-align: center;
-                height: 50px;
-                line-height: 50px;
-
-                span {
-                    font-size: 14px;
-                    color: #000;
-                    font-weight: 700;
-                    display: inline-block;
-                    font-family: Raleway;
                 }
             }
         }
@@ -460,8 +237,268 @@
     }
 }
 
+.search-results,
+.gm-style-iw {
+    height: auto;
+    min-height: 52px;
+    max-height: 738px;
+    overflow: hidden;
+    margin: 1px 0;
+
+    .search-result-single {
+        @include clearfix;
+        background: #fff;
+        height: 246px;
+        padding: 20px;
+        position: relative;
+        margin-bottom: 1px;
+        
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &.visible {
+            display: block;
+        }
+
+        &.hidden {
+            display: none;
+        }
+        
+        .state {
+            display: none !important;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            color: $blackGrey;
+            display: inline-block;
+        }
+
+        .search-result-info {
+            float: left;
+            
+            & > a:hover h2 {
+                color: #d92738;
+            }
+        }
+
+        .search-result-image {
+            width: 96px;
+            height: 96px;
+            position: absolute;
+            right: 20px;
+            top: 35px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .address,
+        .open-hours,
+        .phone {
+            height: 21px;
+            margin-bottom: 14px;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-flex-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            margin-top: 20px;
+            line-height: 1.1;
+            
+            .text {
+                font-size: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: $blackGrey;
+                display: block;
+                width: -webkit-calc(100% - 40px);
+                width: calc(100% - 40px);
+            }
+        }
+
+        .address {
+            width: 210px;
+
+            .icon {
+                display: inline-block;
+                width: 21px;
+                height: 15px;
+                background: url(assets/images/envelope_new_red.png) no-repeat;
+                background-size: 100%;
+                margin-right: 19px;
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/envelope_new_red_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/envelope_new_red_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+        }
+        
+        .phone {
+            width: 210px;
+
+            .icon {
+                display: inline-block;
+                width: 16px;
+                height: 22px;
+                background: url(assets/images/phone_contact_new_red.png) no-repeat;
+                background-size: 100%;
+                margin-right: 22px;
+                margin-left: 2px;
+                
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/phone_contact_new_red_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/phone_contact_new_red_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+        }
+
+        .open-hours {
+            width: 260px;
+
+            .icon {
+                display: inline-block;
+                width: 22px;
+                height: 23px;
+                background: url(assets/images/new-clock-icon.png) no-repeat;
+                background-size: 100%;
+                margin-right: 18px;
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                    only screen and (   min--moz-device-pixel-ratio: 1.5),
+                    only screen and (     -o-min-device-pixel-ratio: 3/2),
+                    only screen and (        min-device-pixel-ratio: 1.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/new-clock-icon_2x.png) no-repeat;
+                        background-size: 100%;
+                    }
+
+                @media  only screen and (-webkit-min-device-pixel-ratio: 2.5),
+                    only screen and (   min--moz-device-pixel-ratio: 2.5),
+                    only screen and (     -o-min-device-pixel-ratio: 5/2),
+                    only screen and (        min-device-pixel-ratio: 2.5),
+                    only screen and (min-resolution: 192dpi) {
+                        background: url(assets/images/new-clock-icon_3x.png) no-repeat;
+                        background-size: 100%;
+                    }
+            }
+
+            .open-hours-optional {
+                display: block;
+            }
+        }
+    }
+    
+    .learn-more {
+        clear: both;
+        display: block;
+        height: 46px;
+        line-height: 46px;
+        background: #f8f8f8;
+        text-align: center;
+        color: $darkRed;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: relative;
+        top: 6px;
+        
+        &:hover {
+            background: $veryDarkRed;
+            color: #fff;
+        }
+        
+        &.disabled {
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+
+    .no-results-msg {
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+
+        span {
+            font-size: 14px;
+            color: #000;
+            font-weight: 700;
+            display: inline-block;
+            font-family: Raleway;
+        }
+    }
+}
+
+.gm-style-iw {
+    width: 318px !important;
+    height: 256px !important;
+    
+    & > div {
+        overflow: visible !important;
+        
+        & > div {
+            overflow: visible !important;
+        }
+    }
+    
+    .search-result-single {
+        padding: 10px 30px 0 5px;
+    
+        .search-result-image {
+            right: -22px;
+            top: 28px;
+        }
+        
+        .learn-more {
+            width: calc(100% + 53px) !important;
+        }
+    }
+}
+
 .search-results-mobile {
     display: none;
+}
+
+.search-results,
+.search-footer {
+    display: none !important;
 }
 
 @media only screen and (max-width: 960px) {
@@ -490,6 +527,10 @@
     
     .search-container .container {
         width: 100%;
+    }
+    
+    .search-container .search-map {
+        padding-top: 50px;
     }
 
     .search-container .search-box {

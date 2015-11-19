@@ -1,0 +1,189 @@
+.store-banner {
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center center !important;
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+        & > span {
+            font-size: 30px;
+            color: #fff;
+            font-family: MontserratLight;
+            line-height: 1.6;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        
+        .banner-text-1 {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.page-content-1,
+.page-content-2 {
+    padding: 80px 0;
+    
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 0 55px;
+    }
+    
+    p {
+        font-size: 24px;
+        margin: 0 0 60px;
+        font-family: MontserratLight;
+    }
+    
+    ol {
+        font-size: 20px;
+        line-height: 1.3;
+        padding: 50px 0 0 30px;
+        border-top: 1px dashed #747474;
+        
+        li {
+            font-weight: 700;
+            margin-bottom: 30px;
+            
+            span {
+                font-family: MontserratLight;
+                font-weight: 300;
+                position: relative;
+                left: 10px;
+            }
+            
+            strong {
+                font-family: Montserrat;
+                font-weight: 700;   
+            }
+        }
+    }
+}
+
+.page-content-1 {
+    background: url(assets/images/locations-bg.jpg) repeat;
+    
+    h2 {
+        color: $darkRed;
+    }
+    
+    p {
+        color: $blackGrey;
+    }
+    
+    ol li {
+        color: #777;
+    }
+    
+    ol li span {
+        color: $blackGrey;
+    }
+}
+
+.page-content-2 {
+    background: url(assets/images/locations-bg_dark.jpg) repeat;
+    
+    h2 {
+        color: $darkRed;
+    }
+    
+    p {
+        color: #e4e4e4;
+    }
+    
+    ol {
+        border-top: 1px dashed #8b8d90;
+        
+        li {
+            color: #8d8e92;
+        }
+    }
+    
+    ol li span {
+        color: #e5e5e5;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .store-banner {
+        height: 290px;
+        
+        .container {
+            
+            & > span {
+                font-size: 24px;
+                line-height: 1.5;
+            }
+        }
+    }
+    
+    .page-content-1,
+    .page-content-2 {
+        padding: 60px 0;
+        
+        h2 {
+            margin: 0 0 45px;
+        }
+        
+        p {
+            font-size: 20px;
+            margin: 0 0 40px;
+        }
+        
+        ol {
+            padding-top: 40px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .store-banner {
+        height: 170px;
+        
+        .container {
+            
+            & > span {
+                font-size: 14px;
+                line-height: 1.3;
+            }
+            
+            .banner-text-1 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    .page-content-1,
+    .page-content-2 {
+        padding: 40px 0;
+        
+        h2 {
+            margin: 0 0 20px;
+            font-size: 20px;
+        }
+        
+        p {
+            font-size: 14px;
+            margin: 0 0 20px;
+        }
+        
+        ol {
+            padding: 20px 0 0 20px;
+            font-size: 12px;
+            line-height: 1.3;
+            
+            li {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

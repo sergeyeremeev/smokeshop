@@ -27,6 +27,7 @@ get_header(); ?>
                                 while ( $loop->have_posts() ) : $loop->the_post();
                             ?>
                                 <div class="search-result-single">
+                                    <span class="state"><?php the_field('state'); ?></span>
                                     <div class="search-result-info">
                                         <a href="<?php the_permalink(); ?>"><h2><span><?php the_field('short_address'); ?></span></h2></a>
                                         <span class="address"><span class="icon"></span><span class="text"><?php the_field('full_address'); ?></span></span>
